@@ -29,7 +29,7 @@ const HelpYou = () => {
                     },
                 }} className='w-100 text-white mt-3' variant="text">Create a Profile</Button>
 
-                <Button onClick={() => navigate('/')} sx={{
+                <Button onClick={() => navigate('/helpyou')} sx={{
                     backgroundColor: '#fff', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                         backgroundColor: '#fff',
                     },

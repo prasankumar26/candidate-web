@@ -29,6 +29,9 @@ const WhatYourName = () => {
             border: 'none',
             borderRadius: '99px',
         },
+        '& input::placeholder': {
+            color: '#000000', // Replace with the color you want
+          },
     }));
 
     return (
@@ -48,7 +51,7 @@ const WhatYourName = () => {
                     id="outlined-basic"
                     placeholder='Full Name'
                     variant="outlined"
-                    className='w-100'
+                    className='w-100 text-white'
                     InputProps={{
                         style: {
                             borderRadius: '99px',
@@ -67,9 +70,9 @@ const WhatYourName = () => {
                         aria-labelledby="demo-row-radio-buttons-group-label"
                         name="row-radio-buttons-group"
                     >
-                        <FormControlLabel value="male" className='text-white' control={<Radio sx={{ color: '#fff' }} />} label="Male" />
-                        <FormControlLabel value="female" className='text-white' control={<Radio sx={{ color: '#fff' }} />} label="Female" />
-                        <FormControlLabel value="other" className='text-white' control={<Radio sx={{ color: '#fff' }} />} label="Other" />
+                        <FormControlLabel value="male" className='text-white' control={<Radio sx={{ color: '#fff', '&.Mui-checked': { color: '#fff' } }} />} label="Male" />
+                        <FormControlLabel value="female" className='text-white' control={<Radio sx={{ color: '#fff', '&.Mui-checked': { color: '#fff' } }} />} label="Female" />
+                        <FormControlLabel value="other" className='text-white' control={<Radio sx={{ color: '#fff', '&.Mui-checked': { color: '#fff' } }} />} label="Other" />
                     </RadioGroup>
                 </Stack>
 
