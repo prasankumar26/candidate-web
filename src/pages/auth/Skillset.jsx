@@ -66,7 +66,7 @@ const Skillset = () => {
 
     return (
         <section className='position-relative' style={{ height: '106vh' }}>
-            <Container maxWidth="xl">
+            <div maxWidth="xl">
                 <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
                     <Grid container spacing={5}>
                         <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '106vh', position: 'relative' }}>
@@ -140,7 +140,7 @@ const Skillset = () => {
                         </Grid>
                     </Grid>
                 </div>
-            </Container>
+            </div>
         </section>
     )
 }
