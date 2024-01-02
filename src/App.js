@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/style.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NoPage from "./pages/NoPage";
+import SignUp from "./pages/auth/SignUp";
+import Layout from "./components/Layout";
+import YouWantTo from './pages/auth/YouWantTo';
+import WhatYourName from './pages/auth/WhatYourName';
+import Opportunities from './pages/auth/Opportunities';
+import HelpYou from './pages/auth/HelpYou';
+import AboutYou from './pages/auth/AboutYou';
+import Hobbies from './pages/auth/Hobbies';
+import DateOfBirth from './pages/auth/DateOfBirth';
+import Degree from './pages/auth/Degree';
+import Skillset from './pages/auth/Skillset';
+import Experience from './pages/auth/Experience';
+import Preference from './pages/auth/Preference';
+import VideoQuestions from './pages/auth/VideoQuestions';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<SignUp />} />
+          <Route path="you-want-to" element={<YouWantTo />} />
+          <Route path="what-your-name" element={<WhatYourName />} />
+          <Route path="opportunities" element={<Opportunities />} />
+          <Route path="helpyou" element={<HelpYou />} />
+          <Route path="about-you" element={<AboutYou />} />
+          <Route path="hobbies" element={<Hobbies />} />
+          <Route path="dob" element={<DateOfBirth />} />
+          <Route path="degree" element={<Degree />} />
+          <Route path="skillset" element={<Skillset />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="preference" element={<Preference />} />
+          <Route path="video-questions" element={<VideoQuestions />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;

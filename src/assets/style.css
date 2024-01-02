@@ -1,0 +1,55 @@
+.signup-bg{
+    background-color: #756DE9;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+    position: relative;
+}
+.opportunities-bg{
+    background-color: #FF8960;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+    position: relative;
+}
+.next-btn{
+    margin-left: -120px !important;
+}
+.nav-links{
+  box-shadow: '0 0 10px #4b44d459' !important;
+  background-color: #4b44d459;
+  padding: 4px 16px;
+  border-radius: 99px;
+}
+.nav-link{
+    text-decoration: none;
+}
+.nav-links .active{
+     background-color: #fff;
+     padding: 10px;
+     border-radius: 99px;
+     color: #095ef0 !important;
+     font-weight: 500;
+}
+.nav-link-mobile{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 991px) {
+    .nav-desktop{
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .nav-mobile-logo{
+        display: none !important;
+    }
+    .nav-mobile{
+        display: none !important;
+    }
+}
