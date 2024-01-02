@@ -28,7 +28,7 @@ const CssTextField = styled(TextField)(({ theme }) => ({
 
 const SignUp = () => {
     return (
-        <section className='signup-bg'>
+        <section className='signup-bg' style={{height: '100vh'}}>
             <img src="/images/signup-one.png" alt="" className="img-fluid" style={{ position: 'absolute', width: '100px' }} />
             <img src="/images/signup-six.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '10%', right: '0', width: '100px' }} />
             <Container maxWidth="sm" sx={{ position: 'relative', zIndex: '99' }}>
