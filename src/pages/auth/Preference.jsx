@@ -150,8 +150,6 @@ const Preference = () => {
                                 </Grid>
                             </Box>
 
-
-
                             <Box className="mt-4">
                                 <p className='mb-3 text-muted'> <b>Industry</b> </p>
                                 <CssTextField
