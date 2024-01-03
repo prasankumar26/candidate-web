@@ -7,6 +7,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import { fontSize } from '@mui/system';
 
 const WhatYourName = () => {
 
@@ -16,7 +17,7 @@ const WhatYourName = () => {
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
                 border: 'none',
-                boxShadow: `0 0 10px #4b44d459`,
+                boxShadow: `inset 0px 0px 11px 2px #4B44D4`,
             },
             '&:hover fieldset': {
                 border: 'none',
@@ -26,12 +27,20 @@ const WhatYourName = () => {
             },
         },
         '& input': {
+            color: 'white',
             border: 'none',
             borderRadius: '99px',
         },
         '& input::placeholder': {
-            color: '#000000', // Replace with the color you want
+            color: '#fff',
+            fontSize: '18px'
           },
+        '& label': {
+            color: 'white !important',
+        },
+        '& .MuiInputLabel-outlined': {
+            transform: 'translate(14px, 12px) scale(1)',
+        },
     }));
 
     return (
@@ -40,8 +49,8 @@ const WhatYourName = () => {
                 <p className="text-center text-white" style={{ fontSize: '20px', padding: '20px 0px' }}>CATALYST</p>
 
                 <div className="text-center mt-5 mb-5">
-                    <h2 className='text-white'>Great!</h2>
-                    <h2 className='text-white mt-1'>What is Your Name?</h2>
+                    <h2 className='text-white' style={{fontSize: '35px'}}>Great!</h2>
+                    <h2 className='text-white mt-1' style={{fontSize: '35px'}}>What is Your Name?</h2>
                 </div>
 
                 <Stack direction="row" justifyContent="end">
@@ -55,7 +64,7 @@ const WhatYourName = () => {
                     InputProps={{
                         style: {
                             borderRadius: '99px',
-                            backgroundColor: '#f4f4fc6b'
+                            backgroundColor: '#6861E3'
                         },
                     }}
                 />
@@ -80,7 +89,7 @@ const WhatYourName = () => {
                     backgroundColor: '#fff', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                         backgroundColor: '#fff',
                     },
-                }} className='w-100 text-dark mt-5' variant="text">That'll be all. Let's dive in!</Button>
+                }} className='w-100 mt-5 fontP' variant="text" style={{color: '#756DE9', fontWeight: '600'}}>That'll be all. Let's dive in!</Button>
 
             </Container>
         </section>

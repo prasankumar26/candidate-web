@@ -18,6 +18,18 @@ code {
 body{
   overflow-x: hidden !important;
 }
+.font-P{
+  font-family: 'Poppins', sans-serif !important;
+}
+.font-R{
+  font-family: 'Poppins', sans-serif !important;
+}
+.font-S{
+  font-family: sans-serif !important;
+}
+.font-16{
+  font-size: 16px !important;
+}
 *{
   margin: 0px;
   padding: 0px;
