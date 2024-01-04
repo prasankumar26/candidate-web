@@ -71,7 +71,7 @@ const VideoQuestions = () => {
                                
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={8} className='pt-5 mt-5'>
+                        <Grid item xs={12} md={8} className='pt-5 mt-5 px-5'>
                             <ProgressBar />
 
                             <Stack direction="row" className='mt-4'> <NavigateBeforeIcon /> Back </Stack>

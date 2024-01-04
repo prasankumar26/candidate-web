@@ -24,6 +24,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
+import ButtonBlue from '../../components/ButtonBlue';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -137,7 +138,7 @@ const Skillset = () => {
                                 <h2 className='text-white ms-3 position-relative px-5' style={{ zIndex: '999' }}>are proud of</h2>
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4'>
+                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4 px-5'>
                             <ProgressBar />
                             <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
                             <Box className="mt-4">
@@ -213,11 +214,8 @@ const Skillset = () => {
                                 </StyledFormControl>
                             </Box>
 
-                            <Button onClick={() => navigate('/experience')} sx={{
-                                backgroundColor: '#756DE9', textTransform: 'capitalize', width: 'fit-content', padding: '10px 0px', borderRadius: '99px', '&:hover': {
-                                    backgroundColor: '#756DE9',
-                                },
-                            }} className='w-100 text-white mt-4 mb-5 px-5' variant="text"> Next up Experience </Button>
+                            <ButtonBlue title="Next up Experience" link="/experience" />
+
                         </Grid>
                     </Grid>
                 </div>

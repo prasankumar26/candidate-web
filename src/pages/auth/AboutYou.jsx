@@ -2,24 +2,16 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { useState } from 'react';
 import Radio from '@mui/material/Radio';
-import Button from '@mui/material/Button';
-import { useNavigate } from 'react-router-dom';
 import ProgressBar from '../../components/ProgressBar';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-
+import ButtonBlue from '../../components/ButtonBlue';
+import Box from '@mui/material/Box';
 
 const CreateProfile = () => {
-    const navigate = useNavigate()
     const [selectedValue, setSelectedValue] = useState('a');
-
-
-
     const handleChange = (event) => {
         setSelectedValue(event.target.value);
     };
-
-
     return (
         <section className='position-relative' style={{ height: '100vh' }}>
             <img src="/images/ellipse.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '300px' }} />
@@ -77,13 +69,8 @@ const CreateProfile = () => {
                                 </Stack>
                             </Box>
 
-                            <Box className="p-3">
-                                <Button variant="contained" onClick={() => navigate('/hobbies')} size='large' className='px-5 next-btn mt-2' sx={{
-                                    borderRadius: '99px', backgroundColor: '#756DE9', fontSize: '16px', textTransform: 'capitalize', '&:hover': {
-                                        backgroundColor: '#756DE9',
-                                    },
-                                }}>Next</Button>
-                            </Box>
+                           <ButtonBlue title="Next" link="/hobbies" center />
+                            
                         </Stack>
                     </Grid>
                 </Grid>

@@ -10,8 +10,6 @@ import Stack from '@mui/material/Stack';
 import TopHeading from '../../components/TopHeading';
 import { CssSelectTextField } from '../../components/CssTextfield';
 
-
-
 const YouWantTo = () => {
     const navigate = useNavigate()
     const [city, setCity] = useState('');
@@ -21,7 +19,7 @@ const YouWantTo = () => {
     };
 
     return (
-        <section className='signup-bg' style={{ height: '97vh' }}>
+        <section className='signup-bg' style={{ height: '97vh', overflowX: 'hidden' }}>
             <img src="/images/signup-one.png" alt="" className="img-fluid" style={{ position: 'absolute', width: '100px' }} />
             <img src="/images/signup-six.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '10%', right: '0', width: '100px' }} />
             <span className='orange-round'></span>
@@ -80,7 +78,6 @@ const YouWantTo = () => {
                             backgroundColor: '#756DE9',
                         },
                     }} className='w-100 text-white font-16' variant="text"><b>Next up Name</b></Button>
-
                 </Box>
             </Container>
         </section>

@@ -17,6 +17,7 @@ import ProgressBar from '../../components/ProgressBar';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NormalHeading from '../../components/NormalHeading';
 import SearchTextBox from '../../components/SearchTextBox';
+import ButtonBlue from '../../components/ButtonBlue';
 
 const CssTextField = styled(TextField)(({ theme }) => ({
     '& .MuiOutlinedInput-root': {
@@ -107,7 +108,7 @@ const Degree = () => {
                                 <h2 className='text-white ms-3 mt-5 position-relative' style={{ zIndex: '999' }}>Show it off!</h2>
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4'>
+                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4 px-5'>
                             <ProgressBar />
                             <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
 
@@ -228,12 +229,8 @@ const Degree = () => {
                                 <SearchTextBox />
                             </Box>
 
-                            <Button onClick={() => navigate('/skillset')} sx={{
-                                backgroundColor: '#756DE9', textTransform: 'capitalize', width: 'fit-content', 
-                                padding: '15px, 40px, 15px, 40px', borderRadius: '99px', '&:hover': {
-                                    backgroundColor: '#756DE9',
-                                },
-                            }} className='w-100 text-white mt-4 mb-5 px-5' variant="text"> Next up skill-set </Button>
+                            <ButtonBlue title="Next up skill-set" link="/skillset" />
+                            
                         </Grid>
                     </Grid>
                 </div>

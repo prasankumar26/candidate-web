@@ -16,6 +16,7 @@ import { useNavigate } from 'react-router-dom';
 import TopHeading from '../../components/TopHeading';
 import ProgressBar from '../../components/ProgressBar';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import ButtonBlue from '../../components/ButtonBlue';
 
 function LinearProgressWithLabel(props) {
     return (
@@ -83,9 +84,8 @@ const Hobbies = () => {
                             <h2 className='text-white ms-3 mt-5 pt-5 position-relative px-5' style={{ zIndex: '999' }}>Do you have any skills or hobbies?</h2>
                         </div>
                     </Grid>
-                    <Grid item xs={12} md={8} className='pt-5 mt-5'>
+                    <Grid item xs={12} md={8} className='pt-5 mt-5 px-5'>
                       <ProgressBar />
-
                       <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
 
                         <Box className="mt-3">
@@ -140,12 +140,8 @@ const Hobbies = () => {
                                 })
                             }
                         </Box>
-
-                        <Button onClick={() => navigate('/dob')} sx={{
-                            backgroundColor: '#756DE9', width: 'fit-content', fontSize: '16px', padding: '15px 0px', borderRadius: '99px', '&:hover': {
-                                backgroundColor: '#756DE9',
-                            },
-                        }} className='w-100 text-white mt-2 mb-5 px-5' variant="text"> Continue </Button>
+                        
+                        <ButtonBlue  title="Continue" link="/dob" />
 
                     </Grid>
                 </Grid>

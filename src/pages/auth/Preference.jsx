@@ -11,6 +11,7 @@ import ProgressBar from '../../components/ProgressBar';
 import NormalHeading from '../../components/NormalHeading';
 import { CssTextField } from '../../components/CssTextfield';
 import SearchTextBox from '../../components/SearchTextBox';
+import ButtonBlue from '../../components/ButtonBlue';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
@@ -36,7 +37,7 @@ const Preference = () => {
                                 </h2>
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4'>
+                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4 px-5'>
                             <ProgressBar />
                             <Box className="mt-3">
                                 <Grid container spacing={2}>
@@ -198,11 +199,8 @@ const Preference = () => {
                                 </Grid>
                             </Box>
 
-                            <Button onClick={() => navigate('/video-questions')} sx={{
-                                backgroundColor: '#756DE9', textTransform: 'capitalize', width: 'fit-content', padding: '15px 0px', borderRadius: '99px', '&:hover': {
-                                    backgroundColor: '#756DE9',
-                                },
-                            }} className='w-100 text-white mt-4 mb-5 px-5' variant="text"> Next Up Video CV </Button>
+                            <ButtonBlue title="Next Up Video CV " link="/video-questions" />
+
                         </Grid>
                     </Grid>
                 </div>

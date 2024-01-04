@@ -19,6 +19,7 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NormalHeading from '../../components/NormalHeading';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
+import ButtonBlue from '../../components/ButtonBlue';
 
 
 const ITEM_HEIGHT = 48;
@@ -75,7 +76,7 @@ const DateOfBirth = () => {
             display: 'none',
         },
         m: 1,
-        width: '50%',
+        width: '75%',
         boxShadow: `inset 0 0 11px 2px #dfd9d9`,
         borderRadius: '99px',
         '&:focus-within': {
@@ -101,7 +102,7 @@ const DateOfBirth = () => {
                                     </h2>
                                 </div>
                             </Grid>
-                            <Grid item xs={12} md={8} className='pt-5 mt-5'>
+                            <Grid item xs={12} md={8} className='pt-5 mt-5 px-5'>
                                 <ProgressBar />
 
                                 <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
@@ -109,7 +110,7 @@ const DateOfBirth = () => {
                                 <Box className="mt-3">
                                     <NormalHeading title="Date Of Birth" />
 
-                                    <Stack direction="row">
+                                    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
                                         <FormControl>
                                             <InputLabel id="demo-simple-select-label">Date</InputLabel>
                                             <Select
@@ -164,7 +165,7 @@ const DateOfBirth = () => {
                                     </Stack>
                                 </Box>
 
-                                <Box className="mt-4 mb-5">
+                                <Box className="mt-4 mb-2">
                                     <NormalHeading title="Language Known" />
                                     <StyledFormControl>
                                         <InputLabel id="demo-multiple-checkbox-label">Search Language</InputLabel>
@@ -198,11 +199,7 @@ const DateOfBirth = () => {
                                     </StyledFormControl>
                                 </Box>
 
-                                <Button onClick={() => navigate('/degree')} sx={{
-                                    backgroundColor: '#756DE9', width: 'fit-content', padding: '15px 0px', borderRadius: '99px', '&:hover': {
-                                        backgroundColor: '#756DE9',
-                                    },
-                                }} className='w-100 text-white mt-2 mb-5 px-5' variant="text"> Next </Button>
+                                <ButtonBlue title="Next" link="/degree" />
 
                             </Grid>
                         </Grid>

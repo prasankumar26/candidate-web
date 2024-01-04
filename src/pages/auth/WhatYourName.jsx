@@ -86,10 +86,10 @@ const WhatYourName = () => {
                 </Stack>
 
                 <Button onClick={()=> navigate('/opportunities')} sx={{
-                    backgroundColor: '#fff', padding: '15px 0px', borderRadius: '99px', '&:hover': {
-                        backgroundColor: '#fff',
+                    backgroundColor: '#fff', padding: '15px 0px', borderRadius: '99px', boxShadow: `0px 0px 11px 2px #4B44D4`, '&:hover': {
+                        backgroundColor: '#fff', 
                     },
-                }} className='w-100 mt-5 fontP' variant="text" style={{color: '#756DE9', fontSize: '16px', fontWeight: '600', textTransform: 'capitalize'}}>That'll be all. Let's dive in!</Button>
+                }} className='w-100 mt-5 fontP mb-2' variant="text" style={{color: '#756DE9', fontSize: '16px', fontWeight: '600', textTransform: 'capitalize'}}>That'll be all. Let's dive in!</Button>
 
             </Container>
         </section>

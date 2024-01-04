@@ -17,6 +17,7 @@ import ProgressBar from '../../components/ProgressBar';
 import NormalHeading from '../../components/NormalHeading';
 import Checkbox from '@mui/material/Checkbox';
 import SearchTextBox from '../../components/SearchTextBox';
+import ButtonBlue from '../../components/ButtonBlue';
 
 const fileTypes = ["JPG", "PNG", "GIF"];
 
@@ -68,7 +69,7 @@ const Experience = () => {
                 <h2 className='text-white ms-3 position-relative px-5' style={{ zIndex: '999' }}>experiences</h2>
               </div>
             </Grid>
-            <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4'>
+            <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4 px-5'>
               <ProgressBar />
 
               <Box className="mt-4">
@@ -204,13 +205,8 @@ const Experience = () => {
                 Add More Certificate
               </Box>
 
+              <ButtonBlue title="Confirm" link="/preference" />
 
-              <Button onClick={() => navigate('/preference')} sx={{
-                backgroundColor: '#756DE9', fontSize: '16px', textTransform: 'capitalize', width: 'fit-content', 
-                padding: '15px, 40px, 15px, 40px', borderRadius: '99px', '&:hover': {
-                  backgroundColor: '#756DE9',
-                },
-              }} className='w-100 text-white mt-4 mb-5 px-5' variant="text"> Confirm </Button>
             </Grid>
           </Grid>
         </div>
