@@ -116,14 +116,14 @@ const VideoQuestions = () => {
                             <Box className="mt-1">
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>
-                                        <Button onClick={() => navigate('/confirm')} sx={{
+                                        <Button onClick={() => navigate('/video')} sx={{
                                             backgroundColor: '#756DE9', textTransform: 'capitalize', width: 'fit-content', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                                                 backgroundColor: '#756DE9',
                                             },
                                         }} className='w-100 text-white mt-4 mb-0 px-5' variant="text"> Proceed to Practice Video </Button>
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <Button onClick={() => navigate('/confirm')} sx={{
+                                        <Button onClick={() => navigate('/video')} sx={{
                                             backgroundColor: '#fff', 
                                             boxShadow: '0px 2px 10px 0px #2222221A',
                                             textTransform: 'capitalize', width: 'fit-content', padding: '15px 0px', borderRadius: '99px', '&:hover': {

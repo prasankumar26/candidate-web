@@ -15,6 +15,9 @@ import Skillset from './pages/auth/Skillset';
 import Experience from './pages/auth/Experience';
 import Preference from './pages/auth/Preference';
 import VideoQuestions from './pages/auth/VideoQuestions';
+import VideoContainer from './pages/videoplayer/Video';
+import VideoOne from './pages/videoplayer/VideoOne';
+import VideoSequence from './pages/videoplayer/VideoOne';
 
 function App() {
   return (
@@ -33,7 +36,11 @@ function App() {
           <Route path="skillset" element={<Skillset />} />
           <Route path="experience" element={<Experience />} />
           <Route path="preference" element={<Preference />} />
+
           <Route path="video-questions" element={<VideoQuestions />} />
+          <Route path="video" element={<VideoContainer />} />
+          <Route path="video-one" element={<VideoSequence />} />
+
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

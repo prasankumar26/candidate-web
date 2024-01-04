@@ -44,7 +44,7 @@ const Navbar = () => {
         <AppBar position="sticky" sx={{ zIndex: '999' }}>
             <Toolbar>
                 <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ width: '100%' }} className='nav-desktop'>
-                    <IconButton size="large" edge="start" color="inherit" aria-label="logo">
+                    <IconButton size="large" edge="start" color="inherit" aria-label="logo" style={{fontSize: '18px'}}>
                         CATALYST
                     </IconButton>
 
