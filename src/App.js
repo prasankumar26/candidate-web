@@ -16,8 +16,9 @@ import Experience from './pages/auth/Experience';
 import Preference from './pages/auth/Preference';
 import VideoQuestions from './pages/auth/VideoQuestions';
 import VideoContainer from './pages/videoplayer/Video';
-import VideoOne from './pages/videoplayer/VideoOne';
 import VideoSequence from './pages/videoplayer/VideoOne';
+import BeforeStartRecording from './pages/videoplayer/BeforeStartRecording';
+import VideoCvMandatory from './pages/videoplayer/VideoCvMandatory';
 
 function App() {
   return (
@@ -40,6 +41,8 @@ function App() {
           <Route path="video-questions" element={<VideoQuestions />} />
           <Route path="video" element={<VideoContainer />} />
           <Route path="video-one" element={<VideoSequence />} />
+          <Route path="before-start-recording" element={<BeforeStartRecording />} />
+          <Route path="video-cv" element={<VideoCvMandatory />} />
 
           <Route path="*" element={<NoPage />} />
         </Route>

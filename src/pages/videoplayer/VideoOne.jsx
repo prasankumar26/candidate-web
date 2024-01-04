@@ -9,6 +9,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate } from 'react-router-dom';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     '& .MuiDialogContent-root': {
@@ -29,6 +30,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 const VideoNine = () => {
     const [open, setOpen] = React.useState(false);
+    const navigate = useNavigate()
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -106,9 +108,9 @@ const VideoNine = () => {
                     <h2 className='text-white text-center' style={{ fontSize: '18px' }}>Video CV is mandatory! <br /> Your profile will be on hold till you <br /> add you Video CV</h2>
                     <Stack direction="column" justifyContent="center" alignItems="center">
                         <img src="/images/video/video-girl.png" alt="" className="img-fluid mt-5" style={{ width: '80px' }} />
-                        <Button sx={{ textTransform: 'capitalize', fontSize: '16px', border: '1px dashed #fff', width: 'fit-content', cursor: 'pointer', backgroundColor: 'transparant', color: '#fff' }} 
+                        <Button onClick={() => navigate('/before-start-recording')} sx={{ textTransform: 'capitalize', fontSize: '16px', border: '1px dashed #fff', width: 'fit-content', cursor: 'pointer', backgroundColor: 'transparant', color: '#fff' }} 
                         className='px-3 py-2 me-2 mb-3 roundedone mt-2'>
-                            Life changing experiences </Button>
+                            Contine with video CV </Button>
                             <a href="#" onClick={handleClose} className='text-white' style={{ fontSize: '16px' }}>Come back to it later</a>
                     </Stack>
                 </DialogContent>
@@ -314,7 +316,7 @@ const VideoOne = () => {
 
 
 const VideoSequence = () => {
-    const [currentComponent, setCurrentComponent] = useState(9);
+    const [currentComponent, setCurrentComponent] = useState(1);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
