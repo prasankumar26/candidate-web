@@ -25,12 +25,13 @@
 }
 .nav-link{
     text-decoration: none;
+    font-family: 'Poppins', sans-serif !important;
 }
 .nav-links .active{
      background-color: #fff;
      padding: 10px;
      border-radius: 99px;
-     color: #095ef0 !important;
+     color: #756DE9 !important;
      font-weight: 500;
 }
 .nav-link-mobile{
@@ -106,7 +107,13 @@
     top: 90%;
     right: 7%;
 }
-
+.drop_area_box{
+    width: 100% !important;
+    border: 1px dashed #C5C3E7;
+    border-radius: 20px;
+    padding: 40px 0px;
+    cursor: pointer;
+}
 @media only screen and (max-width: 991px) {
     .nav-desktop{
         display: none !important;

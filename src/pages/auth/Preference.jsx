@@ -1,92 +1,25 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Stack from '@mui/material/Stack';
-import PropTypes from 'prop-types';
-import LinearProgress from '@mui/material/LinearProgress';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import Container from '@mui/material/Container';
-import AsyncSelect from 'react-select/async';
-import { colourOptions } from '../../data';
-import TextField from '@mui/material/TextField';
-import { styled } from '@mui/material/styles'
 import React from "react";
 import Switch from '@mui/material/Switch';
+import TopHeading from '../../components/TopHeading';
+import ProgressBar from '../../components/ProgressBar';
+import NormalHeading from '../../components/NormalHeading';
+import { CssTextField } from '../../components/CssTextfield';
+import SearchTextBox from '../../components/SearchTextBox';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
-const CssTextField = styled(TextField)(({ theme }) => ({
-    '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-            border: 'none',
-            boxShadow: `0 0 10px #4b44d459`,
-        },
-        '&:hover fieldset': {
-            border: 'none',
-        },
-        '&.Mui-focused fieldset': {
-            border: 'none',
-        },
-    },
-    '& input': {
-        border: 'none',
-        borderRadius: '99px',
-    },
-}));
-
-const filterColors = (inputValue) => {
-    return colourOptions.filter((i) =>
-        i.label.toLowerCase().includes(inputValue.toLowerCase())
-    );
-};
-
-const promiseOptions = (inputValue) =>
-    new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(filterColors(inputValue));
-        }, 1000);
-    });
-
-
-function LinearProgressWithLabel(props) {
-    return (
-        <Box sx={{ width: '80%', display: 'flex', alignItems: 'center' }}>
-            <Box sx={{ width: '60%', mr: 1 }}>
-                <LinearProgress variant="determinate" {...props} />
-            </Box>
-            <Box sx={{ minWidth: 35 }}>
-                <Typography variant="body2" color="text.secondary">{`${Math.round(
-                    props.value,
-                )}%`} <span style={{ fontSize: '13px' }}> <b>Up Next: Video CV</b> </span> </Typography>
-            </Box>
-        </Box>
-    );
-}
-
-LinearProgressWithLabel.propTypes = {
-    value: PropTypes.number.isRequired,
-};
-
-
 const Preference = () => {
     const navigate = useNavigate()
-    const [progress, setProgress] = useState(10);
     const [file, setFile] = useState(null);
     const handleChange = (file) => {
         setFile(file);
     };
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
-        }, 800);
-        return () => {
-            clearInterval(timer);
-        };
-    }, []);
-
 
     return (
         <section className='position-relative' style={{ height: '106vh' }}>
@@ -97,26 +30,18 @@ const Preference = () => {
                             <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
                             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
                             <div className="mt-4">
-                                <p className="text-start text-white ms-3" style={{ fontSize: '20px', padding: '20px 0px' }}>CATALYST</p>
-                                <h2 className='text-white ms-3 mt-5 pt-5 position-relative' style={{ zIndex: '999' }}>
+                               <TopHeading textstart />
+                                <h2 className='text-white ms-3 mt-5 pt-5 position-relative px-5' style={{ zIndex: '999' }}>
                                     Tell us your Preferences
                                 </h2>
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={8} className='pt-5 mt-5'>
-                            <Box sx={{ width: '100%' }}>
-                                <Stack direction="row" justifyContent="space-between" sx={{ flex: 1 }}>
-                                    <h4 style={{ textTransform: 'uppercase' }}>About You</h4>
-                                    <LinearProgressWithLabel sx={{ width: '100%' }} value={progress} />
-                                </Stack>
-                                <p className='mt-3'>1 step out of 2</p>
-                                <p className='mt-5'> {`< Back`} </p>
-                            </Box>
-
+                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4'>
+                            <ProgressBar />
                             <Box className="mt-3">
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>
-                                        <p className='mb-3 text-muted'> <b>Work Experience</b> </p>
+                                        <NormalHeading title="Work Experience" />
                                         <CssTextField
                                             id="outlined-number"
                                             placeholder="Duration"
@@ -132,7 +57,7 @@ const Preference = () => {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <p className='mb-3 text-muted'> <b>Salary</b> </p>
+                                    <NormalHeading title="Salary" />
                                         <CssTextField
                                             id="outlined-number"
                                             placeholder="Range"
@@ -151,7 +76,7 @@ const Preference = () => {
                             </Box>
 
                             <Box className="mt-4">
-                                <p className='mb-3 text-muted'> <b>Industry</b> </p>
+                            <NormalHeading title="Industry" />
                                 <CssTextField
                                     id="outlined-basic"
                                     placeholder='Industry'
@@ -167,7 +92,7 @@ const Preference = () => {
                             </Box>
 
                             <Box className="mt-4">
-                                <p className='mb-3 text-muted'> <b>Job Type</b> </p>
+                            <NormalHeading title="Job Type" />
                                 <CssTextField
                                     id="outlined-basic"
                                     placeholder='Job Type'
@@ -183,7 +108,7 @@ const Preference = () => {
                             </Box>
 
                             <Box className="mt-4">
-                                <p className='mb-3 text-muted'> <b>Preferred City</b> </p>
+                            <NormalHeading title="Preferred City" />
                                 <CssTextField
                                     id="outlined-basic"
                                     placeholder='Preferred City'
@@ -200,31 +125,18 @@ const Preference = () => {
 
                             <Box className="mt-4">
                                 <Stack direction="row" justifyContent="space-between">
-                                    <p className='mb-3 text-muted'> <b>Functional Area</b> </p>
+                                <NormalHeading title="Functional Area" />
                                 </Stack>
-                                <AsyncSelect
-                                    isMulti
-                                    cacheOptions
-                                    defaultOptions
-                                    loadOptions={promiseOptions}
-                                    styles={{
-                                        control: (provided, state) => ({
-                                            ...provided,
-                                            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                                            borderRadius: '99px',
-                                            padding: '6px 0px'
-                                        }),
-                                    }}
-                                />
+                                <SearchTextBox />
                             </Box>
 
                             <Box className="mt-3">
-                                <p className='mb-3 text-muted'>Type of the job</p>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                            <NormalHeading title="Type of the job" />
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
                                     Full Time </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
                                     Part Time </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
                                     Internship </Button>
                             </Box>
 
@@ -233,22 +145,22 @@ const Preference = () => {
                             </Box>
 
                             <Box className="mt-3">
-                                <p className='mb-3 text-muted'> <b>Company Size</b> </p>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                            <NormalHeading title="Company Size" />
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
                                     {`< 25 Employees`} </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
                                     {`< 25 Employees`} </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
                                     {`< 50 Employees`} </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
                                     {`< 50 Employees`} </Button>
                             </Box>
 
                             <Box className="mt-5">
-                                <p className='mb-3 text-muted'> <b>Company Culture</b> </p>
+                            <NormalHeading title="Company Culture" />
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>
-                                        <Box sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedten' le>
+                                        <Box sx={{fontFamily: 'sans-serif', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-4 me-2 roundedten' le>
                                             <p className='mb-3' style={{ color: '#756DE9' }}> Horizontal Corporate Culture </p>
                                             <p className='mb-2'>Teammates discuss new product ideas in the break room</p>
                                             <p className='mb-2'> Everybody does a little bit of everything</p>
@@ -257,7 +169,7 @@ const Preference = () => {
                                         </Box>
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <Box sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedten' le>
+                                        <Box sx={{fontFamily: 'sans-serif', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-4 me-2 roundedten' le>
                                             <p className='mb-3' style={{ color: '#756DE9' }}> Horizontal Corporate Culture </p>
                                             <p className='mb-2'>Teammates discuss new product ideas in the break room</p>
                                             <p className='mb-2'> Everybody does a little bit of everything</p>
@@ -266,7 +178,7 @@ const Preference = () => {
                                         </Box>
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <Box sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedten' le>
+                                        <Box sx={{fontFamily: 'sans-serif', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-4 me-2 roundedten' le>
                                             <p className='mb-3' style={{ color: '#756DE9' }}> Horizontal Corporate Culture </p>
                                             <p className='mb-2'>Teammates discuss new product ideas in the break room</p>
                                             <p className='mb-2'> Everybody does a little bit of everything</p>
@@ -275,7 +187,7 @@ const Preference = () => {
                                         </Box>
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <Box sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedten' le>
+                                        <Box sx={{fontFamily: 'sans-serif', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-4 me-2 roundedten' le>
                                             <p className='mb-3' style={{ color: '#756DE9' }}> Horizontal Corporate Culture </p>
                                             <p className='mb-2'>Teammates discuss new product ideas in the break room</p>
                                             <p className='mb-2'> Everybody does a little bit of everything</p>

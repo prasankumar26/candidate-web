@@ -7,19 +7,22 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import Container from '@mui/material/Container';
 import AsyncSelect from 'react-select/async';
 import { colourOptions } from '../../data';
 import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles'
-
+import TopHeading from '../../components/TopHeading';
+import ProgressBar from '../../components/ProgressBar';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import NormalHeading from '../../components/NormalHeading';
+import SearchTextBox from '../../components/SearchTextBox';
 
 const CssTextField = styled(TextField)(({ theme }) => ({
     '& .MuiOutlinedInput-root': {
         '& fieldset': {
             border: 'none',
-            boxShadow: `0 0 10px #4b44d459`,
+            boxShadow: `inset 0 0 11px 2px rgba(75, 68, 212, 0.08)`,
         },
         '&:hover fieldset': {
             border: 'none',
@@ -97,51 +100,33 @@ const Degree = () => {
                             <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
                             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
                             <div className="mt-4">
-                                <p className="text-start text-white ms-3" style={{ fontSize: '20px', padding: '20px 0px' }}>CATALYST</p>
+                                <TopHeading textstart />
                                 <h2 className='text-white ms-3 mt-5 pt-5 position-relative' style={{ zIndex: '999' }}>
                                     What is your latest education qualification?
                                 </h2>
                                 <h2 className='text-white ms-3 mt-5 position-relative' style={{ zIndex: '999' }}>Show it off!</h2>
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={8} className='pt-5 mt-5'>
-                            <Box sx={{ width: '100%' }}>
-                                <Stack direction="row" justifyContent="space-between" sx={{ flex: 1 }}>
-                                    <h4 style={{ textTransform: 'uppercase' }}>About You</h4>
-                                    <LinearProgressWithLabel sx={{ width: '100%' }} value={progress} />
-                                </Stack>
-                                <p className='mt-3'>1 step out of 2</p>
-                                <p className='mt-5'> {`< Back`} </p>
-                            </Box>
+                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4'>
+                            <ProgressBar />
+                            <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
 
                             <Box className="mt-3">
-                                <p className='mb-3 text-muted'>What is your latest education qualification?</p>
-                                <Button variant='contained' sx={{ width: 'fit-content', cursor: 'pointer', backgroundColor: '#756DE9' }} className='px-3 py-2 me-2 roundedone'>
+                            <NormalHeading title="What is your latest education qualification?" />
+
+                                <Button variant='contained' sx={{ textTransform: 'capitalize', width: 'fit-content', cursor: 'pointer', backgroundColor: '#756DE9' }} className='px-3 py-2 me-2 roundedone'>
                                     Bachelor Degree </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
                                     Masters Degree </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
                                     Diploma Holder </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
                                     Other </Button>
                             </Box>
 
                             <Box className="mt-4">
-                                <p className='mb-3 text-muted'> <b>Course Name</b> </p>
-                                <AsyncSelect
-                                    isMulti
-                                    cacheOptions
-                                    defaultOptions
-                                    loadOptions={promiseOptions}
-                                    styles={{
-                                        control: (provided, state) => ({
-                                            ...provided,
-                                            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                                            borderRadius: '99px',
-                                            padding: '6px 0px'
-                                        }),
-                                    }}
-                                />
+                            <NormalHeading title="Course Name" />
+                                <SearchTextBox />
                             </Box>
 
                             <Box className="mt-3">
@@ -149,8 +134,9 @@ const Degree = () => {
                             </Box>
 
                             <Box className="mt-4">
-                                <p className='mb-3 text-muted'> <b>Which college/university did you get your degree from?</b> </p>
-                                <AsyncSelect
+                            <NormalHeading title="Which college/university did you get your degree from?" />
+                            <SearchTextBox />
+                                {/* <AsyncSelect
                                     isMulti
                                     cacheOptions
                                     defaultOptions
@@ -158,22 +144,22 @@ const Degree = () => {
                                     styles={{
                                         control: (provided, state) => ({
                                             ...provided,
-                                            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+                                            boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.1)',
                                             borderRadius: '99px',
                                             padding: '6px 0px'
                                         }),
                                     }}
-                                />
+                                /> */}
                             </Box>
 
                             <Box className="mt-3">
                                 <Stack direction="row" justifyContent="space-between">
-                                    <p className='mb-3 text-muted'> <b>Course Specialization</b> </p>
+                                <NormalHeading title="Course Specialization" />
                                     <p className='mb-3 text-muted'>Optional</p>
                                 </Stack>
                                 <CssTextField
                                     id="outlined-number"
-                                    placeholder="N/A"
+                                    placeholder="NA"
                                     variant="outlined"
                                     className='w-100'
                                     InputProps={{
@@ -188,7 +174,7 @@ const Degree = () => {
                             <Box className="mt-3">
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>
-                                        <p className='mb-3 text-muted'> <b>Year You Graduated</b> </p>
+                                    <NormalHeading title="Year You Graduated" />
                                         <CssTextField
                                             id="outlined-number"
                                             placeholder="2020"
@@ -204,7 +190,7 @@ const Degree = () => {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <p className='mb-3 text-muted'> <b>Percentage/Grade</b> </p>
+                                    <NormalHeading title="Percentage/Grade" />
                                         <CssTextField
                                             id="outlined-number"
                                             placeholder="72%"
@@ -223,47 +209,31 @@ const Degree = () => {
                             </Box>
 
                             <Box className="mt-3">
-                                <p className='mb-3 text-muted'> <b>Which board have you completed schooling from?</b> </p>
-                                <Button variant='contained' sx={{ width: 'fit-content', cursor: 'pointer', backgroundColor: '#756DE9' }} className='px-3 py-2 me-2 roundedone mb-3'>
-                                    Secondary School Certificate (SSC) </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone mb-3'>
+                            <NormalHeading title="Which board have you completed schooling from?" />
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize', fontSize: '18px' }} className='px-3 py-2 me-2 roundedone mb-2'>
+                                Secondary School Certificate (SSC) </Button>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize', fontSize: '18px' }} className='px-3 py-2 me-2 roundedone mb-2'>
                                     Indian Certificate of Secondary Education (ICSE) </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone mb-3'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize', fontSize: '18px' }} className='px-3 py-2 me-2 roundedone mb-2'>
                                     Central Board of Secondary Education (CBSE) </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone mb-3'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize', fontSize: '18px' }} className='px-3 py-2 me-2 roundedone mb-2'>
                                     IC School </Button>
                             </Box>
 
-
-
                             <Box className="mt-4">
                                 <Stack direction="row" justifyContent="space-between">
-                                    <p className='mb-3 text-muted'> <b>Where have you received your schooling?</b> </p>
+                                <NormalHeading title="Where have you received your schooling?" />
                                     <p className='mb-3 text-muted'>Optional</p>
                                 </Stack>
-                                <AsyncSelect
-                                    isMulti
-                                    cacheOptions
-                                    defaultOptions
-                                    loadOptions={promiseOptions}
-                                    styles={{
-                                        control: (provided, state) => ({
-                                            ...provided,
-                                            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                                            borderRadius: '99px',
-                                            padding: '6px 0px'
-                                        }),
-                                    }}
-                                />
+                                <SearchTextBox />
                             </Box>
 
-
-
                             <Button onClick={() => navigate('/skillset')} sx={{
-                                backgroundColor: '#756DE9', textTransform: 'capitalize', width: 'fit-content', padding: '15px 0px', borderRadius: '99px', '&:hover': {
+                                backgroundColor: '#756DE9', textTransform: 'capitalize', width: 'fit-content', 
+                                padding: '15px, 40px, 15px, 40px', borderRadius: '99px', '&:hover': {
                                     backgroundColor: '#756DE9',
                                 },
-                            }} className='w-100 text-white mt-2 mb-5 px-5' variant="text"> Next up skill-set </Button>
+                            }} className='w-100 text-white mt-4 mb-5 px-5' variant="text"> Next up skill-set </Button>
                         </Grid>
                     </Grid>
                 </div>

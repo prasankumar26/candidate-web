@@ -51,7 +51,7 @@ const Navbar = () => {
                     <div className='nav-links'>
                         <Stack spacing={4} direction="row" justifyContent="between" alignItems="center">
                             <Link className='text-muted nav-link'>Browse Jobs</Link>
-                            <Link className='text-muted nav-link active'>Catalyst Profile</Link>
+                            <Link className='text-muted nav-link active' style={{fontSize: '16px'}}>Catalyst Profile</Link>
                             <Link className='text-muted nav-link'>Job Activities</Link>
                         </Stack>
                     </div>

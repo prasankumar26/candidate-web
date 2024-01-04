@@ -12,6 +12,8 @@ import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import TopHeading from '../../components/TopHeading';
+import { styled } from '@mui/system';
 
 const label = { inputProps: { 'aria-label': 'Size switch demo' } };
 const ITEM_HEIGHT = 48;
@@ -48,6 +50,21 @@ function getStyles(name, personName, theme) {
 }
 
 
+const StyledFormControl = styled(FormControl)({
+    m: 1,
+    width: '100%',
+});
+
+const CustomSelect = styled(Select)(({ theme }) => ({
+    width: '100%',
+    borderRadius: '99px',
+    boxShadow: 'inset 0 0 11px 2px #E8430A', // Inner shadow
+    '&:focus': {
+        borderRadius: '99px',
+        boxShadow: 'inset 0 0 11px 2px #E8430A', // Inner shadow on focus
+    },
+}));
+
 const Opportunities = () => {
     const navigate = useNavigate()
     const theme = useTheme();
@@ -78,18 +95,18 @@ const Opportunities = () => {
         <section className='opportunities-bg' style={{ height: '97vh' }}>
             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '10%', width: '300px' }} />
             <Container maxWidth="sm" sx={{ position: 'relative', zIndex: '99' }}>
-                <p className="text-center text-white" style={{ fontSize: '20px', padding: '20px 0px' }}>CATALYST</p>
+                <TopHeading />
 
                 <div className="text-center mt-5 mb-3">
-                    <p className="text-white" style={{ fontSize: '20px' }}>
-                        <b>What kind of opportunities  are you looking for?</b>
-                    </p>
+                    <h6 className="text-white" style={{ fontSize: '22px' }}>
+                        What kind of opportunities  are you looking for?
+                    </h6>
                 </div>
 
                 <div className="mx-auto text-center w-100">
-                    <FormControl sx={{ m: 1, width: '100%' }}>
+                    <StyledFormControl>
                         <InputLabel id="demo-multiple-chip-label" style={{ color: '#dad5d5' }}>Browse jobs</InputLabel>
-                        <Select
+                        <CustomSelect
                             labelId="demo-multiple-chip-label"
                             id="demo-multiple-chip"
                             multiple
@@ -104,15 +121,6 @@ const Opportunities = () => {
                                 </Box>
                             )}
                             MenuProps={MenuProps}
-                            sx={{
-                                width: '100%',
-                                borderRadius: '99px',
-                                border: '2px solid white',
-                                '&:focus': {
-                                    borderRadius: '99px',
-                                    border: '2px solid white',
-                                },
-                            }}
                         >
                             {names.map((name) => (
                                 <MenuItem
@@ -123,8 +131,8 @@ const Opportunities = () => {
                                     {name}
                                 </MenuItem>
                             ))}
-                        </Select>
-                    </FormControl>
+                        </CustomSelect>
+                    </StyledFormControl>
                 </div>
 
                 <Stack direction="row" justifyContent="space-between" alignItems="center" className='mt-4 mb-4'>
@@ -133,9 +141,9 @@ const Opportunities = () => {
                 </Stack>
 
                 <div className="mx-auto text-center w-100">
-                    <FormControl sx={{ m: 1, width: '100%' }}>
+                    <StyledFormControl>
                         <InputLabel id="demo-multiple-chip-label" style={{ color: '#dad5d5' }}>Select Industry</InputLabel>
-                        <Select
+                        <CustomSelect
                             labelId="demo-multiple-chip-label"
                             id="demo-multiple-chip"
                             multiple
@@ -150,15 +158,6 @@ const Opportunities = () => {
                                 </Box>
                             )}
                             MenuProps={MenuProps}
-                            sx={{
-                                width: '100%',
-                                borderRadius: '99px',
-                                border: '2px solid white',
-                                '&:focus': {
-                                    borderRadius: '99px',
-                                    border: '2px solid white',
-                                },
-                            }}
                         >
                             {names.map((name) => (
                                 <MenuItem
@@ -169,17 +168,15 @@ const Opportunities = () => {
                                     {name}
                                 </MenuItem>
                             ))}
-                        </Select>
-                    </FormControl>
+                        </CustomSelect>
+                    </StyledFormControl>
                 </div>
 
                 <Button onClick={() => navigate('/helpyou')} sx={{
-                    backgroundColor: '#fff', padding: '15px 0px', borderRadius: '99px', '&:hover': {
-                        backgroundColor: '#fff',
+                    backgroundColor: '#FFD0BF', boxShadow: '0px 2px 10px 0px rgba(34, 34, 34, 0.1)', color: '#756DE9', fontWeight: '600', padding: '15px 0px', borderRadius: '99px', '&:hover': {
+                        backgroundColor: '#FFD0BF',
                     },
-                }} className='w-100 text-dark mt-5' variant="text">Next</Button>
-
-
+                }} className='w-100 mt-5' variant="text">Next</Button>
             </Container>
         </section>
     )

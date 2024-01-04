@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import TopHeading from '../../components/TopHeading';
 import { CssTextField } from '../../components/CssTextfield';
 
-
 const SignUp = () => {
     return (
         <section className='signup-bg' style={{ height: '100%' }}>
@@ -92,7 +91,7 @@ const SignUp = () => {
                     <br />
                     <br />
                     <Button sx={{
-                        backgroundColor: '#756DE9', fontSize: '16px', opacity: '50%', padding: '15px 0px', borderRadius: '99px', '&:hover': {
+                        backgroundColor: '#756DE9', textTransform: "capitalize", fontSize: '16px', opacity: '50%', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                             backgroundColor: '#756DE9',
                         },
                     }} className='w-100 text-white' variant="text">Welcome to Catalyst</Button>
@@ -106,7 +105,7 @@ const SignUp = () => {
                         </div>
                     </div>
                     <br />
-                    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }} justifyContent={{ xs: 'center', sm: 'space-between' }} alignItems={{ xs: 'center', sm: 'flex-start' }} >
+                    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }} justifyContent={{ xs: 'center', sm: 'center' }} alignItems={{ xs: 'center', sm: 'flex-start' }} >
                         <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize' }}>
                             <img src="/images/google.png" className='me-2' alt="" style={{ width: '30px', height: '30px', objectFit: 'contain', fontSize: '18px', padding: '3px' }} /> Google </Button>
 

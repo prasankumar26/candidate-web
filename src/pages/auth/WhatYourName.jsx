@@ -7,7 +7,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import { fontSize } from '@mui/system';
+import TopHeading from '../../components/TopHeading';
 
 const WhatYourName = () => {
 
@@ -46,7 +46,7 @@ const WhatYourName = () => {
     return (
         <section className='signup-bg' style={{ height: '97vh' }}>
             <Container maxWidth="sm" sx={{ position: 'relative', zIndex: '99' }}>
-                <p className="text-center text-white" style={{ fontSize: '20px', padding: '20px 0px' }}>CATALYST</p>
+                <TopHeading />
 
                 <div className="text-center mt-5 mb-5">
                     <h2 className='text-white' style={{fontSize: '35px'}}>Great!</h2>
@@ -89,7 +89,7 @@ const WhatYourName = () => {
                     backgroundColor: '#fff', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                         backgroundColor: '#fff',
                     },
-                }} className='w-100 mt-5 fontP' variant="text" style={{color: '#756DE9', fontWeight: '600'}}>That'll be all. Let's dive in!</Button>
+                }} className='w-100 mt-5 fontP' variant="text" style={{color: '#756DE9', fontSize: '16px', fontWeight: '600', textTransform: 'capitalize'}}>That'll be all. Let's dive in!</Button>
 
             </Container>
         </section>

@@ -13,8 +13,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
 import { categoriesList } from '../../data';
 import { useNavigate } from 'react-router-dom';
-import Container from '@mui/material/Container';
-
+import TopHeading from '../../components/TopHeading';
+import ProgressBar from '../../components/ProgressBar';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 function LinearProgressWithLabel(props) {
     return (
@@ -32,10 +33,6 @@ function LinearProgressWithLabel(props) {
 }
 
 LinearProgressWithLabel.propTypes = {
-    /**
-     * The value of the progress indicator for the determinate and buffer variants.
-     * Value between 0 and 100.
-     */
     value: PropTypes.number.isRequired,
 };
 
@@ -44,7 +41,7 @@ const CssTextField = styled(TextField)(({ theme }) => ({
     '& .MuiOutlinedInput-root': {
         '& fieldset': {
             border: 'none',
-            boxShadow: `0 0 10px #4b44d459`,
+            boxShadow: `inset 0 0 11px 2px rgba(75, 68, 212, 0.08)`,
         },
         '&:hover fieldset': {
             border: 'none',
@@ -73,13 +70,6 @@ const Hobbies = () => {
         };
     }, []);
 
-
-
-    const handleChange = (event) => {
-        setSelectedValue(event.target.value);
-    };
-
-
     return (
         <section className='position-relative' style={{ height: '100vh' }}>
             <div maxWidth="xl">
@@ -89,19 +79,14 @@ const Hobbies = () => {
                         <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
                         <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
                         <div className="mt-4">
-                            <p className="text-start text-white ms-3" style={{ fontSize: '20px', padding: '20px 0px' }}>CATALYST</p>
-                            <h2 className='text-white ms-3 mt-5 pt-5 position-relative' style={{ zIndex: '999' }}>Do you have any skills or hobbies?</h2>
+                            <TopHeading textstart />
+                            <h2 className='text-white ms-3 mt-5 pt-5 position-relative px-5' style={{ zIndex: '999' }}>Do you have any skills or hobbies?</h2>
                         </div>
                     </Grid>
                     <Grid item xs={12} md={8} className='pt-5 mt-5'>
-                        <Box sx={{ width: '100%' }}>
-                            <Stack direction="row" justifyContent="space-between" sx={{ flex: 1 }}>
-                                <h4 style={{ textTransform: 'uppercase' }}>About You</h4>
-                                <LinearProgressWithLabel sx={{ width: '100%' }} value={progress} />
-                            </Stack>
-                            <p className='mt-3'>1 step out of 2</p>
-                            <p className='mt-5'> {`< Back`} </p>
-                        </Box>
+                      <ProgressBar />
+
+                      <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
 
                         <Box className="mt-3">
                             <CssTextField
@@ -126,7 +111,7 @@ const Hobbies = () => {
 
                         <Box className="mt-3">
                             <p className='mb-3 text-muted'>Suggestions</p>
-                            <Stack direction="row" alignItems="center" sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='p-3 roundedone'>
+                            <Stack direction="row" alignItems="center" sx={{ border: '1px dashed #756DE9', color: '#756DE9', width: 'fit-content', cursor: 'pointer' }} className='p-3 roundedone'>
                                 <AddIcon /> Add A Hobby/Interest</Stack>
                         </Box>
 
@@ -149,7 +134,7 @@ const Hobbies = () => {
                                             }}
                                         >
                                             <Stack direction="row" alignItems="center">
-                                                <img src={item.image} alt="" className="img-fluid me-2" /> {item.name} </Stack>
+                                                <img src={item.image} alt="" className="img-fluid me-2" style={{width: '50px', height: '50px', objectFit: 'contain'}} /> {item.name} </Stack>
                                         </Button>
                                     )
                                 })
@@ -157,7 +142,7 @@ const Hobbies = () => {
                         </Box>
 
                         <Button onClick={() => navigate('/dob')} sx={{
-                            backgroundColor: '#756DE9', width: 'fit-content', padding: '15px 0px', borderRadius: '99px', '&:hover': {
+                            backgroundColor: '#756DE9', width: 'fit-content', fontSize: '16px', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                                 backgroundColor: '#756DE9',
                             },
                         }} className='w-100 text-white mt-2 mb-5 px-5' variant="text"> Continue </Button>

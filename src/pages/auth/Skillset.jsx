@@ -7,10 +7,34 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import Container from '@mui/material/Container';
 import AsyncSelect from 'react-select/async';
 import { colourOptions } from '../../data';
+import TopHeading from '../../components/TopHeading';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import ProgressBar from '../../components/ProgressBar';
+import NormalHeading from '../../components/NormalHeading';
 
+import { styled } from '@mui/system';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import ListItemText from '@mui/material/ListItemText';
+import Checkbox from '@mui/material/Checkbox';
+import InputAdornment from '@mui/material/InputAdornment';
+import SearchIcon from '@mui/icons-material/Search';
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+    PaperProps: {
+        style: {
+            maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+            width: 250,
+        },
+    },
+};
 
 const filterColors = (inputValue) => {
     return colourOptions.filter((i) =>
@@ -42,26 +66,59 @@ function LinearProgressWithLabel(props) {
 }
 
 LinearProgressWithLabel.propTypes = {
-    /**
-     * The value of the progress indicator for the determinate and buffer variants.
-     * Value between 0 and 100.
-     */
     value: PropTypes.number.isRequired,
 };
+
+const names = [
+    'English',
+    'Hindi',
+    'Telugu',
+    'Tamil',
+    'Kannada',
+    'Marathi',
+    'Punjabi',
+];
+
+const StyledFormControl = styled(FormControl)({
+    position: 'relative',
+    '& .MuiSelect-icon': {
+      display: 'none',
+    },  
+    m: 1,
+    width: '100%',
+    boxShadow: `inset 0 0 11px 2px #dfd9d9`,
+    borderRadius: '99px',
+    '&:focus-within': {
+        boxShadow: 'inset 0 0 11px 2px #dfd9d9', // Inner shadow on focus
+    },
+});
 
 
 const Skillset = () => {
     const navigate = useNavigate()
-    const [progress, setProgress] = useState(10);
+    const [values, setValues] = useState({
+        date: '',
+        month: '',
+        year: ''
+    });
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
-        }, 800);
-        return () => {
-            clearInterval(timer);
-        };
-    }, []);
+    const [personName, setPersonName] = useState([]);
+
+    const handleChange = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setPersonName(
+            // On autofill we get a stringified value.
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
+
+
+    const handleAgeChange = (event) => {
+        const { name, value } = event.target;
+        setValues({ ...values, [name]: value })
+    };
 
 
     return (
@@ -73,67 +130,91 @@ const Skillset = () => {
                             <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
                             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
                             <div className="mt-4">
-                                <p className="text-start text-white ms-3" style={{ fontSize: '20px', padding: '20px 0px' }}>CATALYST</p>
-                                <h2 className='text-white ms-3 mt-5 pt-5 position-relative' style={{ zIndex: '999' }}>
-                                    Select skillset which you 
+                                <TopHeading textstart />
+                                <h2 className='text-white ms-3 mt-5 pt-5 position-relative px-5' style={{ zIndex: '999' }}>
+                                    Select skillset which you
                                 </h2>
-                                <h2 className='text-white ms-3 position-relative' style={{ zIndex: '999' }}>are proud of</h2>
+                                <h2 className='text-white ms-3 position-relative px-5' style={{ zIndex: '999' }}>are proud of</h2>
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={8} className='pt-5 mt-5'>
-                            <Box sx={{ width: '100%' }}>
-                                <Stack direction="row" justifyContent="space-between" sx={{ flex: 1 }}>
-                                    <h4 style={{ textTransform: 'uppercase' }}>About You</h4>
-                                    <LinearProgressWithLabel sx={{ width: '100%' }} value={progress} />
+                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4'>
+                            <ProgressBar />
+                            <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
+                            <Box className="mt-4">
+                                <Stack direction="row" justifyContent="space-between">
+                                    <NormalHeading title="My Skillsets Are" />
                                 </Stack>
-                                <p className='mt-3'>1 step out of 2</p>
-                                <p className='mt-5'> {`< Back`} </p>
+
+                                <StyledFormControl>
+                                    <InputLabel id="demo-multiple-checkbox-label">Search By Keywords</InputLabel>
+                                    <Select
+                                        sx={{ width: '100%', borderRadius: '99px' }}
+                                        labelId="demo-multiple-checkbox-label"
+                                        id="demo-multiple-checkbox"
+                                        multiple
+                                        value={personName}
+                                        onChange={handleChange}
+                                        input={
+                                            <OutlinedInput
+                                                label="Tag"
+                                                endAdornment={
+                                                    <InputAdornment position="end">
+                                                        <SearchIcon />
+                                                    </InputAdornment>
+                                                }
+                                            />
+                                        }
+                                        renderValue={(selected) => selected.join(', ')}
+                                        MenuProps={MenuProps}
+                                    >
+                                        {names.map((name) => (
+                                            <MenuItem key={name} value={name}>
+                                                <Checkbox checked={personName.indexOf(name) > -1} />
+                                                <ListItemText primary={name} />
+                                            </MenuItem>
+                                        ))}
+                                    </Select>
+                                </StyledFormControl>
                             </Box>
 
                             <Box className="mt-4">
                                 <Stack direction="row" justifyContent="space-between">
-                                    <p className='mb-3 text-muted'> <b>My Skillsets Are</b> </p>
+                                    <NormalHeading title="Tools Known" />
                                 </Stack>
-                                <AsyncSelect
-                                    isMulti
-                                    cacheOptions
-                                    defaultOptions
-                                    loadOptions={promiseOptions}
-                                    styles={{
-                                        control: (provided, state) => ({
-                                            ...provided,
-                                            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                                            borderRadius: '99px',
-                                            padding: '6px 0px'
-                                        }),
-                                    }}
-                                />
+                                <StyledFormControl>
+                                    <InputLabel id="demo-multiple-checkbox-label">Search By Tools</InputLabel>
+                                    <Select
+                                        sx={{ width: '100%', borderRadius: '99px' }}
+                                        labelId="demo-multiple-checkbox-label"
+                                        id="demo-multiple-checkbox"
+                                        multiple
+                                        value={personName}
+                                        onChange={handleChange}
+                                        input={
+                                            <OutlinedInput
+                                                label="Tag"
+                                                endAdornment={
+                                                    <InputAdornment position="end">
+                                                        <SearchIcon />
+                                                    </InputAdornment>
+                                                }
+                                            />
+                                        }
+                                        renderValue={(selected) => selected.join(', ')}
+                                        MenuProps={MenuProps}
+                                    >
+                                        {names.map((name) => (
+                                            <MenuItem key={name} value={name}>
+                                                <Checkbox checked={personName.indexOf(name) > -1} />
+                                                <ListItemText primary={name} />
+                                            </MenuItem>
+                                        ))}
+                                    </Select>
+                                </StyledFormControl>
                             </Box>
-
-                            <Box className="mt-4">
-                                <Stack direction="row" justifyContent="space-between">
-                                    <p className='mb-3 text-muted'> <b>Tools Known</b> </p>
-                                </Stack>
-                                <AsyncSelect
-                                    isMulti
-                                    cacheOptions
-                                    defaultOptions
-                                    loadOptions={promiseOptions}
-                                    styles={{
-                                        control: (provided, state) => ({
-                                            ...provided,
-                                            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                                            borderRadius: '99px',
-                                            padding: '6px 0px'
-                                        }),
-                                    }}
-                                />
-                            </Box>
-
-
 
                             <Button onClick={() => navigate('/experience')} sx={{
-                                backgroundColor: '#756DE9', textTransform: 'capitalize', width: 'fit-content', padding: '15px 0px', borderRadius: '99px', '&:hover': {
+                                backgroundColor: '#756DE9', textTransform: 'capitalize', width: 'fit-content', padding: '10px 0px', borderRadius: '99px', '&:hover': {
                                     backgroundColor: '#756DE9',
                                 },
                             }} className='w-100 text-white mt-4 mb-5 px-5' variant="text"> Next up Experience </Button>
