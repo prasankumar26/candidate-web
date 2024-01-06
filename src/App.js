@@ -20,6 +20,7 @@ import VideoSequence from './pages/videoplayer/VideoOne';
 import BeforeStartRecording from './pages/videoplayer/BeforeStartRecording';
 import VideoCvMandatory from './pages/videoplayer/VideoCvMandatory';
 import Profile from './pages/profile/Profile';
+import Test from './pages/auth/Test';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path="video-cv" element={<VideoCvMandatory />} />
 
           <Route path="profile" element={<Profile />} />
+          <Route path="test" element={<Test />} />
 
           <Route path="*" element={<NoPage />} />
         </Route>

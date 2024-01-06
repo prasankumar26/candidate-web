@@ -126,7 +126,7 @@ const Degree = () => {
                                 <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                                     Other </Button>
                             </Box>
-
+ 
                             <Box className="mt-4">
                             <NormalHeading title="Course Name" />
                                 <SearchTextBox />

@@ -111,12 +111,42 @@ body h1,h2,h3,h4,h5,h6{
   text-transform: uppercase !important;
 }
 
+@media only screen and (max-width: 991px) {
+  .px-lg-s-des{
+    padding: 40px 10px 40px 50px !important;
+  }
+  .hobbies-pad{
+    padding: 10px 10px !important;
+  }
+  .hobbies-img{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+  .send-otp{
+    padding: 14px 10px !important;
+  }
+}
 @media only screen and (min-width: 991px) {
   .mx-lg-5{
     margin: 0px 14em !important;
   }
   .mx-lg-you{
     margin: 0px 8em !important;
+  }
+  .px-lg-s-des{
+    padding: 0px 4em !important;
+  }
+  .hobbies-pad{
+    padding: 10px 20px !important;
+  }
+  .hobbies-img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  .send-otp{
+    padding: 14px 30px !important;
   }
 }
 

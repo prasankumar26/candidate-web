@@ -59,8 +59,8 @@ const SignUp = () => {
                             ),
                             endAdornment: (
                                 <InputAdornment position="end">
-                                    <Button variant="contained" sx={{ backgroundColor: '#756DE9', opacity: '50%', fontWeight: '600' }}
-                                        style={{ borderRadius: '0 99px 99px 0', padding: '14px 30px', marginRight: '-12px' }}>
+                                    <Button variant="contained" className='send-otp' sx={{ backgroundColor: '#756DE9', opacity: '50%', fontWeight: '600' }}
+                                        style={{ borderRadius: '0 99px 99px 0', marginRight: '-12px' }}>
                                         Send OTP
                                     </Button>
                                 </InputAdornment>

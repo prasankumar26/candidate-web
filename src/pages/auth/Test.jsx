@@ -9,7 +9,7 @@ import ButtonBlue from '../../components/ButtonBlue';
 import Radio from '@mui/material/Radio';
 
 
-const AboutYou = () => {
+const Test = () => {
     const navigate = useNavigate()
     const [selectedValue, setSelectedValue] = useState('a');
     const handleChange = (event) => {
@@ -85,4 +85,4 @@ const AboutYou = () => {
     )
 }
 
-export default AboutYou
+export default Test

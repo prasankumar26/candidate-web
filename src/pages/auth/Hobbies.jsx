@@ -86,7 +86,7 @@ const Hobbies = () => {
                             <h2 className='text-white ms-3 mt-5 pt-5 position-relative px-5' style={{ zIndex: '999' }}>Do you have any skills or hobbies?</h2>
                         </div>
                     </Grid>
-                    <Grid item xs={12} md={8} className='pt-5 mt-5 px-5'>
+                    <Grid item xs={12} md={8} className='pt-5 mt-5 px-lg-s-des'>
                       <ProgressBar />
                       <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
 
@@ -122,8 +122,7 @@ const Hobbies = () => {
                                 categoriesList.map((item, index) => {
                                     return (
                                         <Button
-                                        style={{padding: '10px 20px',}}
-                                            className='roundedone mb-3 me-2'
+                                            className='roundedone mb-3 me-2 hobbies-pad'
                                             variant="contained"
                                             size="large"
                                             sx={{
@@ -137,7 +136,7 @@ const Hobbies = () => {
                                             }}
                                         >
                                             <Stack direction="row" alignItems="center">
-                                                <img src={item.image} alt="" className="img-fluid me-2" style={{width: '50px', height: '50px', objectFit: 'contain'}} /> {item.name} </Stack>
+                                                <img src={item.image} alt="" className="img-fluid me-2 hobbies-img" /> {item.name} </Stack>
                                         </Button>
                                     )
                                 })

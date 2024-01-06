@@ -63,7 +63,7 @@ const VideoQuestions = () => {
             <div maxWidth="xl">
                 <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
                     <Grid container spacing={5}>
-                        <Grid item xs={12} md={4} style={{ backgroundColor: '#fff', height: '106vh', position: 'relative' }}>
+                        <Grid className='mob-none' item xs={12} md={4} style={{ backgroundColor: '#fff', height: '106vh', position: 'relative' }}>
                             <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
                             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
                             <div className="mt-4">
