@@ -24,7 +24,7 @@ LinearProgressWithLabel.propTypes = {
 };
 
 
-const ProgressBar = ({marginRight}) => {
+const ProgressBar = ({ marginRight }) => {
     const [progress, setProgress] = useState(10);
 
     useEffect(() => {
@@ -39,13 +39,30 @@ const ProgressBar = ({marginRight}) => {
 
     return (
         <Box sx={{ width: '100%', margin: `${marginRight ? '0px 115px' : ''}` }}>
-            <Stack direction="row" justifyContent="space-between" sx={{ flex: 1 }}>
+            <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ flex: 1 }}>
                 <div>
-                <h4 className='text-uppercase' style={{fontSize: '18px'}}>About You</h4>
-                <p style={{fontSize: '12px'}}>1 step out of 2</p>
+                    <h4 className='text-uppercase' style={{ fontSize: '18px' }}>About You</h4>
+                    <p style={{ fontSize: '12px' }}>1 step out of 2</p>
                 </div>
-                
-                <LinearProgressWithLabel sx={{ width: '100%' }} value={progress} />
+
+                {/* <LinearProgressWithLabel sx={{ width: '100%' }} value={progress} /> */}
+
+                <Box sx={{width: '80%', display: 'flex', justifyContent: 'end'}}>
+                <div className="progress progress-striped">
+                    <div
+                        className="progress-bar progress-bar-danger"
+                        role="progressbar"
+                        aria-valuenow={80}
+                        aria-valuemin={0}
+                        aria-valuemax={100}
+                        style={{ width: "30%" }}
+                    >
+                    </div>
+                </div>
+                    <span style={{ fontSize: '12px', color: '#000', marginLeft: '10px', marginTop: '-6px' }}> Up Next: Video CV </span> 
+                </Box>
+                    
+
             </Stack>
         </Box>
     )
