@@ -68,7 +68,10 @@ const SearchTextBox = () => {
             <StyledFormControl>
                 <InputLabel id="demo-multiple-checkbox-label">Search By Keywords</InputLabel>
                 <Select
-                    sx={{ width: '100%', borderRadius: '99px' }}
+                    sx={{ width: '100%', borderRadius: '99px',  '& fieldset': {
+                      border: 'none',
+                      boxShadow: `inset 0 0 11px 2px rgba(75, 68, 212, 0.08)`, // Inner shadow
+                  } }}
                     labelId="demo-multiple-checkbox-label"
                     id="demo-multiple-checkbox"
                     multiple

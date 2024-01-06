@@ -80,7 +80,10 @@ const DateOfBirth = () => {
         boxShadow: `inset 0 0 11px 2px #dfd9d9`,
         borderRadius: '99px',
         '&:focus-within': {
-            boxShadow: 'inset 0 0 11px 2px #dfd9d9', // Inner shadow on focus
+            boxShadow: 'inset 0 0 11px 2px #dfd9d9',
+        },
+        '& fieldset': {
+            border: 'none',
         },
     });
 
@@ -95,6 +98,8 @@ const DateOfBirth = () => {
                             <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '100vh', position: 'relative' }}>
                                 <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
                                 <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
+                                <img src="/images/vector-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '35%', left: '45%', width: 'fit-content' }} />
+
                                 <div className="mt-4">
                                     <TopHeading textstart />
                                     <h2 className='text-white ms-3 mt-5 pt-5 position-relative px-5' style={{ zIndex: '991' }}>
@@ -112,10 +117,17 @@ const DateOfBirth = () => {
 
                                     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
                                         <FormControl>
-                                            <InputLabel id="demo-simple-select-label">Date</InputLabel>
+                                            <InputLabel id="demo-simple-select-label">DD</InputLabel>
                                             <Select
-                                                className='me-4'
-                                                sx={{ width: '130px', borderRadius: '99px', boxShadow: 'inset 0 0 11px 2px #ebe8e8', border: 'none' }}
+                                                className='me-0'
+                                                sx={{
+                                                    width: '130px',
+                                                    borderRadius: '99px',
+                                                    boxShadow: 'inset 0 0 11px 2px #ebe8e8',
+                                                    '& fieldset': {
+                                                        border: 'none',
+                                                    },
+                                                }}
                                                 labelId="demo-simple-select-label"
                                                 id="demo-simple-select"
                                                 value={values.date}
@@ -131,8 +143,15 @@ const DateOfBirth = () => {
                                         <FormControl>
                                             <InputLabel id="demo-simple-select-label">MM</InputLabel>
                                             <Select
-                                                className='me-4'
-                                                sx={{ width: '130px', borderRadius: '99px', boxShadow: 'inset 0 0 11px 2px #ebe8e8', border: 'none' }}
+                                                className='me-0'
+                                                sx={{
+                                                    width: '130px',
+                                                    borderRadius: '99px',
+                                                    boxShadow: 'inset 0 0 11px 2px #ebe8e8',
+                                                    '& fieldset': {
+                                                        border: 'none',
+                                                    },
+                                                }}
                                                 labelId="demo-simple-select-label"
                                                 id="demo-simple-select"
                                                 value={values.month}
@@ -148,8 +167,15 @@ const DateOfBirth = () => {
                                         <FormControl>
                                             <InputLabel id="demo-simple-select-label">YYYY</InputLabel>
                                             <Select
-                                                className='me-4'
-                                                sx={{ width: '130px', borderRadius: '99px', boxShadow: 'inset 0 0 11px 2px #ebe8e8', border: 'none' }}
+                                                className='me-0'
+                                                sx={{
+                                                    width: '130px',
+                                                    borderRadius: '99px',
+                                                    boxShadow: 'inset 0 0 11px 2px #ebe8e8',
+                                                    '& fieldset': {
+                                                        border: 'none',
+                                                    },
+                                                }}
                                                 labelId="demo-simple-select-label"
                                                 id="demo-simple-select"
                                                 value={values.year}

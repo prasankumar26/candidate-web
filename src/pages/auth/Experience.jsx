@@ -98,7 +98,7 @@ const Experience = () => {
               <Box className="mt-4">
                 <Stack direction="row" justifyContent="space-between">
                   <NormalHeading title="Function" />
-                  <p className='mb-2 text-muted'>Optional</p>
+                  <p className='mb-2 text-muted' style={{fontStyle: 'italic', fontSize: '14px'}}>Optional</p>
                 </Stack>
                 <CssTextField
                   id="outlined-number"

@@ -93,14 +93,16 @@ const Degree = () => {
 
 
     return (
-        <section className='position-relative' style={{ height: '170vh' }}>
+        <section className='position-relative' style={{ height: '100vh' }}>
             <div maxWidth="xl">
                 <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
                     <Grid container spacing={5}>
-                        <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '170vh', position: 'relative' }}>
-                            <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
+                        <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '100vh', position: 'relative' }}>
+                            <img src="/images/ellipse-three.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '-50%', width: '70%' }} />
                             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
-                            <div className="mt-4">
+                            <img src="/images/vector-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '30%', left: '45%', width: 'fit-content' }} />
+
+                            <div className="mt-4 mx-5">
                                 <TopHeading textstart />
                                 <h2 className='text-white ms-3 mt-5 pt-5 position-relative' style={{ zIndex: '999' }}>
                                     What is your latest education qualification?
@@ -156,7 +158,7 @@ const Degree = () => {
                             <Box className="mt-3">
                                 <Stack direction="row" justifyContent="space-between">
                                 <NormalHeading title="Course Specialization" />
-                                    <p className='mb-3 text-muted'>Optional</p>
+                                    <p className='mb-3 text-muted' style={{fontStyle: 'italic', fontSize: '14px'}}>Optional</p>
                                 </Stack>
                                 <CssTextField
                                     id="outlined-number"
@@ -224,7 +226,7 @@ const Degree = () => {
                             <Box className="mt-4">
                                 <Stack direction="row" justifyContent="space-between">
                                 <NormalHeading title="Where have you received your schooling?" />
-                                    <p className='mb-3 text-muted'>Optional</p>
+                                    <p className='mb-3 text-muted' style={{fontStyle: 'italic', fontSize: '14px'}}>Optional</p>
                                 </Stack>
                                 <SearchTextBox />
                             </Box>

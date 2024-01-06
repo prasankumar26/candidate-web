@@ -77,8 +77,10 @@ const Hobbies = () => {
             <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
                 <Grid container spacing={5}>
                     <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '100vh', position: 'relative' }}>
-                        <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
+                        <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '-30%', width: '70%' }} />
                         <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
+                        <img src="/images/vector-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '35%', left: '45%', width: 'fit-content' }} />
+
                         <div className="mt-4">
                             <TopHeading textstart />
                             <h2 className='text-white ms-3 mt-5 pt-5 position-relative px-5' style={{ zIndex: '999' }}>Do you have any skills or hobbies?</h2>
