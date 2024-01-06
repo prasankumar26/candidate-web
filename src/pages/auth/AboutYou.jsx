@@ -5,8 +5,8 @@ import Radio from '@mui/material/Radio';
 import ProgressBar from '../../components/ProgressBar';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import { Button } from '@mui/material';
 import ButtonBlue from '../../components/ButtonBlue';
+import TopHeading from '../../components/TopHeading';
 
 const CreateProfile = () => {
     const [selectedValue, setSelectedValue] = useState('a');
@@ -18,8 +18,10 @@ const CreateProfile = () => {
         <section className='position-relative' style={{ height: '100vh' }}>
             <img src="/images/ellipse.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '300px' }} />
             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '220px' }} />
+            <img src="/images/vector-one.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '30%', left: '15%', width: 'fit-content' }} />
+            <TopHeading textstart color />
 
-            <Container className='mt-5' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
+            <Container className='mt-2' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
                 <Grid container spacing={5}>
                     <Grid item xs={12} md={4}>
                         <div className="mt-5">
