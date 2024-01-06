@@ -308,6 +308,13 @@
 	-moz-animation: progress-bar-stripes 2s linear infinite;
 }
 
+
+@media only screen and (max-width: 425px) {
+    .social-m{
+        margin-top: 10px !important;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .nav-desktop{
         display: none !important;
@@ -330,6 +337,12 @@
     .yellow-round-right{
         display: none;
     }
+    .pad-desktop-signup{
+        padding: 10px 10px;
+    }
+    .padding-ywt{
+        padding: 10px 5px;
+    }
 }
 
 @media only screen and (min-width: 991px) {
@@ -338,5 +351,11 @@
     }
     .nav-mobile{
         display: none !important;
+    }
+    .pad-desktop-signup{
+        padding: 10px 80px !important;
+    }
+    .padding-ywt{
+        padding: 10px 85px !important;
     }
 }

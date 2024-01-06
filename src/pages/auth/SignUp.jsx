@@ -24,7 +24,7 @@ const SignUp = () => {
                 <img src="/images/signup-four.png" alt="" className="img-fluid" style={{ zIndex: '-1', position: 'absolute', top: '42%', right: '-14%', width: '100px' }} />
                 <img src="/images/signup-five.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '10%', left: '-20%', width: '100px' }} />
                 <TopHeading />
-                <Box className="bg-white roundedten" style={{ padding: '10px 80px' }} >
+                <Box className="bg-white roundedten pad-desktop-signup" >
                     <h2 className='text-center' style={{ padding: '20px 0px', fontSize: '35px', zIndex: '99', position: 'relative' }}>We're glad you're aboard!</h2>
                     <CssTextField
                         id="outlined-basic"
@@ -105,14 +105,14 @@ const SignUp = () => {
                         </div>
                     </div>
                     <br />
-                    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }} justifyContent={{ xs: 'center', sm: 'center' }} alignItems={{ xs: 'center', sm: 'flex-start' }} >
+                    <Stack flexWrap="wrap" direction={{ xs: 'row', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }} justifyContent={{ xs: 'center', sm: 'center' }} alignItems={{ xs: 'center', sm: 'flex-start' }} >
                         <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize', fontSize: '18px' }}>
                             <img src="/images/google.png" className='me-2' alt="" style={{ width: '30px', height: '30px', objectFit: 'contain', padding: '3px' }} /> Google </Button>
 
                         <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize', fontSize: '18px' }}>
                             <img src="/images/linkedin.png" className='me-2' alt="" style={{ width: '35px', height: '35px', objectFit: 'contain' }} /> LinkedIn </Button>
 
-                        <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize', fontSize: '18px', }}>
+                        <Button variant="outlined" className='roundedone social-m' sx={{ color: '#000', textTransform: 'capitalize', fontSize: '18px', }}>
                             <img src="/images/twitter.png" className='me-2' alt="" style={{ width: '30px', height: '30px', objectFit: 'contain',  padding: '3px' }} /> Twitter </Button>
                     </Stack>
                     <div className="text-center mt-4">

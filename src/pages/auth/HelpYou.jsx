@@ -35,7 +35,7 @@ const HelpYou = () => {
                     backgroundColor: '#fff', color: '#6352CC', textTransform: 'capitalize', fontSize: '16px', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                         backgroundColor: '#fff',
                     },
-                }} className='w-100  mt-3' variant="text">Broewse Jobs</Button>
+                }} className='w-100  mt-3' variant="text">Browse Jobs</Button>
               </div>
 
 
