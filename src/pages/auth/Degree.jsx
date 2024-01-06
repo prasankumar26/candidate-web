@@ -98,9 +98,9 @@ const Degree = () => {
                 <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
                     <Grid container spacing={5}>
                         <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '100vh', position: 'relative' }}>
-                            <img src="/images/ellipse-three.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '-50%', width: '70%' }} />
+                            <img src="/images/ellipse-three.png" alt="" className="img-fluid mob-none" style={{ position: 'absolute', bottom: '-50%', width: '70%' }} />
                             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
-                            <img src="/images/vector-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '30%', left: '45%', width: 'fit-content' }} />
+                            <img src="/images/vector-two.png" alt="" className="img-fluid mob-none" style={{ position: 'absolute', bottom: '30%', left: '45%', width: 'fit-content' }} />
 
                             <div className="mt-4 mx-5">
                                 <TopHeading textstart />
@@ -117,13 +117,13 @@ const Degree = () => {
                             <Box className="mt-3">
                             <NormalHeading title="What is your latest education qualification?" />
 
-                                <Button variant='contained' sx={{ textTransform: 'capitalize', width: 'fit-content', cursor: 'pointer', backgroundColor: '#756DE9' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button variant='contained' sx={{ textTransform: 'capitalize', width: 'fit-content', cursor: 'pointer', backgroundColor: '#756DE9' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                                     Bachelor Degree </Button>
-                                <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                                     Masters Degree </Button>
-                                <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                                     Diploma Holder </Button>
-                                <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                                     Other </Button>
                             </Box>
 

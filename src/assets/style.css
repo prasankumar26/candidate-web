@@ -343,6 +343,12 @@
     .padding-ywt{
         padding: 10px 5px;
     }
+    .round-one, .round-two, .round-three, .round-four, .round-five, .round-six, .round-seven, .round-eight, .round-nine, .round-ten, .round-eleven{
+        display: none !important;
+    }
+    .mob-none{
+        display: none !important;
+    }
 }
 
 @media only screen and (min-width: 991px) {

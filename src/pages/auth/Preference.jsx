@@ -147,13 +147,13 @@ const Preference = () => {
 
                             <Box className="mt-3">
                             <NormalHeading title="Company Size" />
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                                     {`< 25 Employees`} </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                                     {`< 25 Employees`} </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                                     {`< 50 Employees`} </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                                     {`< 50 Employees`} </Button>
                             </Box>
 

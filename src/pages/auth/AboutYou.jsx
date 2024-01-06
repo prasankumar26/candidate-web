@@ -18,9 +18,9 @@ const CreateProfile = () => {
     };
     return (
         <section className='position-relative' style={{ height: '100vh' }}>
-            <img src="/images/ellipse.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '300px' }} />
+            <img src="/images/ellipse.png" alt="" className="img-fluid " style={{ position: 'absolute', bottom: '0', width: '300px' }} />
             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '220px' }} />
-            <img src="/images/vector-one.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '30%', left: '15%', width: 'fit-content' }} />
+            <img src="/images/vector-one.png" alt="" className="img-fluid mob-none" style={{ position: 'absolute', bottom: '30%', left: '15%', width: 'fit-content' }} />
             <TopHeading textstart color />
 
             <Container className='mt-2' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>

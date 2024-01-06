@@ -98,7 +98,7 @@ const DateOfBirth = () => {
                             <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '100vh', position: 'relative' }}>
                                 <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
                                 <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
-                                <img src="/images/vector-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '35%', left: '45%', width: 'fit-content' }} />
+                                <img src="/images/vector-two.png" alt="" className="img-fluid mob-none" style={{ position: 'absolute', bottom: '35%', left: '45%', width: 'fit-content' }} />
 
                                 <div className="mt-4">
                                     <TopHeading textstart />
@@ -115,8 +115,8 @@ const DateOfBirth = () => {
                                 <Box className="mt-3">
                                     <NormalHeading title="Date Of Birth" />
 
-                                    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
-                                        <FormControl>
+                                    <Stack flexWrap="wrap" direction={{ xs: 'row', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
+                                        <FormControl className='social-m'>
                                             <InputLabel id="demo-simple-select-label">DD</InputLabel>
                                             <Select
                                                 className='me-0'
@@ -140,7 +140,7 @@ const DateOfBirth = () => {
                                                 <MenuItem value={3}>3</MenuItem>
                                             </Select>
                                         </FormControl>
-                                        <FormControl>
+                                        <FormControl className='social-m'>
                                             <InputLabel id="demo-simple-select-label">MM</InputLabel>
                                             <Select
                                                 className='me-0'
@@ -164,7 +164,7 @@ const DateOfBirth = () => {
                                                 <MenuItem value="mar">Mar</MenuItem>
                                             </Select>
                                         </FormControl>
-                                        <FormControl>
+                                        <FormControl className='social-m'>
                                             <InputLabel id="demo-simple-select-label">YYYY</InputLabel>
                                             <Select
                                                 className='me-0'

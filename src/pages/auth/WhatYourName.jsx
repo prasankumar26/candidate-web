@@ -44,7 +44,7 @@ const WhatYourName = () => {
     }));
 
     return (
-        <section className='signup-bg' style={{ height: '97vh' }}>
+        <section className='signup-bg' style={{ height: '100%' }}>
              <span className='round-one'></span>
              <span className='round-two'></span>
              <span className='round-three'></span>
