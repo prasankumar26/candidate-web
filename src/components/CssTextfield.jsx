@@ -19,7 +19,8 @@ export const CssTextField = styled(TextField)(({ theme }) => ({
         border: 'none',
         borderRadius: '99px',
         fontSize: '20px',
-        padding: '15px 30px'
+        padding: '15px 30px',
+        fontFamily: 'Poppins'
     },
 }));
 

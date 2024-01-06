@@ -113,7 +113,10 @@ body h1,h2,h3,h4,h5,h6{
 
 @media only screen and (min-width: 991px) {
   .mx-lg-5{
-    margin: 0px 4em !important;
+    margin: 0px 14em !important;
+  }
+  .mx-lg-you{
+    margin: 0px 8em !important;
   }
 }
 

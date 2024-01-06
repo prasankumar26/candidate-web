@@ -109,7 +109,7 @@ const Opportunities = () => {
     return (
         <section className='opportunities-bg' style={{ height: '97vh' }}>
             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '10%', width: '300px' }} />
-            <Container maxWidth="sm" sx={{ position: 'relative', zIndex: '99' }}>
+            <Container maxWidth="md" sx={{ position: 'relative', zIndex: '99' }}>
                 <TopHeading />
 
                 <div className="mx-lg-5">

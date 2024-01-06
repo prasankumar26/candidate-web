@@ -45,9 +45,19 @@ const WhatYourName = () => {
 
     return (
         <section className='signup-bg' style={{ height: '97vh' }}>
-            <Container maxWidth="sm" sx={{ position: 'relative', zIndex: '99' }}>
+             <span className='round-one'></span>
+             <span className='round-two'></span>
+             <span className='round-three'></span>
+             <span className='round-four'></span>
+             <span className='round-five'></span>
+             <span className='round-six'></span>
+             <span className='round-seven'></span>
+             <span className='round-eight'></span>
+             <span className='round-nine'></span>
+             <span className='round-ten'></span>
+             <span className='round-eleven'></span>
+            <Container maxWidth="md" sx={{ position: 'relative', zIndex: '99' }}>
                 <TopHeading />
-
                 <div className="text-center mt-5 mb-5">
                     <h2 className='text-white' style={{fontSize: '35px'}}>Great!</h2>
                     <h2 className='text-white mt-1' style={{fontSize: '35px'}}>What is Your Name?</h2>

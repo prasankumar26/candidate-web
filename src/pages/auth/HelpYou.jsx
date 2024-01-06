@@ -9,7 +9,7 @@ const HelpYou = () => {
 
     return (
         <section className='opportunities-bg' style={{ height: '97vh' }}>
-            <Container maxWidth="sm" sx={{ position: 'relative', zIndex: '99' }}>
+            <Container maxWidth="md" sx={{ position: 'relative', zIndex: '99' }}>
                 <TopHeading />
 
                <Stack direction="row" justifyContent="center">

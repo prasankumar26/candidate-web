@@ -27,7 +27,7 @@ const YouWantTo = () => {
             <span className='orange-round-right'></span>
             <span className='yellow-round-right'></span>
             <span className='skyblue-round-right'></span>
-            <Container maxWidth="sm" sx={{ position: 'relative', zIndex: '99' }}>
+            <Container maxWidth="md" sx={{ position: 'relative', zIndex: '99' }}>
                 <img src="/images/signup-two.png" alt="" className="img-fluid" style={{ zIndex: '1', position: 'absolute', top: '2%', right: '-4%', width: '100px' }} />
                 <span className='yellow-round'></span>
                 <img src="/images/signup-three.png" alt="" className="img-fluid" style={{ zIndex: '-1', position: 'absolute', top: '42%', left: '-10%', width: '100px' }} />
@@ -41,20 +41,20 @@ const YouWantTo = () => {
                         <div className="position-relative" style={{boxShadow: `inset 0 0 11px 2px rgba(75, 68, 212, 0.08)`, border: 'none', borderRadius: '99px'}}>
                         <img src="/images/ywt-one.png" className='me-2 position-absolute'  alt="" style={{top: '-102%', left: '12%', width: '50px', height: '50px', objectFit: 'contain' }} />
                             <Button size="large" variant="outlined" sx={{ fontSize: '16px', fontWeight: '600', color: '#979797', textTransform: 'capitalize', border: 'none', 
-                            padding: '10px 40px', '&:hover': {
+                            padding: '10px 85px', '&:hover': {
                                border: 'none'
                             } }}>
                                 Find Talent </Button>
                         </div>
                         <div className="position-relative">
                         <img src="/images/ywt-two.png" className='me-2 position-absolute'  alt="" style={{top: '-220%', right: '10%', width: '130px', height: '115px', objectFit: 'contain' }} />
-                            <Button size="large" variant="outlined" className='roundedone' sx={{fontSize: '16px', border: '1px solid #756DE9', boxShadow: `inset 0 0 11px 2px #fff`, color: '#756DE9', fontWeight: '600', textTransform: 'capitalize',  padding: '10px 40px', marginLeft: '-15%', backgroundColor: '#fff' }}>
+                            <Button size="large" variant="outlined" className='roundedone' sx={{fontSize: '16px', border: '1px solid #756DE9', boxShadow: `inset 0 0 11px 2px #fff`, color: '#756DE9', fontWeight: '600', textTransform: 'capitalize',  padding: '10px 85px', marginLeft: '-15%', backgroundColor: '#fff' }}>
                                 Find Work </Button>
                         </div>
                     </Stack>
 
                     <p className='text-center mb-3 mt-5 font-S' style={{fontWeight: '400', fontSize: '14px'}}> Where are you based? </p>
-                    <div className="mx-lg-5">
+                    <div className="mx-lg-you">
                     <CssSelectTextField fullWidth>
                         <InputLabel id="demo-simple-select-label"> 
                         <Stack direction="row" alignItems="center">

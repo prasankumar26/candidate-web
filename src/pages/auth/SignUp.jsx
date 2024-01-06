@@ -9,7 +9,7 @@ import { CssTextField } from '../../components/CssTextfield';
 
 const SignUp = () => {
     return (
-        <section className='signup-bg' style={{ height: '100vh' }}>
+        <section className='signup-bg' style={{ height: '100vh', overflowX: 'hidden' }}>
             <img src="/images/signup-one.png" alt="" className="img-fluid" style={{ position: 'absolute', width: '100px' }} />
             <img src="/images/signup-six.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '10%', right: '0', width: '100px' }} />
             <span className='orange-round'></span>
@@ -17,14 +17,14 @@ const SignUp = () => {
             <span className='orange-round-right'></span>
             <span className='yellow-round-right'></span>
             <span className='skyblue-round-right'></span>
-            <Container maxWidth="sm" sx={{ position: 'relative', zIndex: '99' }}>
+            <Container maxWidth="md" sx={{ position: 'relative', zIndex: '99' }}>
                 <img src="/images/signup-two.png" alt="" className="img-fluid" style={{ zIndex: '1', position: 'absolute', top: '2%', right: '-4%', width: '100px' }} />
                 <span className='yellow-round'></span>
                 <img src="/images/signup-three.png" alt="" className="img-fluid" style={{ zIndex: '-1', position: 'absolute', top: '42%', left: '-10%', width: '100px' }} />
                 <img src="/images/signup-four.png" alt="" className="img-fluid" style={{ zIndex: '-1', position: 'absolute', top: '42%', right: '-14%', width: '100px' }} />
                 <img src="/images/signup-five.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '10%', left: '-20%', width: '100px' }} />
                 <TopHeading />
-                <Box className="bg-white roundedten" style={{ padding: '10px 20px' }} >
+                <Box className="bg-white roundedten" style={{ padding: '10px 80px' }} >
                     <h2 className='text-center' style={{ padding: '20px 0px', fontSize: '35px', zIndex: '99', position: 'relative' }}>We're glad you're aboard!</h2>
                     <CssTextField
                         id="outlined-basic"
