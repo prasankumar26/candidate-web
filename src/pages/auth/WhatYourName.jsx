@@ -53,6 +53,7 @@ const WhatYourName = () => {
                     <h2 className='text-white mt-1' style={{fontSize: '35px'}}>What is Your Name?</h2>
                 </div>
 
+               <div className="mx-lg-5">
                 <Stack direction="row" justifyContent="end">
                     <img src="/images/name.png" alt="" className="img-fluid me-5" style={{ width: '100px' }} />
                 </Stack>
@@ -68,6 +69,7 @@ const WhatYourName = () => {
                         },
                     }}
                 />
+                </div>
                 <br />
                 <br />
 
@@ -85,11 +87,13 @@ const WhatYourName = () => {
                     </RadioGroup>
                 </Stack>
 
+                <div className="mx-lg-5">
                 <Button onClick={()=> navigate('/opportunities')} sx={{
                     backgroundColor: '#fff', padding: '15px 0px', borderRadius: '99px', boxShadow: `0px 0px 11px 2px #4B44D4`, '&:hover': {
                         backgroundColor: '#fff', 
                     },
                 }} className='w-100 mt-5 fontP mb-2' variant="text" style={{color: '#756DE9', fontSize: '16px', fontWeight: '600', textTransform: 'capitalize'}}>That'll be all. Let's dive in!</Button>
+                </div>
 
             </Container>
         </section>

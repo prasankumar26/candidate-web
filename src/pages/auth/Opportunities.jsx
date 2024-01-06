@@ -13,7 +13,7 @@ import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import TopHeading from '../../components/TopHeading';
-import { styled } from '@mui/system';
+import { alpha, styled } from '@mui/system';
 
 const label = { inputProps: { 'aria-label': 'Size switch demo' } };
 const ITEM_HEIGHT = 48;
@@ -53,15 +53,18 @@ function getStyles(name, personName, theme) {
 const StyledFormControl = styled(FormControl)({
     m: 1,
     width: '100%',
+    '& fieldset': {
+        border: 'none',
+      },
 });
 
 const CustomSelect = styled(Select)(({ theme }) => ({
     width: '100%',
     borderRadius: '99px',
-    boxShadow: 'inset 0 0 11px 2px #E8430A', // Inner shadow
+    boxShadow: 'inset 0 0 11px 2px #e8430a91', // Inner shadow
     '&:focus': {
         borderRadius: '99px',
-        boxShadow: 'inset 0 0 11px 2px #E8430A', // Inner shadow on focus
+        boxShadow: 'inset 0 0 11px 2px #e8430a91', // Inner shadow on focus
     },
 }));
 
@@ -91,13 +94,26 @@ const Opportunities = () => {
         );
     };
 
+    const CustomSwitch = styled(Switch)(({ theme }) => ({
+        '& .MuiSwitch-switchBase.Mui-checked': {
+          color: '#52C6AE', // Your custom color
+          '&:hover': {
+            backgroundColor: alpha('#52C6AE'),
+          },
+        },
+        '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+          backgroundColor: '#52C6AE', // Your custom color
+        },
+      }));
+
     return (
         <section className='opportunities-bg' style={{ height: '97vh' }}>
             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '10%', width: '300px' }} />
             <Container maxWidth="sm" sx={{ position: 'relative', zIndex: '99' }}>
                 <TopHeading />
 
-                <div className="text-center mt-5 mb-3">
+                <div className="mx-lg-5">
+                <div className="text-start mt-5 mb-3">
                     <h6 className="text-white" style={{ fontSize: '22px' }}>
                         What kind of opportunities  are you looking for?
                     </h6>
@@ -137,7 +153,7 @@ const Opportunities = () => {
 
                 <Stack direction="row" justifyContent="space-between" alignItems="center" className='mt-4 mb-4'>
                     <p className='text-white'>Notify me about similar jobs</p>
-                    <Switch {...label} size="medium" />
+                    <CustomSwitch {...label} size="medium" />
                 </Stack>
 
                 <div className="mx-auto text-center w-100">
@@ -177,6 +193,9 @@ const Opportunities = () => {
                         backgroundColor: '#FFD0BF',
                     },
                 }} className='w-100 mt-5' variant="text">Next</Button>
+                </div>
+
+
             </Container>
         </section>
     )

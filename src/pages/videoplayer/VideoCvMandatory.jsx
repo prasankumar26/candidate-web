@@ -48,7 +48,7 @@ const VideoCvMandatory = () => {
 
     return (
         <>
-        <section style={{backgroundColor: '#ffffff'}}>
+        <section style={{backgroundColor: '#ffffff', overflowX: 'hidden'}}>
             <Navbar />
 
             <Container maxWidth="lg" className='mt-5'>
@@ -66,7 +66,7 @@ const VideoCvMandatory = () => {
 
                 <Box sx={{ flexGrow: 1 }} className="mt-5">
                     <Grid container spacing={2}>
-                        <Grid item xs={6} md={6}>
+                        <Grid item xs={12} md={6}>
                             <p className="text-bold">
                                 Final Output
                             </p>
@@ -80,7 +80,7 @@ const VideoCvMandatory = () => {
                                 </div>
                             </Stack>
                         </Grid>
-                        <Grid item xs={6} md={6}>
+                        <Grid item xs={12} md={6}>
                             <p>What do we call this draft?</p>
                             <Box className="mt-3">
                                 <CssTextField
@@ -149,7 +149,7 @@ const VideoCvMandatory = () => {
                             </Stack>
 
 
-                            <Button onClick={() => navigate('/about-you')} sx={{
+                            <Button onClick={() => navigate('/profile')} sx={{
                                 backgroundColor: '#6352cc', textTransform: 'capitalize', fontSize: '16px', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                                     backgroundColor: '#6352cc',
                                 },

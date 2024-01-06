@@ -9,7 +9,7 @@ import { CssTextField } from '../../components/CssTextfield';
 
 const SignUp = () => {
     return (
-        <section className='signup-bg' style={{ height: '100%' }}>
+        <section className='signup-bg' style={{ height: '100vh' }}>
             <img src="/images/signup-one.png" alt="" className="img-fluid" style={{ position: 'absolute', width: '100px' }} />
             <img src="/images/signup-six.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '10%', right: '0', width: '100px' }} />
             <span className='orange-round'></span>
@@ -46,7 +46,7 @@ const SignUp = () => {
                         id="outlined-number"
                         placeholder="+91"
                         variant="outlined"
-                        className='w-100 mt-2'
+                        className='w-100 mt-0'
                         InputProps={{
                             style: {
                                 borderRadius: '99px',
@@ -59,8 +59,8 @@ const SignUp = () => {
                             ),
                             endAdornment: (
                                 <InputAdornment position="end">
-                                    <Button variant="contained" sx={{ backgroundColor: '#756DE9', opacity: '50%' }}
-                                        style={{ borderRadius: '0 99px 99px 0', padding: '14px', marginRight: '-12px' }}>
+                                    <Button variant="contained" sx={{ backgroundColor: '#756DE9', opacity: '50%', fontWeight: '600' }}
+                                        style={{ borderRadius: '0 99px 99px 0', padding: '14px 30px', marginRight: '-12px' }}>
                                         Send OTP
                                     </Button>
                                 </InputAdornment>
@@ -73,7 +73,7 @@ const SignUp = () => {
                         id="outlined-number"
                         placeholder="Enter OTP Code"
                         variant="outlined"
-                        className='w-100 mt-2'
+                        className='w-100 mt-0'
                         InputProps={{
                             style: {
                                 borderRadius: '99px',
@@ -91,7 +91,7 @@ const SignUp = () => {
                     <br />
                     <br />
                     <Button sx={{
-                        backgroundColor: '#756DE9', textTransform: "capitalize", fontSize: '16px', opacity: '50%', padding: '15px 0px', borderRadius: '99px', '&:hover': {
+                        backgroundColor: '#756DE9', fontWeight: '600', textTransform: "capitalize", fontSize: '16px', opacity: '50%', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                             backgroundColor: '#756DE9',
                         },
                     }} className='w-100 text-white' variant="text">Welcome to Catalyst</Button>
@@ -106,18 +106,18 @@ const SignUp = () => {
                     </div>
                     <br />
                     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }} justifyContent={{ xs: 'center', sm: 'center' }} alignItems={{ xs: 'center', sm: 'flex-start' }} >
-                        <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize' }}>
-                            <img src="/images/google.png" className='me-2' alt="" style={{ width: '30px', height: '30px', objectFit: 'contain', fontSize: '18px', padding: '3px' }} /> Google </Button>
+                        <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize', fontSize: '18px' }}>
+                            <img src="/images/google.png" className='me-2' alt="" style={{ width: '30px', height: '30px', objectFit: 'contain', padding: '3px' }} /> Google </Button>
 
-                        <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize' }}>
-                            <img src="/images/linkedin.png" className='me-2' alt="" style={{ width: '35px', height: '35px', objectFit: 'contain', fontSize: '18px' }} /> LinkedIn </Button>
+                        <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize', fontSize: '18px' }}>
+                            <img src="/images/linkedin.png" className='me-2' alt="" style={{ width: '35px', height: '35px', objectFit: 'contain' }} /> LinkedIn </Button>
 
-                        <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize' }}>
-                            <img src="/images/twitter.png" className='me-2' alt="" style={{ width: '30px', height: '30px', objectFit: 'contain', fontSize: '18px', padding: '3px' }} /> Twitter </Button>
+                        <Button variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize', fontSize: '18px', }}>
+                            <img src="/images/twitter.png" className='me-2' alt="" style={{ width: '30px', height: '30px', objectFit: 'contain',  padding: '3px' }} /> Twitter </Button>
                     </Stack>
                     <div className="text-center mt-4">
-                        <p className='mb-2' style={{ fontSize: '20px' }}> Already have an account? </p>
-                        <Link to="/you-want-to" className='text-dark decoration-none' style={{ fontSize: '20px' }}><b>Sign In</b></Link>
+                        <p className='mb-1' style={{ fontSize: '20px' }}> Already have an account? </p>
+                        <Link to="/you-want-to" className='text-dark decoration-none' style={{ fontSize: '20px', fontWeight: '600' }}>Sign In</Link>
                     </div>
                 </Box>
             </Container>

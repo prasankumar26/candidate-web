@@ -199,7 +199,7 @@ const DateOfBirth = () => {
                                     </StyledFormControl>
                                 </Box>
 
-                                <ButtonBlue title="Next" link="/degree" />
+                                <ButtonBlue title="Continue" link="/degree" />
 
                             </Grid>
                         </Grid>

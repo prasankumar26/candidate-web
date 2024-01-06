@@ -120,6 +120,7 @@ const Hobbies = () => {
                                 categoriesList.map((item, index) => {
                                     return (
                                         <Button
+                                        style={{padding: '10px 20px',}}
                                             className='roundedone mb-3 me-2'
                                             variant="contained"
                                             size="large"

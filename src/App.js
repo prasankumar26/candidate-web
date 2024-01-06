@@ -19,6 +19,7 @@ import VideoContainer from './pages/videoplayer/Video';
 import VideoSequence from './pages/videoplayer/VideoOne';
 import BeforeStartRecording from './pages/videoplayer/BeforeStartRecording';
 import VideoCvMandatory from './pages/videoplayer/VideoCvMandatory';
+import Profile from './pages/profile/Profile';
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
           <Route path="video-one" element={<VideoSequence />} />
           <Route path="before-start-recording" element={<BeforeStartRecording />} />
           <Route path="video-cv" element={<VideoCvMandatory />} />
+
+          <Route path="profile" element={<Profile />} />
 
           <Route path="*" element={<NoPage />} />
         </Route>

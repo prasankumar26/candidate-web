@@ -15,7 +15,7 @@
     position: relative;
 }
 .next-btn{
-    margin-left: -120px !important;
+    margin-left: -150px !important;
 }
 .nav-links{
   box-shadow: '0 0 10px #4b44d459' !important;
@@ -164,6 +164,10 @@
     left: 50%;
     transform: translate(-40%, -50%);
     width: 100%;
+  }
+
+  .btn-pad{
+    padding: '15px, 40px, 15px, 40px' !important;
   }
 
 @media only screen and (max-width: 991px) {

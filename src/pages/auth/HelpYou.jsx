@@ -24,17 +24,19 @@ const HelpYou = () => {
                 </div>
 
 
-                <Button onClick={() => navigate('/about-you')} sx={{
+              <div className="mx-lg-5 mt-3">
+              <Button onClick={() => navigate('/about-you')} sx={{ fontWeight: 600,
                     backgroundColor: '#6352cc', textTransform: 'capitalize', fontSize: '16px', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                         backgroundColor: '#6352cc',
                     },
                 }} className='w-100 text-white mt-3' variant="text">Create a Profile</Button>
 
-                <Button onClick={() => navigate('/helpyou')} sx={{
+                <Button onClick={() => navigate('/helpyou')} sx={{ fontWeight: 600,
                     backgroundColor: '#fff', color: '#6352CC', textTransform: 'capitalize', fontSize: '16px', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                         backgroundColor: '#fff',
                     },
                 }} className='w-100  mt-3' variant="text">Broewse Jobs</Button>
+              </div>
 
 
             </Container>

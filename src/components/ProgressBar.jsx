@@ -24,7 +24,7 @@ LinearProgressWithLabel.propTypes = {
 };
 
 
-const ProgressBar = () => {
+const ProgressBar = ({marginRight}) => {
     const [progress, setProgress] = useState(10);
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const ProgressBar = () => {
 
 
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ width: '100%', margin: `${marginRight ? '0px 115px' : ''}` }}>
             <Stack direction="row" justifyContent="space-between" sx={{ flex: 1 }}>
                 <div>
                 <h4 className='text-uppercase' style={{fontSize: '18px'}}>About You</h4>

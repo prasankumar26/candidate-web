@@ -35,29 +35,38 @@ const YouWantTo = () => {
                 <img src="/images/signup-five.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '10%', left: '-20%', width: '100px' }} />
                 <TopHeading />
                 <Box className="bg-white roundedten" style={{ padding: '30px' }} >
-                    <h2 className='text-center mb-5' style={{ padding: '20px 0px', fontSize: '35px' }}>You want to</h2>
+                    <h2 className='text-center' style={{ padding: '20px 0px', fontSize: '35px', marginBottom: '90px' }}>You want to</h2>
 
                     <Stack direction="row" justifyContent="center">
                         <div className="position-relative" style={{boxShadow: `inset 0 0 11px 2px rgba(75, 68, 212, 0.08)`, border: 'none', borderRadius: '99px'}}>
-                        <img src="/images/ywt-one.png" className='me-2 position-absolute'  alt="" style={{top: '-115%', left: '12%', width: '50px', height: '50px', objectFit: 'contain' }} />
-                            <Button size="large" variant="outlined" className='roundedone' sx={{ color: '#000', textTransform: 'capitalize', border: 'none' }}>
+                        <img src="/images/ywt-one.png" className='me-2 position-absolute'  alt="" style={{top: '-102%', left: '12%', width: '50px', height: '50px', objectFit: 'contain' }} />
+                            <Button size="large" variant="outlined" sx={{ fontSize: '16px', fontWeight: '600', color: '#979797', textTransform: 'capitalize', border: 'none', 
+                            padding: '10px 40px', '&:hover': {
+                               border: 'none'
+                            } }}>
                                 Find Talent </Button>
                         </div>
                         <div className="position-relative">
-                        <img src="/images/ywt-two.png" className='me-2 position-absolute'  alt="" style={{top: '-115%', right: '-16%', width: '100px', height: '50px', objectFit: 'contain' }} />
-                            <Button size="large" variant="outlined" className='roundedone' sx={{boxShadow: `inset 0 0 11px 2px #fff`, color: '#000', textTransform: 'capitalize' }}>
+                        <img src="/images/ywt-two.png" className='me-2 position-absolute'  alt="" style={{top: '-220%', right: '10%', width: '130px', height: '115px', objectFit: 'contain' }} />
+                            <Button size="large" variant="outlined" className='roundedone' sx={{fontSize: '16px', border: '1px solid #756DE9', boxShadow: `inset 0 0 11px 2px #fff`, color: '#756DE9', fontWeight: '600', textTransform: 'capitalize',  padding: '10px 40px', marginLeft: '-15%', backgroundColor: '#fff' }}>
                                 Find Work </Button>
                         </div>
                     </Stack>
 
-                    <p className='text-center mb-3 mt-5 font-S' style={{fontWeight: '600'}}> Where are you based? </p>
+                    <p className='text-center mb-3 mt-5 font-S' style={{fontWeight: '400', fontSize: '14px'}}> Where are you based? </p>
+                    <div className="mx-lg-5">
                     <CssSelectTextField fullWidth>
-                        <InputLabel id="demo-simple-select-label">Select</InputLabel>
+                        <InputLabel id="demo-simple-select-label"> 
+                        <Stack direction="row" alignItems="center">
+                        <img src="/images/north-mumbai.png" alt="" /> <span className='ms-2' 
+                        style={{color: '#756DE9', fontWeight: 700}}>Mumbai</span>
+                        </Stack>
+                         </InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             value={city}
-                            placeholder="Mumbei"
+                            placeholder="Mumbai"
                             onChange={handleChange}
                         >
                             <MenuItem value={10}>Mumbai</MenuItem>
@@ -65,19 +74,22 @@ const YouWantTo = () => {
                             <MenuItem value={30}>Hyderabad</MenuItem>
                         </Select>
                     </CssSelectTextField>
+                    </div>
 
 
-                    <div className="text-center mt-5">
-                        <p className='mb-2 font-S' style={{color: '#9f9898'}}>We have derived your location from your device.</p>
-                        <p className='font-S' style={{color: '#9f9898'}}>You can change it from the drop down above.</p>
+                    <div className="text-center mt-3">
+                        <p className='mb-2 font-S' style={{color: '#9f9898', fontSize: '14px'}}>We have derived your location from your device.</p>
+                        <p className='font-S' style={{color: '#9f9898', fontSize: '14px'}}>You can change it from the drop down above.</p>
                     </div>
                     <br />
                     <br />
-                    <Button onClick={()=> navigate('/what-your-name')} sx={{
+                   <div className="mx-lg-5">
+                   <Button onClick={()=> navigate('/what-your-name')} sx={{
                         backgroundColor: '#756DE9', textTransform: 'capitalize', padding: '15px 0px', borderRadius: '99px', '&:hover': {
                             backgroundColor: '#756DE9',
                         },
-                    }} className='w-100 text-white font-16' variant="text"><b>Next up Name</b></Button>
+                    }} className='w-100 text-white font-16 f-600' variant="text">Next up Name</Button>
+                   </div>
                 </Box>
             </Container>
         </section>
