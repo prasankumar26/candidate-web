@@ -18,6 +18,7 @@ import NormalHeading from '../../components/NormalHeading';
 import Checkbox from '@mui/material/Checkbox';
 import SearchTextBox from '../../components/SearchTextBox';
 import ButtonBlue from '../../components/ButtonBlue';
+import MobileNav from '../../components/MobileNav';
 
 const fileTypes = ["JPG", "PNG", "GIF"];
 
@@ -57,8 +58,8 @@ const Experience = () => {
     <section className='position-relative' style={{ height: '106vh' }}>
       <div maxWidth="xl">
         <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '106vh', position: 'relative' }}>
+          <Grid container>
+            <Grid className='mob-none' item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '106vh', position: 'relative' }}>
               <img src="/images/ellipse-two.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', width: '70%' }} />
               <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
               <div className="mt-4">
@@ -69,8 +70,11 @@ const Experience = () => {
                 <h2 className='text-white ms-3 position-relative px-5' style={{ zIndex: '999' }}>experiences</h2>
               </div>
             </Grid>
-            <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4 px-5'>
-              <ProgressBar />
+
+            <MobileNav />
+
+            <Grid item xs={12} md={8} className='pt-5 px-lg-s-des'>
+              <ProgressBar para1="Tell us about your experiences" />
 
               <Box className="mt-4">
                 <Stack direction="row" justifyContent="space-between">

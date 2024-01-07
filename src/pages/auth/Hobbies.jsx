@@ -17,6 +17,7 @@ import TopHeading from '../../components/TopHeading';
 import ProgressBar from '../../components/ProgressBar';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import ButtonBlue from '../../components/ButtonBlue';
+import MobileNav from '../../components/MobileNav';
 
 function LinearProgressWithLabel(props) {
     return (
@@ -75,8 +76,8 @@ const Hobbies = () => {
         <section className='position-relative' style={{ height: '100vh' }}>
             <div maxWidth="xl">
             <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
-                <Grid container spacing={5}>
-                    <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '100vh', position: 'relative' }}>
+                <Grid container>
+                    <Grid item xs={12} md={4} className='mob-none' style={{ backgroundColor: '#FF8960', height: '100vh', position: 'relative' }}>
                         <img src="/images/ellipse-two.png" alt="" className="img-fluid mob-none" style={{ position: 'absolute', bottom: '-30%', width: '70%' }} />
                         <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
                         <img src="/images/vector-two.png" alt="" className="img-fluid mob-none" style={{ position: 'absolute', bottom: '35%', left: '45%', width: 'fit-content' }} />
@@ -86,10 +87,10 @@ const Hobbies = () => {
                             <h2 className='text-white ms-3 mt-5 pt-5 position-relative px-5' style={{ zIndex: '999' }}>Do you have any skills or hobbies?</h2>
                         </div>
                     </Grid>
-                    <Grid item xs={12} md={8} className='pt-5 mt-5 px-lg-s-des'>
-                      <ProgressBar />
+                    <MobileNav />
+                    <Grid item xs={12} md={8} className='pt-5 px-lg-s-des' >
+                      <ProgressBar para1="Do you have any skills or hobbies?" />
                       <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
-
                         <Box className="mt-3">
                             <CssTextField
                                 id="outlined-number"
@@ -122,7 +123,7 @@ const Hobbies = () => {
                                 categoriesList.map((item, index) => {
                                     return (
                                         <Button
-                                            className='roundedone mb-3 me-2 hobbies-pad'
+                                            className='roundedone mb-3 me-2 hobbies-pad cat-btn-mob'
                                             variant="contained"
                                             size="large"
                                             sx={{

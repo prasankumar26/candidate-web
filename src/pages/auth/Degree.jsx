@@ -7,7 +7,6 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import AsyncSelect from 'react-select/async';
 import { colourOptions } from '../../data';
 import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
@@ -18,6 +17,7 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NormalHeading from '../../components/NormalHeading';
 import SearchTextBox from '../../components/SearchTextBox';
 import ButtonBlue from '../../components/ButtonBlue';
+import MobileNav from '../../components/MobileNav';
 
 const CssTextField = styled(TextField)(({ theme }) => ({
     '& .MuiOutlinedInput-root': {
@@ -96,8 +96,8 @@ const Degree = () => {
         <section className='position-relative' style={{ height: '100vh' }}>
             <div maxWidth="xl">
                 <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
-                    <Grid container spacing={5}>
-                        <Grid item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '100vh', position: 'relative' }}>
+                    <Grid container>
+                        <Grid className='mob-none' item xs={12} md={4} style={{ backgroundColor: '#FF8960', height: '100vh', position: 'relative' }}>
                             <img src="/images/ellipse-three.png" alt="" className="img-fluid mob-none" style={{ position: 'absolute', bottom: '-50%', width: '70%' }} />
                             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
                             <img src="/images/vector-two.png" alt="" className="img-fluid mob-none" style={{ position: 'absolute', bottom: '30%', left: '45%', width: 'fit-content' }} />
@@ -110,7 +110,10 @@ const Degree = () => {
                                 <h2 className='text-white ms-3 mt-5 position-relative' style={{ zIndex: '999' }}>Show it off!</h2>
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={8} className='pt-5 mt-5 pe-4 px-5'>
+
+                        <MobileNav />
+                        
+                        <Grid item xs={12} md={8} className='pt-5 px-lg-s-des'>
                             <ProgressBar />
                             <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
 
@@ -213,13 +216,13 @@ const Degree = () => {
 
                             <Box className="mt-3">
                             <NormalHeading title="Which board have you completed schooling from?" />
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize', fontSize: '18px' }} className='px-3 py-2 me-2 roundedone mb-2'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='degree-font px-3 py-2 me-2 roundedone mb-2'>
                                 Secondary School Certificate (SSC) </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize', fontSize: '18px' }} className='px-3 py-2 me-2 roundedone mb-2'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='degree-font px-3 py-2 me-2 roundedone mb-2'>
                                     Indian Certificate of Secondary Education (ICSE) </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize', fontSize: '18px' }} className='px-3 py-2 me-2 roundedone mb-2'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='degree-font px-3 py-2 me-2 roundedone mb-2'>
                                     Central Board of Secondary Education (CBSE) </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize', fontSize: '18px' }} className='px-3 py-2 me-2 roundedone mb-2'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='degree-font px-3 py-2 me-2 roundedone mb-2'>
                                     IC School </Button>
                             </Box>
 

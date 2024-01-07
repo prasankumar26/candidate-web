@@ -4,6 +4,8 @@ import LinearProgress from '@mui/material/LinearProgress';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import { useEffect, useState } from 'react';
+import MobileNina from './MobileNina';
+import Container from '@mui/material/Container';
 
 function LinearProgressWithLabel(props) {
     return (
@@ -24,7 +26,7 @@ LinearProgressWithLabel.propTypes = {
 };
 
 
-const ProgressBar = ({ marginRight }) => {
+const ProgressBar = ({ marginRight, number, para1 }) => {
     const [progress, setProgress] = useState(10);
 
     useEffect(() => {
@@ -38,33 +40,34 @@ const ProgressBar = ({ marginRight }) => {
 
 
     return (
-        <Box sx={{ width: '100%', margin: `${marginRight ? '0px 115px' : ''}` }}>
+        // <Container>
+            <Box sx={{ width: '100%', margin: `${marginRight ? '0px 115px' : ''}` }}>
             <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ flex: 1 }}>
                 <div>
-                    <h4 className='text-uppercase' style={{ fontSize: '18px' }}>About You</h4>
+                    <h4 className='text-uppercase progressbar-font'>About You</h4>
                     <p style={{ fontSize: '12px' }}>1 step out of 2</p>
                 </div>
 
                 {/* <LinearProgressWithLabel sx={{ width: '100%' }} value={progress} /> */}
 
-                <Box sx={{width: '80%', display: 'flex', justifyContent: 'end'}}>
-                <div className="progress progress-striped">
-                    <div
-                        className="progress-bar progress-bar-danger"
-                        role="progressbar"
-                        aria-valuenow={80}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                        style={{ width: "30%" }}
-                    >
+                <Box className="progressbar-res" sx={{ display: 'flex', justifyContent: 'end' }}>
+                    <div className="progress progress-striped">
+                        <div
+                            className="progress-bar progress-bar-danger"
+                            role="progressbar"
+                            aria-valuenow={80}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
+                            style={{ width: "30%" }}
+                        >
+                        </div>
                     </div>
-                </div>
-                    <span style={{ fontSize: '12px', color: '#000', marginLeft: '10px', marginTop: '-6px' }}> Up Next: Video CV </span> 
+                    <span style={{ fontSize: '12px', color: '#000', marginLeft: '10px', marginTop: '-6px' }}> Up Next: Video CV </span>
                 </Box>
-                    
-
             </Stack>
+            <MobileNina number={number} para1={para1} />
         </Box>
+        // </Container>
     )
 }
 

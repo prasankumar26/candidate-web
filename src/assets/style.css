@@ -349,6 +349,15 @@
     .mob-none{
         display: none !important;
     }
+    .progressbar-font{
+        font-size: 16px !important;
+    }
+    .progressbar-res{
+        width: 60%;
+    }
+    .cat-btn-mob{
+        width: 164px !important;
+    }
 }
 
 @media only screen and (min-width: 991px) {
@@ -363,5 +372,17 @@
     }
     .padding-ywt{
         padding: 10px 85px !important;
+    }
+    .des-none{
+        display: none !important;
+    }
+    .progressbar-font{
+        font-size: 18px !important;
+    }
+    .progressbar-res{
+        width: 80%;
+    }
+    .mt-lg-5{
+        margin-top: 3em !important;
     }
 }
