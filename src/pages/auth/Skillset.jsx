@@ -143,9 +143,9 @@ const Skillset = () => {
                         <MobileNav />
                         
                         <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
-                            <ProgressBar />
-                            <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
-                            <Box className="mt-4">
+                            <ProgressBar sPara="Select skillset which you are proud of" />
+                            <Stack direction="row" className='mt-3'> <NavigateBeforeIcon /> Back </Stack>
+                            <Box className="mt-2">
                                 <Stack direction="row" justifyContent="space-between">
                                     <NormalHeading title="My Skillsets Are" />
                                 </Stack>

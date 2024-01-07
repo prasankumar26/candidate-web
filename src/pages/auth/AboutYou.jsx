@@ -40,7 +40,7 @@ const AboutYou = () => {
                     <MobileNav />
                         
                         <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
-                            <ProgressBar number="1/5" para1="So here's a thought. Say your team is kicking off a huge project at work."  />
+                            <ProgressBar number="1/5" para1="So here's a thought. Say your team is kicking off a huge project at work." sPara="So here's a thought."  />
                             <Stack direction="column" justifyContent="center" alignItems="center" className='mt-5'>
                             <Box style={{ background: selectedValue === 'a' ? 'rgb(117 109 233 / 29%)' : '#F5F6FA', width: 'fit-content' }} className="p-3 mb-4">
                                 <Stack direction="row" alignItems="center">

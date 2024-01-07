@@ -108,11 +108,11 @@ const DateOfBirth = () => {
                                 </div>
                             </Grid>
                             <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
-                                <ProgressBar para1="Let's begin with yourdemographics." />
+                                <ProgressBar sPara="What is your date of birth?" />
 
-                                <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
+                                <Stack direction="row" className='mt-3'> <NavigateBeforeIcon /> Back </Stack>
 
-                                <Box className="mt-3">
+                                <Box className="mt-2">
                                     <NormalHeading title="Date Of Birth" />
 
                                     <Stack flexWrap="wrap" direction={{ xs: 'row', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>

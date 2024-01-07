@@ -26,7 +26,7 @@ LinearProgressWithLabel.propTypes = {
 };
 
 
-const ProgressBar = ({ marginRight, number, para1 }) => {
+const ProgressBar = ({ marginRight, number, para1, sPara }) => {
     const [progress, setProgress] = useState(10);
 
     useEffect(() => {
@@ -65,7 +65,7 @@ const ProgressBar = ({ marginRight, number, para1 }) => {
                     <span style={{ fontSize: '12px', color: '#000', marginLeft: '10px', marginTop: '-6px' }}> Up Next: Video CV </span>
                 </Box>
             </Stack>
-            <MobileNina number={number} para1={para1} />
+            <MobileNina number={number} para1={para1} sPara={sPara} />
         </Box>
         // </Container>
     )

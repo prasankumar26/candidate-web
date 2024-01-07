@@ -42,7 +42,7 @@ const Preference = () => {
                          <MobileNav  />
 
                         <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
-                            <ProgressBar para1="Tell us your Preferences" />
+                            <ProgressBar sPara="Tell us your Preferences" />
                             <Box className="mt-3">
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>

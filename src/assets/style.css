@@ -358,6 +358,10 @@
     .cat-btn-mob{
         width: 155px !important;
     }
+    .video-qts{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+    }
 }
 
 @media only screen and (min-width: 991px) {
@@ -384,5 +388,8 @@
     }
     .mt-lg-5{
         margin-top: 3em !important;
+    }
+    .video-qts{
+        font-size: 24px !important;
     }
 }

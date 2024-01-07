@@ -114,10 +114,10 @@ const Degree = () => {
                         <MobileNav />
                         
                         <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
-                            <ProgressBar />
-                            <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
+                            <ProgressBar sPara="Let's talk about education now?" para1="What is your latest education qualification? Show it off!" />
+                            <Stack direction="row" className='mt-3'> <NavigateBeforeIcon /> Back </Stack>
 
-                            <Box className="mt-3">
+                            <Box className="mt-2">
                             <NormalHeading title="What is your latest education qualification?" />
 
                                 <Button variant='contained' sx={{ textTransform: 'capitalize', width: 'fit-content', cursor: 'pointer', backgroundColor: '#756DE9' }} className='px-3 py-2 me-2 mb-2 roundedone'>

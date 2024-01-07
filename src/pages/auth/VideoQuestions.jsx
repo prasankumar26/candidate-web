@@ -75,14 +75,14 @@ const VideoQuestions = () => {
                            <MobileNav />
 
                         <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
-                            <ProgressBar />
+                            <ProgressBar sPara="Easy, Right?" />
 
                             <Stack direction="row" className='mt-4'> <NavigateBeforeIcon /> Back </Stack>
 
                             <Box className="mt-2">
-                                <h2 className='mb-3' style={{fontSize: '24px'}}>Use these 3 minutes to speak beyond your academics and the information you have provided.</h2>
-                                <h2 className='mb-3' style={{fontSize: '24px'}}>You can speak about a range of topics which will give the hiring company an insight into your personality</h2>
-                                <h2 className='mb-3' style={{fontSize: '24px'}}>You can use any of the below suggestions, or feel free to choose your own topics.</h2>
+                                <h2 className='mb-3 video-qts'>Use these 3 minutes to speak beyond your academics and the information you have provided.</h2>
+                                <h2 className='mb-3 video-qts'>You can speak about a range of topics which will give the hiring company an insight into your personality</h2>
+                                <h2 className='mb-3 video-qts'>You can use any of the below suggestions, or feel free to choose your own topics.</h2>
                             </Box>
 
                             <Box className="mt-3">

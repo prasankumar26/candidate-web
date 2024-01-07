@@ -89,9 +89,9 @@ const Hobbies = () => {
                     </Grid>
                     <MobileNav />
                     <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des' >
-                      <ProgressBar para1="Do you have any skills or hobbies?" />
-                      <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
-                        <Box className="mt-3">
+                      <ProgressBar sPara="Do you have any skills or hobbies?" />
+                      <Stack direction="row" className='mt-3'> <NavigateBeforeIcon /> Back </Stack>
+                        <Box className="mt-2">
                             <CssTextField
                                 id="outlined-number"
                                 placeholder="Search by Keywords"

@@ -74,7 +74,7 @@ const Experience = () => {
             <MobileNav />
 
             <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
-              <ProgressBar para1="Tell us about your experiences" />
+              <ProgressBar sPara="Tell us about your experiences" />
 
               <Box className="mt-4">
                 <Stack direction="row" justifyContent="space-between">
