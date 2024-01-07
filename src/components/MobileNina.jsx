@@ -6,7 +6,7 @@ const MobileNina = ({number, para1}) => {
         <div className='mb-2 mt-3 des-none'>
             <h5 className='mb-1'>NINA</h5>
             <Stack direction="row" alignItems="center" >
-                <Avatar alt="Cindy Baker" src="https://mui.com/static/images/avatar/3.jpg" />
+                <Avatar alt="Cindy Baker" src="/images/avatar-one.png" />
                 <p style={{marginLeft: '-4px', fontSize: '14px', backgroundColor: '#F5F6Fa', borderTopRightRadius: '5px', borderTopLeftRadius: '5px', padding: '4px 8px'  }}>So here's a thought.</p>
             </Stack>
 

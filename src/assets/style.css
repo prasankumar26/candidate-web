@@ -117,7 +117,7 @@
 .text-box{
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-30%, -50%);
     font-size: 16px;
     color: #fff;
     font-weight: bold;
@@ -162,7 +162,7 @@
   .video-button-seven{
     top: 75%;
     left: 50%;
-    transform: translate(-40%, -50%);
+    transform: translate(-25%, -50%);
     width: 100%;
   }
 
@@ -356,7 +356,7 @@
         width: 60%;
     }
     .cat-btn-mob{
-        width: 164px !important;
+        width: 155px !important;
     }
 }
 

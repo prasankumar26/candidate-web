@@ -69,13 +69,12 @@ const VideoQuestions = () => {
                             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
                             <div className="mt-4">
                                 <TopHeading textstart />
-                               
                             </div>
                         </Grid>
 
                            <MobileNav />
 
-                        <Grid item xs={12} md={8} className='pt-5 px-lg-s-des'>
+                        <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
                             <ProgressBar />
 
                             <Stack direction="row" className='mt-4'> <NavigateBeforeIcon /> Back </Stack>

@@ -22,7 +22,7 @@ const AboutYou = () => {
         <section className='position-relative' style={{ height: '106vh' }}>
             <div>
                 <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
-                    <Grid container spacing={5}>
+                    <Grid container>
                         <Grid item xs={12} md={4} className='mob-none' style={{ backgroundColor: '#fff', height: '106vh', position: 'relative' }}>
                             <img src="/images/ellipse.png" alt="" className="img-fluid " style={{ position: 'absolute', bottom: '0', width: '300px' }} />
                             <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '220px' }} />
@@ -39,7 +39,7 @@ const AboutYou = () => {
 
                     <MobileNav />
                         
-                        <Grid item xs={12} md={8} className='pe-4 px-5 mt-lg-5'>
+                        <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
                             <ProgressBar number="1/5" para1="So here's a thought. Say your team is kicking off a huge project at work."  />
                             <Stack direction="column" justifyContent="center" alignItems="center" className='mt-5'>
                             <Box style={{ background: selectedValue === 'a' ? 'rgb(117 109 233 / 29%)' : '#F5F6FA', width: 'fit-content' }} className="p-3 mb-4">

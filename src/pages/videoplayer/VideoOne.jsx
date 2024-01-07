@@ -167,12 +167,12 @@ const VideoSeven = () => {
                                     color: '#fff',
                                     fontSize: '16px',
                                     width: 'fit-content',
-                                    padding: '25px, 40px, 25px, 40px',
+                                    padding: '5px 0px',
                                     '&:hover': {
                                         backgroundColor: '#756DE9',
                                     },
                                 }}
-                                variant="contained" className='w-100 px-5 mt-2' size='small'> TEST RECORDING </Button>
+                                variant="contained" className='w-100 px-2 mt-2' size='small'> TEST RECORDING </Button>
                         </div>
                         <div className="position-absolute video-button">
                             <Button
@@ -189,7 +189,7 @@ const VideoSeven = () => {
                                         backgroundColor: '#fff',
                                     },
                                 }}
-                                variant="contained" className='w-100 px-5 mt-2' size='small'> <span className="dot"></span> 00:08/01:00 min </Button>
+                                variant="contained" className='w-100 px-4 py-2 mt-2 ms-3' size='small'> <span className="dot"></span> 00:08/01:00 min </Button>
                         </div>
 
                     </div>

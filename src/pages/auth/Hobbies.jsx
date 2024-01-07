@@ -88,7 +88,7 @@ const Hobbies = () => {
                         </div>
                     </Grid>
                     <MobileNav />
-                    <Grid item xs={12} md={8} className='pt-5 px-lg-s-des' >
+                    <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des' >
                       <ProgressBar para1="Do you have any skills or hobbies?" />
                       <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
                         <Box className="mt-3">
@@ -123,6 +123,7 @@ const Hobbies = () => {
                                 categoriesList.map((item, index) => {
                                     return (
                                         <Button
+                                            key={index}
                                             className='roundedone mb-3 me-2 hobbies-pad cat-btn-mob'
                                             variant="contained"
                                             size="large"

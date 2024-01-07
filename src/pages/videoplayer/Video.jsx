@@ -11,7 +11,7 @@ const VideoContainer = () => {
            <Stack direction="row" justifyContent="center" alignItems="center" alignContent="center">
             <div className="position-relative">
             <img src="/images/video/video-1.png" alt="" className="img-fluid mt-5" style={{width: '300px'}} />
-            <div className="text-box position-absolute">
+            <div className="text-box position-absolute w-100">
               <p>Click Here to Start?</p>
             </div>
             <div className="position-absolute video-arrow">

@@ -113,10 +113,10 @@ body h1,h2,h3,h4,h5,h6{
 
 @media only screen and (max-width: 991px) {
   .px-lg-s-des{
-    padding: 40px 15px 20px 15px !important;
+    padding: 20px 15px 20px 15px !important;
   }
   .hobbies-pad{
-    padding: 10px 10px !important;
+    padding: 10px 0px !important;
   }
   .hobbies-img{
     width: 50%;
@@ -153,6 +153,9 @@ body h1,h2,h3,h4,h5,h6{
   }
   .degree-font{
     font-size: 16px !important;
+  }
+  .pt-lg-5{
+    padding-top: 3rem !important;
   }
 }
 

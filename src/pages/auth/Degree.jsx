@@ -113,7 +113,7 @@ const Degree = () => {
 
                         <MobileNav />
                         
-                        <Grid item xs={12} md={8} className='pt-5 px-lg-s-des'>
+                        <Grid item xs={12} md={8} className='pt-lg-5 px-lg-s-des'>
                             <ProgressBar />
                             <Stack direction="row" className='mt-5'> <NavigateBeforeIcon /> Back </Stack>
 
