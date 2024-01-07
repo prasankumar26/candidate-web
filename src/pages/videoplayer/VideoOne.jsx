@@ -51,20 +51,21 @@ const VideoNine = () => {
                         </div>
                     </div>
                 </Stack>
-                <Stack direction="column" justifyContent="center" alignItems="center" alignContent="center">
+                <Stack direction="column" justifyContent="center" alignItems="center" alignContent="center" className='mt-2'>
                     <Button
                         sx={{
                             backgroundColor: '#756DE9',
                             borderRadius: '99px',
                             fontSize: '16px',
+                            fontWeight: 600,
                             textTransform: 'capitalize',
-                            width: 'fit-content',
+                            width: '300px',
                             padding: '15px, 0px, 15px, 0px',
                             '&:hover': {
                                 backgroundColor: '#756DE9',
                             },
                         }}
-                        variant="contained" className='w-100 px-5 mt-3' size='small'> Ready To Record</Button>
+                        variant="contained" className='w-100 px-5 py-2 mt-3 mb-2' size='small'> Ready To Record</Button>
 
                     <Button
                         sx={{
@@ -72,16 +73,17 @@ const VideoNine = () => {
                             borderRadius: '99px',
                             fontSize: '16px',
                             textTransform: 'capitalize',
-                            width: 'fit-content',
+                            width: '300px',
                             padding: '15px, 0px, 15px, 0px',
-                            color: '#000',
+                            color: '#756DE9',
+                            fontWeight: 600,
                             '&:hover': {
                                 backgroundColor: '#ffffff',
                             },
                         }}
-                        variant="contained" className='w-100 px-5 mt-1' size='small' onClick={handleClickOpen}> Another Trial </Button>
+                        variant="contained" className='w-100 px-5 py-2 mt-1' size='small' onClick={handleClickOpen}> Another Trial </Button>
 
-                    <Link className='my-3'>Come back it to later</Link>
+                    <Link className='my-3' style={{ fontSize: '16px', color:'#756DE9' }}>Come back it to later</Link>
                 </Stack>
             </section>
 
@@ -105,13 +107,13 @@ const VideoNine = () => {
                     <CloseIcon />
                 </IconButton>
                 <DialogContent>
-                    <h2 className='text-white text-center' style={{ fontSize: '18px' }}>Video CV is mandatory! <br /> Your profile will be on hold till you <br /> add you Video CV</h2>
+                    <h2 className='text-white text-center' style={{ fontSize: '18px', fontWeight: 500, lineHeight: '25px' }}>Video CV is mandatory! <br /> Your profile will be on hold till you <br /> add you Video CV</h2>
                     <Stack direction="column" justifyContent="center" alignItems="center">
-                        <img src="/images/video/video-girl.png" alt="" className="img-fluid mt-5" style={{ width: '80px' }} />
+                        <img src="/images/video/video-girl.png" alt="" className="img-fluid mt-4" style={{ width: '80px' }} />
                         <Button onClick={() => navigate('/before-start-recording')} sx={{ textTransform: 'capitalize', fontSize: '16px', border: '1px dashed #fff', width: 'fit-content', cursor: 'pointer', backgroundColor: 'transparant', color: '#fff' }} 
-                        className='px-3 py-2 me-2 mb-3 roundedone mt-2'>
+                        className='px-3 py-2 me-2 mb-3 roundedone mt-0'>
                             Contine with video CV </Button>
-                            <a href="#" onClick={handleClose} className='text-white' style={{ fontSize: '16px' }}>Come back to it later</a>
+                            <a href="#" onClick={handleClose} className='text-white py-2' style={{ fontSize: '16px' }}>Come back to it later</a>
                     </Stack>
                 </DialogContent>
             </BootstrapDialog>
@@ -316,7 +318,7 @@ const VideoOne = () => {
 
 
 const VideoSequence = () => {
-    const [currentComponent, setCurrentComponent] = useState(1);
+    const [currentComponent, setCurrentComponent] = useState(9);
 
     useEffect(() => {
         const intervalId = setInterval(() => {

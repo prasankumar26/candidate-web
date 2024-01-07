@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import MobileNav from '../../components/MobileNav';
 
 
 const BeforeStartRecording = () => {
@@ -23,12 +24,13 @@ const BeforeStartRecording = () => {
     inputProps: { 'aria-label': item },
   });
   return (
-    <section className='position-relative' style={{ height: '106vh' }}>
+    <section className='position-relative' style={{ height: '100vh' }}>
       <div maxWidth="xl">
         <div className='pt-0' maxWidth="lg" sx={{ position: 'relative', zIndex: '99' }}>
           <Grid container spacing={5}>
-            <Grid item xs={12} md={4} style={{ backgroundColor: '#ffffff', height: '106vh', position: 'relative' }}>
-              <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '1%', width: '50%' }} />
+            <Grid className='mob-none' item xs={12} md={4} style={{ backgroundColor: '#ffffff', height: '100vh', position: 'relative' }}>
+              <img src="/images/opportunities.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '0', left: '10%', width: '50%' }} />
+              <img src="/images/vector-one.png" alt="" className="img-fluid mob-none" style={{ position: 'absolute', bottom: '35%', left: '45%', width: 'fit-content' }} />
               <div className="mt-4">
                 <p className="text-start ms-3 text-dark" style={{ fontSize: '18px', padding: '20px 0px', fontWeight: '600' }}>CATALYST</p>
                 <h2 className='text-dark ms-3 mt-5 pt-5 position-relative px-5' style={{ zIndex: '999' }}>
@@ -37,8 +39,11 @@ const BeforeStartRecording = () => {
                 <p className="text-muted ms-3 position-relative px-5">Few tips to prep you for the best outcome</p>
               </div>
             </Grid>
-            <Grid item xs={12} md={8} className='pt-5 pe-4 px-5' style={{ backgroundColor: '#756DE9', height: '106vh' }}>
-              <Box className="mt-5">
+
+             <MobileNav />
+
+            <Grid item xs={12} md={8} className='pt-5 pe-4 px-5' style={{ backgroundColor: '#756DE9', height: '100%' }}>
+              <Box className="mt-lg-5">
                 
                 <Stack direction="row" alignItems="start" alignContent="start">
                   <div>
@@ -72,7 +77,7 @@ const BeforeStartRecording = () => {
                   </div>
                   <div>
                     <h4 className='mb-2 text-white' style={{fontSize: '18px'}}>Family not yelling in the back?</h4>
-                    <p className='text-white' style={{fontSize: '14px'}}>Find a quiet spot wherever you’re recording</p>
+                    <p className='text-white' style={{fontSize: '14px'}}>Find a quiet spot wherever you're recording</p>
                   </div>
                 </Stack>
                 
@@ -130,8 +135,8 @@ const BeforeStartRecording = () => {
                     
                 <Button 
                 onClick={()=> navigate('/video-cv')}
-                sx={{ backgroundColor: '#FFFFFF', 
-                      color: '#000',
+                sx={{ backgroundColor: '#BAB6F4', 
+                      color: '#756DE9',
                       borderRadius: '99px',
                       fontSize: '16px', 
                       textTransform: 'capitalize',
@@ -141,7 +146,7 @@ const BeforeStartRecording = () => {
                         backgroundColor: '#FFFFFF', 
                       },
                 }}
-                variant="contained" className='w-100 px-5 mt-5' size='small'> LET'S GO</Button>
+                variant="contained" className='w-100 px-5 py-2 mt-5 mb-3' size='small'> LET'S GO</Button>
                   </div>
                 </Stack>
               </Box>

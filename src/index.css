@@ -110,6 +110,9 @@ body h1,h2,h3,h4,h5,h6{
 .text-uppercase{
   text-transform: uppercase !important;
 }
+.text-bold{
+  font-weight: 500;
+}
 
 @media only screen and (max-width: 991px) {
   .px-lg-s-des{

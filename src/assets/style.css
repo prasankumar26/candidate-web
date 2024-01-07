@@ -362,9 +362,18 @@
         font-size: 16px !important;
         font-weight: 400 !important;
     }
+    .profile-center{
+        justify-content: center !important;
+    }
+    .profile-nina-res{
+        margin-top: -40px;
+    }
 }
 
 @media only screen and (min-width: 991px) {
+    .pt-lg-5 {
+        padding-top: 3rem!important;
+    }
     .nav-mobile-logo{
         display: none !important;
     }
