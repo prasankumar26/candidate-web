@@ -21,6 +21,8 @@ import BeforeStartRecording from './pages/videoplayer/BeforeStartRecording';
 import VideoCvMandatory from './pages/videoplayer/VideoCvMandatory';
 import Profile from './pages/profile/Profile';
 import Test from './pages/auth/Test';
+import ProfileView from './pages/profile/ProfileView';
+import GreatJob from './pages/profile/GreatJob';
 
 function App() {
   return (
@@ -47,6 +49,8 @@ function App() {
           <Route path="video-cv" element={<VideoCvMandatory />} />
 
           <Route path="profile" element={<Profile />} />
+          <Route path="profile-view" element={<ProfileView />} />
+          <Route path="great-job" element={<GreatJob />} />
           <Route path="test" element={<Test />} />
 
           <Route path="*" element={<NoPage />} />

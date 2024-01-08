@@ -13,9 +13,9 @@ import TabPanel from '@mui/lab/TabPanel';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
+import MobileNav from '../../components/MobileNav';
 
-const TabsList = () => {
-
+const ProfileView = () => {
     const navigate = useNavigate()
     const [value, setValue] = useState('1');
 
@@ -23,9 +23,12 @@ const TabsList = () => {
         setValue(newValue);
     };
 
-    return (
-        <>
-            <Stack direction="row" justifyContent="center" className='mt-5'>
+  return (
+    <>
+    
+    <MobileNav />
+
+    <Stack direction="row" justifyContent="center" className='mt-5'>
                 <Card sx={{ width: 475 }}>
                     <CardContent className='m-0 p-0'>
                         <div style={{ backgroundColor: '#6352CC' }} className='p-4 position-relative'>
@@ -63,14 +66,8 @@ const TabsList = () => {
                                     <Stack direction="row" justifyContent="center">
                                         <div className="position-relative">
                                             <img src="/images/profile-one.png" style={{ width: '300px' }} alt="" className="img-fluid" />
-                                            <div className="position-absolute" style={{bottom: '5%', transform: 'translateX(-50%)', left: '50%' }}>
-                                                <Button onClick={()=> navigate('/profile-view') } variant="contained" sx={{
-                                                    textTransform: 'capitalize', borderRadius: '99px',
-                                                    backgroundColor: '#fff', color: '#756DE9', '&:hover': {
-                                                        backgroundColor: '#756DE9',
-                                                        color: '#fff',
-                                                    },
-                                                }}>View Profile</Button>
+                                            <div className="position-absolute" style={{bottom: '5%', left: '20px' }} onClick={()=> navigate('/great-job')}>
+                                                <img src="/images/video/pause.png" alt="" />
                                             </div>
                                         </div>
                                     </Stack>
@@ -85,8 +82,8 @@ const TabsList = () => {
                     </CardContent>
                 </Card>
             </Stack>
-        </>
-    )
+            </>
+  )
 }
 
-export default TabsList
+export default ProfileView

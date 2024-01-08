@@ -122,8 +122,8 @@ body h1,h2,h3,h4,h5,h6{
     padding: 10px 0px !important;
   }
   .hobbies-img{
-    width: 50%;
-    height: 50%;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
   }
   .send-otp{

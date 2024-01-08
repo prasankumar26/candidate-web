@@ -121,7 +121,7 @@ const DateOfBirth = () => {
                                             <Select
                                                 className='me-0'
                                                 sx={{
-                                                    width: '130px',
+                                                    width: '100px',
                                                     borderRadius: '99px',
                                                     boxShadow: 'inset 0 0 11px 2px #ebe8e8',
                                                     '& fieldset': {
@@ -145,7 +145,7 @@ const DateOfBirth = () => {
                                             <Select
                                                 className='me-0'
                                                 sx={{
-                                                    width: '130px',
+                                                    width: '100px',
                                                     borderRadius: '99px',
                                                     boxShadow: 'inset 0 0 11px 2px #ebe8e8',
                                                     '& fieldset': {
@@ -169,7 +169,7 @@ const DateOfBirth = () => {
                                             <Select
                                                 className='me-0'
                                                 sx={{
-                                                    width: '130px',
+                                                    width: '120px',
                                                     borderRadius: '99px',
                                                     boxShadow: 'inset 0 0 11px 2px #ebe8e8',
                                                     '& fieldset': {
