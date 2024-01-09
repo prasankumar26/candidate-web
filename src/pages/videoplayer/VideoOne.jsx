@@ -318,7 +318,7 @@ const VideoOne = () => {
 
 
 const VideoSequence = () => {
-    const [currentComponent, setCurrentComponent] = useState(9);
+    const [currentComponent, setCurrentComponent] = useState(1);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
