@@ -57,12 +57,9 @@ function App() {
           
           <Route path="browse-jobs" element={<BrowseJobs />} />
 
-
           <Route path="catalyst-profile" element={<CatalystProfile />} />
 
-
           <Route path="job-activities" element={<JobActivities />} />
-
 
           <Route path="test" element={<Test />} />
 

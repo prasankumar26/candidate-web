@@ -70,6 +70,7 @@ body ul li{
 .text-muted{
   color: #afaeae !important;
 }
+
 body p{
   /* font-family: 'Raleway', sans-serif !important;  */
   font-family: 'Poppins', sans-serif !important;
@@ -162,6 +163,10 @@ body h1,h2,h3,h4,h5,h6{
   }
   .pt-lg-5{
     padding-top: 3rem !important;
+  }
+  .px-lg-3{
+    padding-right: 1rem!important;
+    padding-left: 1rem!important;
   }
 }
 

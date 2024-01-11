@@ -41,7 +41,7 @@ const JobActivities = () => {
                     <Grid container spacing={5}>
                         <Grid item xs={12} md={8}>
                             <TabContext value={value}>
-                                <Stack direction="row" justifyContent="space-between">
+                                <Stack direction="row" justifyContent="space-between" flexWrap="wrap">
                                     <Box>
                                         <TabList onChange={handleChange} aria-label="lab API tabs example">
                                             <Tab label="Application" value="1" sx={{ fontWeight: '600', color: '#000' }} />

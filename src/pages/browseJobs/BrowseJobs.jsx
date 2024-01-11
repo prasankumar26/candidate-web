@@ -4,7 +4,6 @@ import Stack from '@mui/material/Stack';
 import { CssTextField } from '../../components/CssTextfield';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -13,11 +12,19 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Divider from '@mui/material/Divider';
+import Button from '@mui/material/Button';
+
+
+import Filter from '../../components/Filter';
+
+
+
+
 
 const BrowseJobs = () => {
 
     const [value, setValue] = React.useState('1');
-
+  
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -33,6 +40,8 @@ const BrowseJobs = () => {
             color: '#FF8960',
         },
     };
+
+  
 
     return (
         <>
@@ -70,8 +79,7 @@ const BrowseJobs = () => {
                             Account Planner </Button>
                     </Box>
 
-                    <Button variant='contained' sx={{ textTransform: 'capitalize', width: 'fit-content', cursor: 'pointer', backgroundColor: '#ffffff' }} className='text-dark px-3 py-1 me-2 mb-2 roundedone'>
-                        Filter <img src="/images/browse-jobs/filter.png" className='ms-4' style={{ width: '10px', objectFit: 'fit-content' }} alt="" /> </Button>
+                  <Filter />
                 </Stack>
 
 
@@ -296,25 +304,25 @@ const BrowseJobs = () => {
                                             <p style={{ color: '#1F2235' }}>Which company culture resembles with you the most?</p>
                                         </Box>
 
-                                        <Box style={{boxShadow: '0px 2px 14px 0px #2042521A',  width: 'fit-content'}}>
-                                        <Box className="mt-3 px-4 py-4">
-                                            <h6 style={{ color: '#756DE9', fontSize: '16px', fontWeight: '700', color: '#221F60' }}>Horizontal Corporate Culture</h6>
+                                        <Box style={{ boxShadow: '0px 2px 14px 0px #2042521A', width: 'fit-content' }}>
+                                            <Box className="mt-3 px-4 py-4">
+                                                <h6 style={{ color: '#756DE9', fontSize: '16px', fontWeight: '700', color: '#221F60' }}>Horizontal Corporate Culture</h6>
 
-                                            <ul style={{ listStyleType: 'none' }}>
-                                                <li className='mb-4 mt-3 text-dark blue-bullet' style={{ fontSize: '14px', color: '#1F2235', lineHeight: '10px' }}>
-                                                    Teammates discuss new product ideas in the break room
-                                                </li>
-                                                <li className='mb-4 text-dark blue-bullet' style={{ fontSize: '14px', color: '#1F2235', lineHeight: '10px' }}>
-                                                    Everybody does a little bit of everything
-                                                </li>
-                                                <li className='mb-4 text-dark blue-bullet' style={{ fontSize: '14px', color: '#1F2235', lineHeight: '10px' }}>
-                                                    The CEO makes his or her own coffee
-                                                </li>
-                                                <li className='mb-4 text-dark blue-bullet' style={{ fontSize: '14px', color: '#1F2235', lineHeight: '10px' }}>
-                                                    You still have to prove your product’s worth to critics
-                                                </li>
-                                            </ul>
-                                        </Box>
+                                                <ul style={{ listStyleType: 'none' }}>
+                                                    <li className='mb-4 mt-3 text-dark blue-bullet' style={{ fontSize: '14px', color: '#1F2235', lineHeight: '10px' }}>
+                                                        Teammates discuss new product ideas in the break room
+                                                    </li>
+                                                    <li className='mb-4 text-dark blue-bullet' style={{ fontSize: '14px', color: '#1F2235', lineHeight: '10px' }}>
+                                                        Everybody does a little bit of everything
+                                                    </li>
+                                                    <li className='mb-4 text-dark blue-bullet' style={{ fontSize: '14px', color: '#1F2235', lineHeight: '10px' }}>
+                                                        The CEO makes his or her own coffee
+                                                    </li>
+                                                    <li className='mb-4 text-dark blue-bullet' style={{ fontSize: '14px', color: '#1F2235', lineHeight: '10px' }}>
+                                                        You still have to prove your product's worth to critics
+                                                    </li>
+                                                </ul>
+                                            </Box>
                                         </Box>
 
                                         <Divider variant="fullWidth" />
@@ -322,19 +330,19 @@ const BrowseJobs = () => {
                                         <Box className="mt-4">
                                             <p style={{ color: '#756DE9', fontSize: '12px', fontWeight: '500' }}> Values and Mission </p>
                                             <p style={{ color: '#1F2235' }}>A brief about company aspirations</p>
-                                            <p className="mt-4" style={{fontSize: '14px', lineHeight: '23px'}}>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                            <p className="mt-4" style={{ fontSize: '14px', lineHeight: '23px' }}>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                                             </p>
 
                                             <Stack direction="row" flexWrap="wrap">
-                                            <Stack direction="row" alignItems="center" className='mt-4 p-3 me-5' sx={{ borderRadius: '5px', boxShadow: '0px 2px 14px 0px #2042521A', width: 'fit-content'}}>
-                                                <img src="/images/browse-jobs/pdf-1.png" alt="" className='me-2' />
-                                                <p style={{fontSize: '14px'}}>Mission Vision - Ogilvy</p>
-                                            </Stack>
-                                            <Stack direction="row" alignItems="center" className='mt-4 p-3' sx={{ borderRadius: '5px', boxShadow: '0px 2px 14px 0px #2042521A', width: 'fit-content'}}>
-                                                <img src="/images/browse-jobs/pdf-1.png" alt="" className='me-2' />
-                                                <p style={{fontSize: '14px'}}>Mission Vision - Ogilvy</p>
-                                            </Stack>
+                                                <Stack direction="row" alignItems="center" className='mt-4 p-3 me-5' sx={{ borderRadius: '5px', boxShadow: '0px 2px 14px 0px #2042521A', width: 'fit-content' }}>
+                                                    <img src="/images/browse-jobs/pdf-1.png" alt="" className='me-2' />
+                                                    <p style={{ fontSize: '14px' }}>Mission Vision - Ogilvy</p>
+                                                </Stack>
+                                                <Stack direction="row" alignItems="center" className='mt-4 p-3' sx={{ borderRadius: '5px', boxShadow: '0px 2px 14px 0px #2042521A', width: 'fit-content' }}>
+                                                    <img src="/images/browse-jobs/pdf-1.png" alt="" className='me-2' />
+                                                    <p style={{ fontSize: '14px' }}>Mission Vision - Ogilvy</p>
+                                                </Stack>
                                             </Stack>
                                         </Box>
 
@@ -348,6 +356,8 @@ const BrowseJobs = () => {
                     </Grid>
                 </Box>
 
+
+             
 
 
             </section>

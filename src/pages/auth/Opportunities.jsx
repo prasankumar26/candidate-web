@@ -9,10 +9,10 @@ import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import { useState } from 'react';
 import Stack from '@mui/material/Stack';
-import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import TopHeading from '../../components/TopHeading';
+import Switch from '@mui/material/Switch';
 import { alpha, styled } from '@mui/system';
 
 const label = { inputProps: { 'aria-label': 'Size switch demo' } };
