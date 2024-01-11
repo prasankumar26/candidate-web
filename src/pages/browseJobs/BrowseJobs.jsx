@@ -1,9 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import Stack from '@mui/material/Stack';
-import { CssTextField } from '../../components/CssTextfield';
-import InputAdornment from '@mui/material/InputAdornment';
-import SearchIcon from '@mui/icons-material/Search';
+
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -14,12 +12,8 @@ import TabPanel from '@mui/lab/TabPanel';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 
-
 import Filter from '../../components/Filter';
-
-
-
-
+import Search from '../../components/Search';
 
 const BrowseJobs = () => {
 
@@ -49,24 +43,7 @@ const BrowseJobs = () => {
             <section className='px-4 pt-4' style={{ backgroundColor: '#F4F4F4' }}>
                 <Stack direction="row" justifyContent="space-between" alignItems="center">
                     <h4 style={{ fontSize: '24px' }}>Browse Jobs</h4>
-                    <CssTextField
-                        id="outlined-number"
-                        placeholder="Search by Keywords, skills, job role, etc"
-                        variant="outlined"
-                        className='mt-2'
-                        style={{ width: '35%' }}
-                        InputProps={{
-                            style: {
-                                borderRadius: '99px',
-                                backgroundColor: '#f4f4fc6b',
-                            },
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <SearchIcon />
-                                </InputAdornment>
-                            ),
-                        }}
-                    />
+                    <Search />
                 </Stack>
 
                 <Stack className="mt-4" direction="row" justifyContent="space-between" alignItems="center">

@@ -10,8 +10,7 @@ import { useState } from 'react';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/material/Box';
-import { CssTextField } from './CssTextfield';
-
+import { CssTextField } from './CssTextfield';  
 
 const label = { inputProps: { 'aria-label': 'Size switch demo' } };
 
@@ -66,7 +65,7 @@ const Filter = () => {
                 <DialogTitle sx={{ m: 0, p: 2, color: '#868686', fontSize: '14px', letterSpacing: '1.67px', fontWeight: '500' }} id="customized-dialog-title">
                     Filter By
                 </DialogTitle>
-                <p aria-label="close" onClick={handleClose} style={{ position: 'absolute', right: '8%', top: '5%', color: '#756DE9', cursor: 'pointer' }}>CLEAR ALL</p>
+                <p aria-label="close" onClick={handleClose} style={{ position: 'absolute', right: '4%', top: '3%', color: '#756DE9', cursor: 'pointer' }}>CLEAR ALL</p>
                 <DialogContent dividers>
                     <Box className="mt-2">
                         <p style={{ color: '#221F60', fontSize: '14px', fontWeight: 600 }} className='mb-2'>Work Experience</p>
