@@ -17,10 +17,13 @@ import { Link } from 'react-router-dom';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const { pathname } = useLocation();
+    console.log(pathname, "pathname");
 
     const open = Boolean(anchorEl);
 
@@ -44,15 +47,15 @@ const Navbar = () => {
         <AppBar position="sticky" sx={{ zIndex: '999' }}>
             <Toolbar>
                 <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ width: '100%' }} className='nav-desktop'>
-                    <IconButton size="large" edge="start" color="inherit" aria-label="logo" style={{fontSize: '18px'}}>
+                    <IconButton size="large" edge="start" color="inherit" aria-label="logo" style={{ fontSize: '18px' }}>
                         CATALYST
                     </IconButton>
 
                     <div className='nav-links'>
                         <Stack spacing={4} direction="row" justifyContent="between" alignItems="center">
-                            <Link className='text-muted nav-link'>Browse Jobs</Link>
-                            <Link className='text-muted nav-link active' style={{fontSize: '16px'}}>Catalyst Profile</Link>
-                            <Link className='text-muted nav-link'>Job Activities</Link>
+                            <Link to="/browse-jobs" className={`text-muted nav-link ${pathname === '/browse-jobs' ? 'text-muted nav-link active' : 'text-muted nav-link'}`} style={{ fontSize: '16px' }}>Browse Jobs</Link>
+                            <Link to="/catalyst-profile" className={`text-muted nav-link ${pathname === '/catalyst-profile' ? 'text-muted nav-link active' : 'text-muted nav-link'}`} style={{ fontSize: '16px' }}>Catalyst Profile</Link>
+                            <Link to="/job-activities" className={`text-muted nav-link ${pathname === '/job-activities' ? 'text-muted nav-link active' : 'text-muted nav-link'}`} style={{ fontSize: '16px' }}>Job Activities</Link>
                         </Stack>
                     </div>
 
@@ -94,18 +97,18 @@ const Navbar = () => {
                         />
 
                         <Stack direction="row" alignItems="center">
-                           <div>
-                           <Avatar
-                                sx={{ bgcolor: '#FFFFFF', marginLeft: '20px' }}
-                                alt="Avatar"
-                                src="/images/avatar.png"
-                            />
-                           </div>
-                            
-                           <div>
-                           <p className='ms-2 mb-0 pb-0'>Need Help?</p>
-                            <p className='ms-2 mt-0 pt-0'>...</p>
-                           </div>
+                            <div>
+                                <Avatar
+                                    sx={{ bgcolor: '#FFFFFF', marginLeft: '20px' }}
+                                    alt="Avatar"
+                                    src="/images/avatar.png"
+                                />
+                            </div>
+
+                            <div>
+                                <p className='ms-2 mb-0 pb-0'>Need Help?</p>
+                                <p className='ms-2 mt-0 pt-0'>...</p>
+                            </div>
                         </Stack>
 
                     </Stack>

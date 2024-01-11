@@ -308,7 +308,79 @@
 	-moz-animation: progress-bar-stripes 2s linear infinite;
 }
 
+.orange-bullet::before {
+    content: '•'; 
+    color: #FF8960;
+    margin-right: 8px; 
+  }
+.blue-bullet::before {
+    content: '•'; 
+    color: #1F2235    ;
+    margin-right: 8px; 
+  }
 
+  /* avatar  */
+  .avatar-upload {
+    position: relative;
+    max-width: 115px;
+  }
+  .avatar-upload .avatar-edit {
+    position: absolute;
+    right: -9px;
+    z-index: 1;
+    bottom: 15px;
+  }
+  .avatar-upload .avatar-edit input {
+    display: none;
+  }
+  .avatar-upload .avatar-edit input + label {
+    /* display: inline-block; */
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+  }
+  .avatar-upload .avatar-edit input + label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+  }
+  .avatar-upload .avatar-edit input + label:after {
+    /* content: "\f040"; */
+    font-family: 'FontAwesome';
+    color: #757575;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+  }
+  .avatar-upload .avatar-preview {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    border-radius: 100%;
+    /* border: 6px solid #F8F8F8; */
+    /* box-shado    w: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); */
+  }
+  .avatar-upload .avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
 @media only screen and (max-width: 425px) {
     .social-m{
         margin-top: 10px !important;
@@ -367,6 +439,9 @@
     }
     .profile-nina-res{
         margin-top: -40px;
+    }
+    .tab-mobile{
+        margin-top: 80px;
     }
 }
 

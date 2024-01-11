@@ -21,6 +21,9 @@ body{
 .font-P{
   font-family: 'Poppins', sans-serif !important;
 }
+body ul li{
+  font-family: 'Poppins', sans-serif !important;
+}
 .font-R{
   font-family: 'Poppins', sans-serif !important;
 }

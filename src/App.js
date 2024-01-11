@@ -23,6 +23,9 @@ import Profile from './pages/profile/Profile';
 import Test from './pages/auth/Test';
 import ProfileView from './pages/profile/ProfileView';
 import GreatJob from './pages/profile/GreatJob';
+import BrowseJobs from './pages/browseJobs/BrowseJobs';
+import CatalystProfile from './pages/catalystProfile/CatalystProfile';
+import JobActivities from './pages/jobsActivities/JobActivities';
 
 function App() {
   return (
@@ -51,6 +54,16 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="profile-view" element={<ProfileView />} />
           <Route path="great-job" element={<GreatJob />} />
+          
+          <Route path="browse-jobs" element={<BrowseJobs />} />
+
+
+          <Route path="catalyst-profile" element={<CatalystProfile />} />
+
+
+          <Route path="job-activities" element={<JobActivities />} />
+
+
           <Route path="test" element={<Test />} />
 
           <Route path="*" element={<NoPage />} />
