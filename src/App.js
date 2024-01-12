@@ -27,6 +27,7 @@ import BrowseJobs from './pages/browseJobs/BrowseJobs';
 import CatalystProfile from './pages/catalystProfile/CatalystProfile';
 import JobActivities from './pages/jobsActivities/JobActivities';
 import VideoCVJobs from './pages/browseJobs/VideoCVJobs';
+import ConfirmAll from './pages/browseJobs/ConfirmAll';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
           
           <Route path="browse-jobs" element={<BrowseJobs />} />
           <Route path="video-cv-jobs" element={<VideoCVJobs />} />
+          <Route path="confirm-all" element={<ConfirmAll />} />
 
           <Route path="catalyst-profile" element={<CatalystProfile />} />
 
