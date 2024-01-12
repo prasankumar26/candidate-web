@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import { useEffect, useState } from 'react';
 import MobileNina from './MobileNina';
-import Container from '@mui/material/Container';
 
 function LinearProgressWithLabel(props) {
     return (

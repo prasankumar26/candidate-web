@@ -53,9 +53,9 @@ const Navbar = () => {
 
                     <div className='nav-links'>
                         <Stack spacing={4} direction="row" justifyContent="between" alignItems="center">
-                            <Link to="/browse-jobs" className={`text-muted nav-link ${pathname === '/browse-jobs' ? 'text-muted nav-link active' : 'text-muted nav-link'}`} style={{ fontSize: '16px' }}>Browse Jobs</Link>
-                            <Link to="/catalyst-profile" className={`text-muted nav-link ${pathname === '/catalyst-profile' ? 'text-muted nav-link active' : 'text-muted nav-link'}`} style={{ fontSize: '16px' }}>Catalyst Profile</Link>
-                            <Link to="/job-activities" className={`text-muted nav-link ${pathname === '/job-activities' ? 'text-muted nav-link active' : 'text-muted nav-link'}`} style={{ fontSize: '16px' }}>Job Activities</Link>
+                            <Link to="/browse-jobs" className={`text-muted nav-link py-2 ${pathname === '/browse-jobs' ? 'text-muted nav-link active' : 'text-muted nav-link'}`} style={{ fontSize: '16px' }}>Browse Jobs</Link>
+                            <Link to="/catalyst-profile" className={`text-muted nav-link py-2 ${pathname === '/catalyst-profile' ? 'text-muted nav-link active' : 'text-muted nav-link'}`} style={{ fontSize: '16px' }}>Catalyst Profile</Link>
+                            <Link to="/job-activities" className={`text-muted nav-link py-2 ${pathname === '/job-activities' ? 'text-muted nav-link active' : 'text-muted nav-link'}`} style={{ fontSize: '16px' }}>Job Activities</Link>
                         </Stack>
                     </div>
 

@@ -26,6 +26,7 @@ import GreatJob from './pages/profile/GreatJob';
 import BrowseJobs from './pages/browseJobs/BrowseJobs';
 import CatalystProfile from './pages/catalystProfile/CatalystProfile';
 import JobActivities from './pages/jobsActivities/JobActivities';
+import VideoCVJobs from './pages/browseJobs/VideoCVJobs';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
           <Route path="great-job" element={<GreatJob />} />
           
           <Route path="browse-jobs" element={<BrowseJobs />} />
+          <Route path="video-cv-jobs" element={<VideoCVJobs />} />
 
           <Route path="catalyst-profile" element={<CatalystProfile />} />
 
