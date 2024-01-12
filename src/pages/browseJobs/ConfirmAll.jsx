@@ -93,34 +93,37 @@ const ConfirmAll = () => {
 
                 <Box sx={{ flexGrow: 1, paddingBottom: '60px' }} className="mt-3">
                     <Grid container spacing={2}>
-                        <Grid item xs={12} md={4}>
+                        <Grid item xs={12} md={6}>
                             <h2 style={{ fontSize: '24px' }} className='my-3'>Confirm all your details for <br />  this job role</h2>
-                            <Box style={{ padding: '20px 20px', background: `linear-gradient(0deg, rgba(117, 109, 233, 0.16), rgba(117, 109, 233, 0.16)), linear-gradient(0deg, #FFFFFF, #FFFFFF)`, borderRadius: '5px', position: 'relative' }}>
-                                <Stack direction="row" justifyContent="space-between">
-                                    <Box>
-                                        <Stack direction="row">
-                                            <img src="/images/ogilvy.png" alt="" className="img-fluid" style={{ width: '100px' }} />
-                                            <Box className="ms-3">
-                                                <h4 className="text-dark">Account Planner</h4>
-                                                <p className="text-dark">Ogilvy.Pvt. Ltd</p>
-                                                <Button variant="contained" className='mt-2' sx={{
-                                                    backgroundColor: '#52C6AE33', color: '#52C6AE', borderRadius: '99px', fontWeight: '600', '&:hover': {
-                                                        background: '#52C6AE33',
-                                                        color: '#52C6AE',
-                                                    },
-                                                }}>
-                                                    Good Fit
-                                                </Button>
-                                            </Box>
-                                        </Stack>
-                                    </Box>
-                                    <Box>
-                                        <MoreVertIcon style={{ color: '#363636' }} />
-                                    </Box>
-                                </Stack>
+                            <Box style={{ padding: '20px 20px', borderRadius: '5px', position: 'relative' }}>
+                               <Stack>
+                               <Box sx={{ flexGrow: 1 }}>
+                                    <Grid container spacing={2} style={{display: 'flex', justifyContent: 'center'}}>
+                                        <Grid item xs={12} md={8} style={{background: `linear-gradient(0deg, rgba(117, 109, 233, 0.16), rgba(117, 109, 233, 0.16)), linear-gradient(0deg, #FFFFFF, #FFFFFF)`}}>
+                                            <Stack direction="row" justifyContent="space-between">
+                                                <Box>
+                                                    <Stack direction="row">
+                                                        <img src="/images/ogilvy.png" alt="" className="img-fluid" style={{ width: '100px' }} />
+                                                        <Box className="ms-3">
+                                                            <h4 className="text-dark">Account Planner</h4>
+                                                            <p className="text-dark">Ogilvy.Pvt. Ltd</p>
+                                                            <Button variant="contained" className='mt-2' sx={{
+                                                                backgroundColor: '#52C6AE33', color: '#52C6AE', borderRadius: '99px', fontWeight: '600', '&:hover': {
+                                                                    background: '#52C6AE33',
+                                                                    color: '#52C6AE',
+                                                                },
+                                                            }}>
+                                                                Good Fit
+                                                            </Button>
+                                                        </Box>
+                                                    </Stack>
+                                                </Box>
+                                                <Box>
+                                                    <MoreVertIcon style={{ color: '#363636' }} />
+                                                </Box>
+                                            </Stack>
 
-
-                                <Stack className='mt-3' direction="row" flexWrap="wrap" >
+                                            <Stack className='mt-3' direction="row" flexWrap="wrap" >
                                     <Stack style={{ background: '#FFFFFF87', width: '100px', borderRadius: '5px' }} className='p-3 me-2 mb-4'>
                                         <img src="/images/browse-jobs/location.png" alt="" style={{ width: '30px', margin: '0px auto', display: 'block' }} />
                                         <h6 className='text-center mt-2' style={{ fontSize: '14px', fontWeight: '500' }}>Mumbai</h6>
@@ -160,10 +163,14 @@ const ConfirmAll = () => {
                                     style={{ position: 'absolute', bottom: '-9%', left: '50%', width: '60px' }} />
 
 
+                                        </Grid>
+                                    </Grid>
+                                </Box>
+                               </Stack>
                             </Box>
                         </Grid>
 
-                        <Grid item xs={12} md={2}></Grid>
+                        {/* <Grid item xs={12} md={2}></Grid> */}
 
                         <Grid item xs={12} md={6}>
                             <h2 style={{ fontSize: '24px' }} className='text-center mt-3'>
@@ -405,22 +412,22 @@ const ConfirmAll = () => {
                                         margin: '5px 0px', background: '#FF89601A', borderRadius: '99px',
                                         color: '#000000', fontWeight: '600'
                                     }}>
-                                       <img src="/images/browse-jobs/banking.png" alt="" className='me-2 w-100' /> <span>Baking</span>
-                                       </Button>
+                                        <img src="/images/browse-jobs/banking.png" alt="" className='me-2 w-100' /> <span>Baking</span>
+                                    </Button>
 
-                                       <Button variant="contained" className='me-3' style={{
+                                    <Button variant="contained" className='me-3' style={{
                                         margin: '5px 0px', background: '#FF89601A', borderRadius: '99px',
                                         color: '#000000', fontWeight: '600'
                                     }}>
-                                       <img src="/images/browse-jobs/investments.png" alt="" className='me-2 w-100' /> <span>Investment</span>
-                                       </Button>
+                                        <img src="/images/browse-jobs/investments.png" alt="" className='me-2 w-100' /> <span>Investment</span>
+                                    </Button>
 
-                                       <Button variant="contained" className='me-3' style={{
+                                    <Button variant="contained" className='me-3' style={{
                                         margin: '5px 0px', background: '#FF89601A', borderRadius: '99px',
                                         color: '#000000', fontWeight: '600'
                                     }}>
-                                       <img src="/images/browse-jobs/travelling.png" alt="" className='me-2 w-100' /> <span>Travelling</span>
-                                       </Button>
+                                        <img src="/images/browse-jobs/travelling.png" alt="" className='me-2 w-100' /> <span>Travelling</span>
+                                    </Button>
                                 </Stack>
                             </Box>
 
