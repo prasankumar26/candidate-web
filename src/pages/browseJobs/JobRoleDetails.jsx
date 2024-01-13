@@ -199,14 +199,6 @@ const JobRoleDetails = () => {
 
                     </Grid>
                 </Box>
-
-
-
-
-
-
-
-
             </section>
         </>
     )
