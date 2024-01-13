@@ -15,11 +15,14 @@ import Filter from '../../components/Filter';
 import { styled } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-
+import EditIcon from '@mui/icons-material/Edit';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
+import { borderRadius } from '@mui/system';
+
 
 const bull = (
     <Box
@@ -42,9 +45,20 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     },
 }));
 
-const VideoCVJobs = () => {
+const Answers = () => {
 
     const [value, setValue] = React.useState('1');
+    const [textValue, setTextValue] = React.useState('');
+
+    const handleTextChange = (event) => {
+        setTextValue(event.target.value);
+    };
+
+    const handleButtonClick = () => {
+        // Handle button click logic here
+        console.log('Button clicked!');
+    };
+
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -61,6 +75,8 @@ const VideoCVJobs = () => {
             color: '#FF8960',
         },
     };
+
+
 
 
 
@@ -93,7 +109,7 @@ const VideoCVJobs = () => {
 
                 <Box sx={{ flexGrow: 1, paddingBottom: '60px' }} className="mt-3">
                     <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={6}>
                             <Box style={{ padding: '20px 20px', borderRadius: '5px', position: 'relative' }}>
                                 <Stack>
                                     <Box sx={{ flexGrow: 1 }}>
@@ -170,32 +186,49 @@ const VideoCVJobs = () => {
                             </Box>
                         </Grid>
 
+                        {/* <Grid item xs={12} md={2}></Grid> */}
+
                         <Grid item xs={12} md={6}>
-                            <h2 style={{ fontSize: '24px' }} className='text-center mt-3'>Select your Video CV</h2>
+                            <h2 style={{ fontSize: '24px' }} className='text-center mt-3'>
+                                Answer Interview Questions
+                            </h2>
 
-                            <Box className="mt-3">
-                                <p style={{ color: '#14141480' }}>4 videos available</p>
+                            <p style={{ fontWeight: '600' }} className='mt-4'>Tell me about your experience as an Account</p>
+                            <p style={{ fontWeight: '600' }}>Planner at your previous job? </p>
 
-                                <Box className='mt-3' sx={{ background: '#F2F1FF' }}>
-                                    <img src="/images/browse-jobs/video-image.png" alt="" style={{ width: '300px' }} className="img-fluid" />
-                                    <Box >
-                                        <p>Account Manager</p>
-                                    </Box>
-                                </Box>
-                            </Box>
+                            <TextareaAutosize
+                                className='mt-3 p-2'
+                                aria-label="empty textarea"
+                                placeholder="Write your answer here..."
+                                value={textValue}
+                                onChange={handleTextChange}
+                                style={{ width: '100%' }}
+                                minRows={4}
+                                sx={{ borderRadius: '10px', border: 'none', boxShadow: '0px 0px 11px 2px #4B44D40F inset' }}
+                            />
 
-                            <Stack direction="row" justifyContent="cengter" alignItems="center">
-                                <Box className="mt-5 w-100">
-                                    <p className='text-center mb-2'>None of the video works for this Job Role?</p>
-                                    <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: '100%', cursor: 'pointer' }} className='px-3 py-2 me-2 mb-2 roundedone text-center'>
-                                        Media Manager </Button>
-                                </Box>
-                            </Stack>
-                            <Box className="text-center mt-3">
-                                <Button variant="contained" className='py-3' style={{ backgroundColor: '#756DE9', borderRadius: '99px', width: '100%', textTransform: 'capitalize', fontWeight: '600' }}>
-                                    Next Up Check Profile Details
+                            <p style={{ fontWeight: '600' }} className='mt-4'>Can you meet a target of 4 clients every month?</p>
+
+                            <TextareaAutosize
+                                className='mt-3 p-2'
+                                aria-label="empty textarea"
+                                placeholder="Write your answer here..."
+                                value={textValue}
+                                onChange={handleTextChange}
+                                style={{ width: '100%' }}
+                                minRows={4}
+                                sx={{ borderRadius: '10px', border: 'none', boxShadow: '0px 0px 11px 2px #4B44D40F inset' }}
+                            />
+
+
+                            <Box className="mt-3 text-center">
+                                <Button variant="contained" className='py-3' sx={{ width: '60%', backgroundColor: '#756DE9', borderRadius: '99px' }}>
+                                I'm confident! Let's Apply
                                 </Button>
                             </Box>
+
+
+
 
                         </Grid>
 
@@ -214,4 +247,4 @@ const VideoCVJobs = () => {
     )
 }
 
-export default VideoCVJobs
+export default Answers

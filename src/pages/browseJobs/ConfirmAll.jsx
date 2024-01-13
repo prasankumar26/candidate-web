@@ -94,12 +94,12 @@ const ConfirmAll = () => {
                 <Box sx={{ flexGrow: 1, paddingBottom: '60px' }} className="mt-3">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
-                            <h2 style={{ fontSize: '24px' }} className='my-3'>Confirm all your details for <br />  this job role</h2>
                             <Box style={{ padding: '20px 20px', borderRadius: '5px', position: 'relative' }}>
                                <Stack>
+                            <h2 style={{ fontSize: '24px' }} className='my-3 text-center'>Confirm all your details for <br />  this job role</h2>
                                <Box sx={{ flexGrow: 1 }}>
                                     <Grid container spacing={2} style={{display: 'flex', justifyContent: 'center'}}>
-                                        <Grid item xs={12} md={8} style={{background: `linear-gradient(0deg, rgba(117, 109, 233, 0.16), rgba(117, 109, 233, 0.16)), linear-gradient(0deg, #FFFFFF, #FFFFFF)`}}>
+                                        <Grid item xs={12} md={8} className='pb-5' style={{background: `linear-gradient(0deg, rgba(117, 109, 233, 0.16), rgba(117, 109, 233, 0.16)), linear-gradient(0deg, #FFFFFF, #FFFFFF)`}}>
                                             <Stack direction="row" justifyContent="space-between">
                                                 <Box>
                                                     <Stack direction="row">
@@ -158,9 +158,9 @@ const ConfirmAll = () => {
 
 
                                 <img src="/images/browse-jobs/skip.png" alt="" className="img-fluid"
-                                    style={{ position: 'absolute', bottom: '-9%', left: '28%', width: '60px' }} />
+                                    style={{ position: 'absolute', bottom: '-5%', left: '28%', width: '60px' }} />
                                 <img src="/images/browse-jobs/save.png" alt="" className="img-fluid"
-                                    style={{ position: 'absolute', bottom: '-9%', left: '50%', width: '60px' }} />
+                                    style={{ position: 'absolute', bottom: '-5%', left: '50%', width: '60px' }} />
 
 
                                         </Grid>

@@ -15,6 +15,7 @@ import Filter from '../../components/Filter';
 import { styled } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -42,7 +43,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     },
 }));
 
-const VideoCVJobs = () => {
+const JobRoleDetails = () => {
 
     const [value, setValue] = React.useState('1');
 
@@ -68,32 +69,21 @@ const VideoCVJobs = () => {
     return (
         <>
             <Navbar />
-            <section className='px-4 pt-4' style={{ backgroundColor: '#ffffff' }}>
-                <Box sx={{ flexGrow: 1 }} className="mt-4">
+            <section className='px-4' style={{ backgroundColor: '#ffffff' }}>
+                <Box sx={{ flexGrow: 1,  }} className="pt-3">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
-                            <Stack direction="row" alignItems="center">
-                                <KeyboardArrowLeftIcon /> <h4 style={{ fontSize: '14px', fontWeight: '400' }} className='me-2'> Back </h4>
-                            </Stack>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <BorderLinearProgress variant="determinate" value={50} />
-                            <Stack direction="row" justifyContent="space-between" className='mt-2'>
-                                <p style={{ color: '#000000', fontWeight: '500', textTransform: 'uppercase' }}>1/3 Video CV</p>
-                                <p style={{ color: '#000000', fontWeight: '500', textTransform: 'uppercase' }}>2/3 PROFILE</p>
-                                <p style={{ color: '#000000', fontWeight: '500', textTransform: 'uppercase' }}>2/3 Answers</p>
-                            </Stack>
 
-                        </Grid>
-                    </Grid>
-                </Box>
+                            <Box sx={{ flexGrow: 1 }} className="pt-4">
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12} md={6}>
+                                        <Stack direction="row" alignItems="center">
+                                            <KeyboardArrowLeftIcon /> <h4 style={{ fontSize: '14px', fontWeight: '400' }} className='me-2'> Back </h4>
+                                        </Stack>
+                                    </Grid>
+                                </Grid>
+                            </Box>
 
-
-
-
-                <Box sx={{ flexGrow: 1, paddingBottom: '60px' }} className="mt-3">
-                    <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
                             <Box style={{ padding: '20px 20px', borderRadius: '5px', position: 'relative' }}>
                                 <Stack>
                                     <Box sx={{ flexGrow: 1 }}>
@@ -156,13 +146,6 @@ const VideoCVJobs = () => {
                                                     </Box>
                                                 </Stack>
 
-
-                                                <img src="/images/browse-jobs/skip.png" alt="" className="img-fluid"
-                                                    style={{ position: 'absolute', bottom: '-5%', left: '28%', width: '60px' }} />
-                                                <img src="/images/browse-jobs/save.png" alt="" className="img-fluid"
-                                                    style={{ position: 'absolute', bottom: '-5%', left: '50%', width: '60px' }} />
-
-
                                             </Grid>
                                         </Grid>
                                     </Box>
@@ -170,31 +153,46 @@ const VideoCVJobs = () => {
                             </Box>
                         </Grid>
 
-                        <Grid item xs={12} md={6}>
-                            <h2 style={{ fontSize: '24px' }} className='text-center mt-3'>Select your Video CV</h2>
+                        <Grid item xs={12} md={6} style={{ backgroundColor: '#FF8960' }}>
+                            <h2 style={{ fontSize: '24px', fontWeight: '700' }} className='text-center pt-3 text-white'>Your Profile is on hold</h2>
+                            <p className='text-center text-white mt-2' style={{ fontSize: '16px' }}>Update your Catalyst profile to apply</p>
 
-                            <Box className="mt-3">
-                                <p style={{ color: '#14141480' }}>4 videos available</p>
+                            <Box sx={{ backgroundColor: '#fff', borderRadius: '10px' }} className="mx-5 mt-4 p-4">
+                                <Stack direction="row" justifyContent="space-between">
+                                    <p style={{ color: '#00000080', fontSize: '12px', fontWeight: 600 }}>1/3 PENDING ACTIONS</p>
+                                    <p> <i style={{ color: '#FF8960', fontSize: '12px' }}>Mandatory</i></p>
+                                </Stack>
 
-                                <Box className='mt-3' sx={{ background: '#F2F1FF' }}>
-                                    <img src="/images/browse-jobs/video-image.png" alt="" style={{ width: '300px' }} className="img-fluid" />
-                                    <Box >
-                                        <p>Account Manager</p>
-                                    </Box>
-                                </Box>
+                                <h6 style={{ fontSize: '16px' }} className='mb-2 mt-1'>Make your Video CV</h6>
+                                <p>At Catalyst we belive the right candidate thrives in the right culture. Show hiring company you are much more than just a piece of paper.</p>
+
+                                <Stack direction="row" alignItems="center" className='mt-4'> <p style={{ color: '#756DE9' }}>Let's do it</p> <KeyboardArrowRightIcon style={{ color: '#756DE9' }} /> </Stack>
                             </Box>
 
-                            <Stack direction="row" justifyContent="cengter" alignItems="center">
-                                <Box className="mt-5 w-100">
-                                    <p className='text-center mb-2'>None of the video works for this Job Role?</p>
-                                    <Button sx={{ textTransform: 'capitalize', border: '1px dashed #756DE9', width: '100%', cursor: 'pointer' }} className='px-3 py-2 me-2 mb-2 roundedone text-center'>
-                                        Media Manager </Button>
-                                </Box>
-                            </Stack>
+
+                            <Box sx={{ backgroundColor: '#fff', borderRadius: '10px' }} className="mx-5 mt-4 p-4">
+                                <Stack direction="row" justifyContent="space-between">
+                                    <p style={{ color: '#00000080', fontSize: '12px', fontWeight: 600 }}>1/3 PENDING ACTIONS</p>
+                                    <p> <i style={{ color: '#979797', fontSize: '12px' }}>Optional</i></p>
+                                </Stack>
+
+                                <h6 style={{ fontSize: '16px' }} className='mb-2 mt-1'>Add media</h6>
+                                <p>Add images and cirtificates of your achivements and activity</p>
+
+                                <Stack direction="row" alignItems="center" className='mt-3'> <p style={{ color: '#756DE9' }}>Let's do it</p> <KeyboardArrowRightIcon style={{ color: '#756DE9' }} /> </Stack>
+                            </Box>
+
+
+
+
+
+
                             <Box className="text-center mt-3">
-                                <Button variant="contained" className='py-3' style={{ backgroundColor: '#756DE9', borderRadius: '99px', width: '100%', textTransform: 'capitalize', fontWeight: '600' }}>
-                                    Next Up Check Profile Details
-                                </Button>
+                                <Button variant="contained" className='py-3 px-5' style={{ backgroundColor: '#FFFFFF', borderRadius: '99px', width: 'fit-content', textTransform: 'capitalize', fontWeight: '600', color: '#756DE9' }}>
+                                    Complete Profile
+                                </Button> <br /> <br />
+
+                                <a href="#" className='text-white' style={{ fontSize: '14px' }}>Back to Browsing Jobs</a>
                             </Box>
 
                         </Grid>
@@ -214,4 +212,4 @@ const VideoCVJobs = () => {
     )
 }
 
-export default VideoCVJobs
+export default JobRoleDetails
