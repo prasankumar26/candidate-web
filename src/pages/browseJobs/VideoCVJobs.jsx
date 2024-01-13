@@ -15,11 +15,13 @@ import Filter from '../../components/Filter';
 import { styled } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
 
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 
 const bull = (
     <Box
@@ -93,7 +95,7 @@ const VideoCVJobs = () => {
 
                 <Box sx={{ flexGrow: 1, paddingBottom: '60px' }} className="mt-3">
                     <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={6}>
                             <Box style={{ padding: '20px 20px', borderRadius: '5px', position: 'relative' }}>
                                 <Stack>
                                     <Box sx={{ flexGrow: 1 }}>
@@ -175,13 +177,138 @@ const VideoCVJobs = () => {
 
                             <Box className="mt-3">
                                 <p style={{ color: '#14141480' }}>4 videos available</p>
-
-                                <Box className='mt-3' sx={{ background: '#F2F1FF' }}>
-                                    <img src="/images/browse-jobs/video-image.png" alt="" style={{ width: '300px' }} className="img-fluid" />
-                                    <Box >
-                                        <p>Account Manager</p>
-                                    </Box>
-                                </Box>
+                                <Swiper
+                                    slidesPerView={1}
+                                    spaceBetween={30}
+                                    className="mySwiper"
+                                    modules={[Autoplay]}
+                                    autoplay={{
+                                        delay: 2500,
+                                        disableOnInteraction: false,
+                                    }}
+                                    breakpoints={{
+                                        640: {
+                                            slidesPerView: 1,
+                                            spaceBetween: 20,
+                                        },
+                                        768: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 40,
+                                        },
+                                        1024: {
+                                            slidesPerView: 3,
+                                            spaceBetween: 50,
+                                        },
+                                    }}
+                                >
+                                    {/* <Box> */}
+                                    <SwiperSlide>
+                                        <Box className='mt-3' sx={{ background: '#F2F1FF' }}>
+                                            <Box className='mt-3' sx={{ background: '#F2F1FF', boxShadow: '2px 4px 10px 0px #0000001F', border: '2px solid #756DE9', borderRadius: '5px' }}>
+                                                <div className="position-relative">
+                                                    <img src="/images/browse-jobs/video-image.png" alt="" className="img-fluid" />
+                                                    <div className="position-absolute center-icon">
+                                                        <img src="/images/browse-jobs/video-icon.png" alt="" />
+                                                    </div>
+                                                    <div className="position-absolute center-icon-btn">
+                                                        <Button className='py-0' variant="contained" style={{ backgroundColor: '#52C6AE', color: '#ffffff', width: 'fit-content', fontSize: '12px', borderRadius: '99px' }}>Use it by default</Button>
+                                                    </div>
+                                                    <div className="position-absolute center-icon-checkbox">
+                                                        <FormControlLabel control={<Checkbox style={{ color: '#000000' }} />} />
+                                                    </div>
+                                                </div>
+                                                <Stack direction="row" justifyContent="space-between" className='px-2 py-2' style={{ backgroundColor: '#fff' }}>
+                                                    <h5 style={{ fontSize: '14px', color: '#000000' }}>Account Manager</h5>
+                                                </Stack>
+                                            </Box>
+                                        </Box>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Box className='mt-3' sx={{ background: '#F2F1FF' }}>
+                                            <Box className='mt-3' sx={{ background: '#F2F1FF', boxShadow: '2px 4px 10px 0px #0000001F', border: '2px solid #756DE9', borderRadius: '5px' }}>
+                                                <div className="position-relative">
+                                                    <img src="/images/browse-jobs/video-image.png" alt="" className="img-fluid" />
+                                                    <div className="position-absolute center-icon">
+                                                        <img src="/images/browse-jobs/video-icon.png" alt="" />
+                                                    </div>
+                                                    <div className="position-absolute center-icon-btn">
+                                                        <Button className='py-0' variant="contained" style={{ backgroundColor: '#52C6AE', color: '#ffffff', width: 'fit-content', fontSize: '12px', borderRadius: '99px' }}>Use it by default</Button>
+                                                    </div>
+                                                    <div className="position-absolute center-icon-checkbox">
+                                                        <FormControlLabel control={<Checkbox style={{ color: '#000000' }} />} />
+                                                    </div>
+                                                </div>
+                                                <Stack direction="row" justifyContent="space-between" className='px-2 py-2' style={{ backgroundColor: '#fff' }}>
+                                                    <h5 style={{ fontSize: '14px', color: '#000000' }}>Account Manager</h5>
+                                                </Stack>
+                                            </Box>
+                                        </Box>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Box className='mt-3' sx={{ background: '#F2F1FF' }}>
+                                            <Box className='mt-3' sx={{ background: '#F2F1FF', boxShadow: '2px 4px 10px 0px #0000001F', border: '2px solid #756DE9', borderRadius: '5px' }}>
+                                                <div className="position-relative">
+                                                    <img src="/images/browse-jobs/video-image.png" alt="" className="img-fluid" />
+                                                    <div className="position-absolute center-icon">
+                                                        <img src="/images/browse-jobs/video-icon.png" alt="" />
+                                                    </div>
+                                                    <div className="position-absolute center-icon-btn">
+                                                        <Button className='py-0' variant="contained" style={{ backgroundColor: '#52C6AE', color: '#ffffff', width: 'fit-content', fontSize: '12px', borderRadius: '99px' }}>Use it by default</Button>
+                                                    </div>
+                                                    <div className="position-absolute center-icon-checkbox">
+                                                        <FormControlLabel control={<Checkbox style={{ color: '#000000' }} />} />
+                                                    </div>
+                                                </div>
+                                                <Stack direction="row" justifyContent="space-between" className='px-2 py-2' style={{ backgroundColor: '#fff' }}>
+                                                    <h5 style={{ fontSize: '14px', color: '#000000' }}>Account Manager</h5>
+                                                </Stack>
+                                            </Box>
+                                        </Box>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Box className='mt-3' sx={{ background: '#F2F1FF' }}>
+                                            <Box className='mt-3' sx={{ background: '#F2F1FF', boxShadow: '2px 4px 10px 0px #0000001F', border: '2px solid #756DE9', borderRadius: '5px' }}>
+                                                <div className="position-relative">
+                                                    <img src="/images/browse-jobs/video-image.png" alt="" className="img-fluid" />
+                                                    <div className="position-absolute center-icon">
+                                                        <img src="/images/browse-jobs/video-icon.png" alt="" />
+                                                    </div>
+                                                    <div className="position-absolute center-icon-btn">
+                                                        <Button className='py-0' variant="contained" style={{ backgroundColor: '#52C6AE', color: '#ffffff', width: 'fit-content', fontSize: '12px', borderRadius: '99px' }}>Use it by default</Button>
+                                                    </div>
+                                                    <div className="position-absolute center-icon-checkbox">
+                                                        <FormControlLabel control={<Checkbox style={{ color: '#000000' }} />} />
+                                                    </div>
+                                                </div>
+                                                <Stack direction="row" justifyContent="space-between" className='px-2 py-2' style={{ backgroundColor: '#fff' }}>
+                                                    <h5 style={{ fontSize: '14px', color: '#000000' }}>Account Manager</h5>
+                                                </Stack>
+                                            </Box>
+                                        </Box>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Box className='mt-3' sx={{ background: '#F2F1FF' }}>
+                                            <Box className='mt-3' sx={{ background: '#F2F1FF', boxShadow: '2px 4px 10px 0px #0000001F', border: '2px solid #756DE9', borderRadius: '5px' }}>
+                                                <div className="position-relative">
+                                                    <img src="/images/browse-jobs/video-image.png" alt="" className="img-fluid" />
+                                                    <div className="position-absolute center-icon">
+                                                        <img src="/images/browse-jobs/video-icon.png" alt="" />
+                                                    </div>
+                                                    <div className="position-absolute center-icon-btn">
+                                                        <Button className='py-0' variant="contained" style={{ backgroundColor: '#52C6AE', color: '#ffffff', width: 'fit-content', fontSize: '12px', borderRadius: '99px' }}>Use it by default</Button>
+                                                    </div>
+                                                    <div className="position-absolute center-icon-checkbox">
+                                                        <FormControlLabel control={<Checkbox style={{ color: '#000000' }} />} />
+                                                    </div>
+                                                </div>
+                                                <Stack direction="row" justifyContent="space-between" className='px-2 py-2' style={{ backgroundColor: '#fff' }}>
+                                                    <h5 style={{ fontSize: '14px', color: '#000000' }}>Account Manager</h5>
+                                                </Stack>
+                                            </Box>
+                                        </Box>
+                                    </SwiperSlide>
+                                    {/* </Box> */}
+                                </Swiper>
                             </Box>
 
                             <Stack direction="row" justifyContent="cengter" alignItems="center">

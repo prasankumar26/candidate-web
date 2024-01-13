@@ -32,6 +32,7 @@ import Answers from './pages/browseJobs/Answers';
 import JobsCongrats from './pages/browseJobs/JobsCongrats';
 import JobRoleDetails from './pages/browseJobs/JobRoleDetails';
 import Settings from './pages/dashboard/Settings';
+import CatalystProfileOne from './pages/catalystProfile/CatalystProfileOne';
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
           <Route path="job-role-details" element={<JobRoleDetails />} />
 
           <Route path="catalyst-profile" element={<CatalystProfile />} />
+          <Route path="catalyst-profile-one" element={<CatalystProfileOne />} />
 
           <Route path="job-activities" element={<JobActivities />} />
 
