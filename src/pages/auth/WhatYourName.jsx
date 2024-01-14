@@ -60,7 +60,7 @@ const WhatYourName = () => {
                 <TopHeading />
                 <div className="text-center mt-5 mb-5">
                     <h2 className='text-white' style={{fontSize: '35px'}}>Great!</h2>
-                    <h2 className='text-white mt-1' style={{fontSize: '35px'}}>What is Your Name?</h2>
+                    <h2 className='text-white mt-1 name-heading'>What is Your Name?</h2>
                 </div>
 
                <div className="mx-lg-5">

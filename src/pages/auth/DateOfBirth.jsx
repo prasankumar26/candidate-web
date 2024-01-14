@@ -115,7 +115,7 @@ const DateOfBirth = () => {
                                 <Box className="mt-2">
                                     <NormalHeading title="Date Of Birth" />
 
-                                    <Stack flexWrap="wrap" direction={{ xs: 'row', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
+                                    <Stack flexWrap="wrap" direction={{ xs: 'row', sm: 'row' }} spacing={{ xs: 0, sm: 2, md: 4 }}>
                                         <FormControl className='social-m'>
                                             <InputLabel id="demo-simple-select-label">DD</InputLabel>
                                             <Select

@@ -483,9 +483,42 @@
     .tab-mobile{
         margin-top: 80px;
     }
+
+    /* res  */
+    .name-heading{
+        font-size: 1.2em;
+    }
+    .notes-list{
+        width: 50px;
+    }
+    .group-table{
+        width: 150px;
+    }
+    .great-job-btn{
+        margin-top: 40px;
+    }
+    .cp-img{
+        margin-top: 30px !important;
+    }
 }
 
 @media only screen and (min-width: 991px) {
+    .name-heading{
+        font-size: 35px;
+    }
+    .notes-list{
+        width: 100px;
+    }
+    .cp-img{
+        width: 500px;
+    }
+    .group-table{
+        width: 250px;
+    }
+    .great-job-publish{
+        margin-left: 20px !important;
+    }
+
     .pt-lg-5 {
         padding-top: 3rem!important;
     }

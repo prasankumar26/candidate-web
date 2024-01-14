@@ -86,7 +86,7 @@ const CatalystProfile = () => {
 
                                         <Box sx={{ flexGrow: 1 }}>
                                             <Grid container spacing={2}>
-                                                <Grid item xs={6} md={8}>
+                                                <Grid item xs={12} md={8}>
                                                     <Stack className="drop_area_box mt-4" direction="row" justifyContent="center">
                                                         <FileUploader className="drop_area drop_zone" handleChange={handleChange} name="file" types={fileTypes} style={{ width: '100% !important' }} >
                                                             <div className='text-center'><p style={{ color: '#756DE9', fontWeight: '600' }}>+Add Work Links</p>
@@ -98,15 +98,14 @@ const CatalystProfile = () => {
                                                     <Stack>
                                                             <h3 className='ms-4 pt-3'>Personality Type</h3>
                                                         </Stack>
-                                                        <Stack className='m-4 p-3' direction="row" alignItems="center" justifyContent="space-between" style={{ boxShadow: '0px 2px 10px 0px #2222221A' }}>
-                                                            <Box>
-                                                                
+                                                        <Stack className='m-4 p-3' direction={{ xs: 'column', sm: 'row' }} alignItems="center" justifyContent="space-between" style={{ boxShadow: '0px 2px 10px 0px #2222221A' }}>
+                                                            <Box> 
                                                                 <h3>THE DRIVER</h3>
                                                                 <p>When faced with a challenge, drivers say, “Bring it on!” Your eye is always on the prize at work, and you like to use logic and data to tackle problems because if there’s anything you love more than playing the game, it's winning.</p>
                                                             </Box>
 
-                                                            <Box className="ms-5" style={{width: '500px'}}>
-                                                                <Stack direction="row" alignItems="center">
+                                                            <Box className="ms-5 cp-img">
+                                                                <Stack direction="row" alignItems="center" flexWrap="wrap"  >
                                                                     <EditIcon className='me-1' style={{ color: '#756DE9', fontSize: '18px' }} />
                                                                     <p style={{ color: '#756DE9', fontSize: '16px', fontWeight: '600' }}>TEST RETAKE</p>
                                                                 </Stack>
@@ -489,7 +488,7 @@ const CatalystProfile = () => {
                                                     </Box>
                                                 </Grid>
 
-                                                <Grid item xs={6} md={4}>
+                                                <Grid item xs={12} md={4}>
 
                                                     <Box className="mt-5 mx-5">
                                                         <p style={{ color: '#00000080', textTransform: 'uppercase' }}>Updates</p>

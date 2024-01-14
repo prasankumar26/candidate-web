@@ -157,7 +157,7 @@ const GreatJob = () => {
                   <p style={{ color: '#979797', lineHeight: '18px' }}>Add work links, media, tell us about you</p>
                   <p style={{ color: '#979797' }}>a bit more</p>
                 </div>
-                <img src="/images/notes-list.png" alt="" className="img-fluid w-100 position-absolute" style={{ bottom: 0, right: '-2%', width: '100px' }} />
+                <img src="/images/notes-list.png" alt="" className="img-fluid w-100 position-absolute notes-list" style={{ bottom: 0, right: '-2%'}} />
               </Box>
 
 
@@ -167,13 +167,13 @@ const GreatJob = () => {
                   <p style={{ color: '#979797', lineHeight: '18px' }}>Tell us what are your basic criteria so we can </p>
                   <p style={{ color: '#979797' }}>find best fit opportunities for you</p>
                 </div>
-                <img src="/images/group-table.png" alt="" className="img-fluid w-100 position-absolute" style={{ bottom: '-15%', right: '-2%', width: '300px' }} />
+                <img src="/images/group-table.png" alt="" className="img-fluid w-100 position-absolute group-table" style={{ bottom: '-15%', right: '-2%'}} />
               </Box>
 
 
 
 
-              <Stack direction="row" alignItems="center">
+              <Stack direction="row" alignItems="center" flexWrap="wrap" className='great-job-btn'>
                 <ButtonBlue title="Let's get it done!" link="/experience" />
 
                 <Button
@@ -191,7 +191,7 @@ const GreatJob = () => {
                       backgroundColor: '#ffffff',
                     },
                   }}
-                  variant="contained" className='w-100 mt-2 btn-pad ms-4' size='small'>  Publish Anyway </Button>
+                  variant="contained" className='w-100 mt-0 btn-pad great-job-publish' size='small'>  Publish Anyway </Button>
               </Stack>
 
 

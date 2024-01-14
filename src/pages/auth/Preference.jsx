@@ -137,11 +137,11 @@ const Preference = () => {
 
                             <Box className="mt-3">
                             <NormalHeading title="Type of the job" />
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 mb-1 roundedone'>
                                     Full Time </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 mb-1 roundedone'>
                                     Part Time </Button>
-                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 roundedone'>
+                                <Button sx={{ border: '1px dashed #756DE9', width: 'fit-content', cursor: 'pointer', textTransform: 'capitalize' }} className='px-3 py-2 me-2 mb-1 roundedone'>
                                     Internship </Button>
                             </Box>
 
