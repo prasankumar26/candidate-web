@@ -63,7 +63,7 @@ const CatalystProfileOne = () => {
                             </div>
 
                             <div>
-                                <h4 className='text-white mb-1' style={{ fontSize: '28px' }}>Janki Sharma</h4>
+                                <h4 className='text-white mb-1 cp-heading'>Janki Sharma</h4>
                                 <p style={{ color: '#F4F4F4', fontSize: '14px' }}>Aspiring Account Manager</p>
                             </div>
                         </Stack>
@@ -385,7 +385,7 @@ const CatalystProfileOne = () => {
                                                             </Stack>
                                                         </Stack>
 
-                                                        <Stack direction="row" justifyContent="space-between">
+                                                        <Stack direction="row" justifyContent="space-between" flexWrap="wrap">
                                                             <Box className="my-3">
                                                                 <Stack direction="row" alignItems="center">
                                                                     <img src="/images/saved-jobs/icon-2.png" alt="" className='me-2' />
@@ -575,7 +575,7 @@ const CatalystProfileOne = () => {
                                                             <h3 className='mt-3 text-white'>Just in  ₹200</h3>
 
                                                             <Button variant="contained" className='mt-5' style={{ fontSize: '16px', backgroundColor: '#ffffff', borderRadius: '99px', color: '#756DE9', fontWeight: '600', margin: '5px 0px' }}>Let's Talk</Button>
-                                                            <img src="/images/job-act-1.png" alt="" className="img-fluid" style={{ position: 'absolute', right: '-10%', bottom: 0, width: '200px' }} />
+                                                            <img src="/images/job-act-1.png" alt="" className="img-fluid" style={{ position: 'absolute', right: '-10%', bottom: 0, width: '150px' }} />
                                                         </Box>
                                                     </Box>
                                                 </Grid>

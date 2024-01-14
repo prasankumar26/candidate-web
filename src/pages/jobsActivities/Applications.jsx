@@ -12,9 +12,9 @@ const Applications = () => {
         <>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} className='mb-3' >
                         <Box style={{ boxShadow: '0px 2px 10px 0px #2222221A', border: '1px solid #F0F0F0', borderRadius: '5px', backgroundColor: '#ffffff' }} className="p-3">
-                            <Stack direction="row" justifyContent="space-between">
+                            <Stack direction="row" justifyContent="space-between" alignContent="center" flexWrap="wrap">
                                 <Box>
                                     <h4>Account Planner</h4>
                                     <p style={{ fontSize: '14px' }}>Ogilvy.Pvt. Ltd</p>
@@ -45,9 +45,9 @@ const Applications = () => {
                             </Stack>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} className='mb-3' >
                         <Box style={{ boxShadow: '0px 2px 10px 0px #2222221A', border: '1px solid #F0F0F0', borderRadius: '5px', backgroundColor: '#ffffff' }} className="p-3">
-                            <Stack direction="row" justifyContent="space-between">
+                            <Stack direction="row" justifyContent="space-between"  alignContent="center" flexWrap="wrap">
                                 <Box>
                                     <h4>Account Planner</h4>
                                     <p style={{ fontSize: '14px' }}>Ogilvy.Pvt. Ltd</p>
@@ -81,9 +81,9 @@ const Applications = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} className='mb-3' >
                         <Box style={{ boxShadow: '0px 2px 10px 0px #2222221A', border: '1px solid #F0F0F0', borderRadius: '5px', backgroundColor: '#ffffff' }} className="p-3">
-                            <Stack direction="row" justifyContent="space-between">
+                            <Stack direction="row" justifyContent="space-between"  alignContent="center" flexWrap="wrap">
                                 <Box>
                                     <h4>Account Planner</h4>
                                     <p style={{ fontSize: '14px' }}>Ogilvy.Pvt. Ltd</p>
@@ -114,9 +114,9 @@ const Applications = () => {
                             </Stack>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} className='mb-3' >
                         <Box style={{ boxShadow: '0px 2px 10px 0px #2222221A', border: '1px solid #F0F0F0', borderRadius: '5px', backgroundColor: '#ffffff' }} className="p-3">
-                            <Stack direction="row" justifyContent="space-between">
+                            <Stack direction="row" justifyContent="space-between"  alignContent="center" flexWrap="wrap">
                                 <Box>
                                     <h4>Account Planner</h4>
                                     <p style={{ fontSize: '14px' }}>Ogilvy.Pvt. Ltd</p>

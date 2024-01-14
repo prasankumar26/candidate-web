@@ -35,24 +35,24 @@ const JobActivities = () => {
                 </Stack>
             </section>
 
-            <section style={{ backgroundColor: '#F4F4F4' }} className='px-3 pt-3'>
+            <section style={{ backgroundColor: '#F4F4F4', overflowX: 'hidden' }} className='px-3 pt-3' >
 
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={5}>
                         <Grid item xs={12} md={8}>
                             <TabContext value={value}>
-                                <Stack direction="row" justifyContent="space-between" flexWrap="wrap">
-                                    <Box>
+                                <Stack direction="row" justifyContent="space-between" flexWrap="wrap" className='mb-3'>
+                                    <Box className='mt-4'>
                                         <TabList onChange={handleChange} aria-label="lab API tabs example">
                                             <Tab label="Application" value="1" sx={{ fontWeight: '600', color: '#000' }} />
                                             <Tab label="Saved" value="2" />
                                         </TabList>
                                     </Box>
-                                    <Button variant="contained" style={{ backgroundColor: '#fff', borderRadius: '99px', color: '#756DE9', fontWeight: '600' }}>
+                                    <Button variant="contained" className='mt-4' style={{ backgroundColor: '#fff', borderRadius: '99px', color: '#756DE9', fontWeight: '600' }}>
                                         Sort By <img src="/images/swap.png" className='ms-2' alt="" />
                                     </Button>
                                 </Stack>
-                                <TabPanel value="1" sx={{ textTransform: 'capitalize' }}>
+                                <TabPanel value="1" sx={{ textTransform: 'capitalize', padding: '0px' }}>
                                    <Applications />
                                 </TabPanel>
                                 <TabPanel value="2" sx={{ textTransform: 'capitalize' }}>
@@ -61,7 +61,7 @@ const JobActivities = () => {
                             </TabContext>
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Box className="mt-5 mx-5">
+                            <Box className="mt-5 mx-cat-5">
                                 <p style={{ color: '#00000080', textTransform: 'uppercase' }}>Updates</p>
                                 <Stack direction="row" justifyContent="space-between">
                                     <h4 className="mt-2 mb-3">
@@ -144,7 +144,7 @@ const JobActivities = () => {
                                     <h3 className='mt-3 text-white'>Just in  ₹200</h3>
 
                                     <Button variant="contained" className='mt-5' style={{fontSize: '16px', backgroundColor: '#ffffff', borderRadius: '99px', color: '#756DE9', fontWeight: '600', margin: '5px 0px' }}>Let's Talk</Button>
-                                    <img src="/images/job-act-1.png" alt="" className="img-fluid" style={{position: 'absolute', right: '-10%', bottom: 0, width: '200px'}} />
+                                    <img src="/images/job-act-1.png" alt="" className="img-fluid" style={{position: 'absolute', right: '-10%', bottom: 0, width: '150px'}} />
 
                                 </Box>
 

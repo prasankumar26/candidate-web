@@ -428,6 +428,15 @@
 }
 
 @media only screen and (max-width: 991px) {
+    .search-box{
+        width: 100%;
+    }
+    .cp-heading{
+        font-size: 16px;
+    }
+    .jrd-heading{
+        font-size: 18px;
+    }
     .nav-desktop{
         display: none !important;
     }
@@ -503,6 +512,15 @@
 }
 
 @media only screen and (min-width: 991px) {
+    .search-box{
+        width: 35%;
+    }
+    .cp-heading{
+        font-size: 28px;
+    }
+    .jrd-heading{
+        font-size: 24px;
+    }
     .name-heading{
         font-size: 35px;
     }

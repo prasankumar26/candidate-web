@@ -70,7 +70,7 @@ const VideoCVJobs = () => {
     return (
         <>
             <Navbar />
-            <section className='px-4 pt-4' style={{ backgroundColor: '#ffffff' }}>
+            <section className='px-lg-4 pt-4 px-2' style={{ backgroundColor: '#ffffff', overflowX: 'hidden' }}>
                 <Box sx={{ flexGrow: 1 }} className="mt-4">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
@@ -96,16 +96,16 @@ const VideoCVJobs = () => {
                 <Box sx={{ flexGrow: 1, paddingBottom: '60px' }} className="mt-3">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
-                            <Box style={{ padding: '20px 20px', borderRadius: '5px', position: 'relative' }}>
+                            <Box style={{ padding: '20px 10px', borderRadius: '5px', position: 'relative' }}>
                                 <Stack>
                                     <Box sx={{ flexGrow: 1 }}>
                                         <Grid container spacing={2} style={{ display: 'flex', justifyContent: 'center' }}>
-                                            <h2 style={{ fontSize: '24px' }} className='my-3'>Confirm all your details for <br />  this job role</h2>
+                                            <h2  className='my-3 cp-heading'>Confirm all your details for <br />  this job role</h2>
                                             <Grid className='pb-5' item xs={12} md={8} style={{ background: `linear-gradient(0deg, rgba(117, 109, 233, 0.16), rgba(117, 109, 233, 0.16)), linear-gradient(0deg, #FFFFFF, #FFFFFF)` }}>
                                                 <Stack direction="row" justifyContent="space-between">
                                                     <Box>
-                                                        <Stack direction="row">
-                                                            <img src="/images/ogilvy.png" alt="" className="img-fluid" style={{ width: '100px' }} />
+                                                        <Stack direction="row"  flexWrap="wrap">
+                                                            <img src="/images/ogilvy.png" alt="" className="img-fluid" style={{ width: '100px', objectFit: 'contain' }} />
                                                             <Box className="ms-3">
                                                                 <h4 className="text-dark">Account Planner</h4>
                                                                 <p className="text-dark">Ogilvy.Pvt. Ltd</p>

@@ -56,7 +56,7 @@ const CatalystProfile = () => {
                             </div>
 
                             <div>
-                                <h4 className='text-white mb-1' style={{ fontSize: '28px' }}>Janki Sharma</h4>
+                                <h4 className='text-white mb-1 cp-heading'>Janki Sharma</h4>
                                 <p style={{ color: '#F4F4F4', fontSize: '14px' }}>Aspiring Account Manager</p>
                             </div>
                         </Stack>

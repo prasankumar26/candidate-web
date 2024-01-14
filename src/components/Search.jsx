@@ -43,8 +43,7 @@ const Search = () => {
                 id="outlined-number"
                 placeholder="Search by Keywords, skills, job role, etc"
                 variant="outlined"
-                className='mt-2'
-                style={{ width: '35%' }}
+                className='mt-2 search-box'
                 InputProps={{
                     style: {
                         borderRadius: '99px',

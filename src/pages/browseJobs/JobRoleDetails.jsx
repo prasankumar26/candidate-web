@@ -69,7 +69,7 @@ const JobRoleDetails = () => {
     return (
         <>
             <Navbar />
-            <section className='px-4' style={{ backgroundColor: '#ffffff' }}>
+            <section className='px-lg-4' style={{ backgroundColor: '#ffffff' }}>
                 <Box sx={{ flexGrow: 1,  }} className="pt-3">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
@@ -84,14 +84,14 @@ const JobRoleDetails = () => {
                                 </Grid>
                             </Box>
 
-                            <Box style={{ padding: '20px 20px', borderRadius: '5px', position: 'relative' }}>
+                            <Box className="px-0" style={{ borderRadius: '5px', position: 'relative' }}>
                                 <Stack>
                                     <Box sx={{ flexGrow: 1 }}>
                                         <Grid container spacing={2} style={{ display: 'flex', justifyContent: 'center' }}>
-                                            <h2 style={{ fontSize: '24px' }} className='my-3'>Confirm all your details for <br />  this job role</h2>
+                                            <h2 className='my-3 ms-0 mt-5 jrd-heading'>Confirm all your details for <br />  this job role</h2>
                                             <Grid className='pb-5' item xs={12} md={8} style={{ background: `linear-gradient(0deg, rgba(117, 109, 233, 0.16), rgba(117, 109, 233, 0.16)), linear-gradient(0deg, #FFFFFF, #FFFFFF)` }}>
                                                 <Stack direction="row" justifyContent="space-between">
-                                                    <Box>
+                                                    <Box className="px-2">
                                                         <Stack direction="row">
                                                             <img src="/images/ogilvy.png" alt="" className="img-fluid" style={{ width: '100px' }} />
                                                             <Box className="ms-3">
@@ -113,7 +113,7 @@ const JobRoleDetails = () => {
                                                     </Box>
                                                 </Stack>
 
-                                                <Stack className='mt-3' direction="row" flexWrap="wrap" >
+                                                <Stack className='mt-3 px-2' direction="row" flexWrap="wrap" justifyContent={{ xs: 'center', sm: 'center' }}>
                                                     <Stack style={{ background: '#FFFFFF87', width: '100px', borderRadius: '5px' }} className='p-3 me-2 mb-4'>
                                                         <img src="/images/browse-jobs/location.png" alt="" style={{ width: '30px', margin: '0px auto', display: 'block' }} />
                                                         <h6 className='text-center mt-2' style={{ fontSize: '14px', fontWeight: '500' }}>Mumbai</h6>
@@ -153,11 +153,11 @@ const JobRoleDetails = () => {
                             </Box>
                         </Grid>
 
-                        <Grid item xs={12} md={6} style={{ backgroundColor: '#FF8960' }}>
+                        <Grid item xs={12} md={6} style={{ backgroundColor: '#FF8960' }} className='pb-5'>
                             <h2 style={{ fontSize: '24px', fontWeight: '700' }} className='text-center pt-3 text-white'>Your Profile is on hold</h2>
                             <p className='text-center text-white mt-2' style={{ fontSize: '16px' }}>Update your Catalyst profile to apply</p>
 
-                            <Box sx={{ backgroundColor: '#fff', borderRadius: '10px' }} className="mx-5 mt-4 p-4">
+                            <Box sx={{ backgroundColor: '#fff', borderRadius: '10px' }} className="mx-cat-5 mx-1 mt-4 p-4">
                                 <Stack direction="row" justifyContent="space-between">
                                     <p style={{ color: '#00000080', fontSize: '12px', fontWeight: 600 }}>1/3 PENDING ACTIONS</p>
                                     <p> <i style={{ color: '#FF8960', fontSize: '12px' }}>Mandatory</i></p>
@@ -170,7 +170,7 @@ const JobRoleDetails = () => {
                             </Box>
 
 
-                            <Box sx={{ backgroundColor: '#fff', borderRadius: '10px' }} className="mx-5 mt-4 p-4">
+                            <Box sx={{ backgroundColor: '#fff', borderRadius: '10px' }} className="mx-cat-5 mx-1 mt-4 p-4">
                                 <Stack direction="row" justifyContent="space-between">
                                     <p style={{ color: '#00000080', fontSize: '12px', fontWeight: 600 }}>1/3 PENDING ACTIONS</p>
                                     <p> <i style={{ color: '#979797', fontSize: '12px' }}>Optional</i></p>

@@ -40,13 +40,13 @@ const BrowseJobs = () => {
     return (
         <>
             <Navbar />
-            <section className='px-4 pt-4' style={{ backgroundColor: '#F4F4F4' }}>
-                <Stack direction="row" justifyContent="space-between" alignItems="center">
+            <section className=' px-2 px-lg-4 pt-4' style={{ backgroundColor: '#F4F4F4' }}>
+                <Stack direction="row" justifyContent="space-between" alignItems="center"  flexWrap="wrap">
                     <h4 style={{ fontSize: '24px' }}>Browse Jobs</h4>
                     <Search />
                 </Stack>
 
-                <Stack className="mt-4" direction="row" justifyContent="space-between" alignItems="center">
+                <Stack className="mt-4" direction="row" justifyContent="space-between" alignItems="center" flexWrap="wrap">
                     <Box>
                         <Button variant='contained' sx={{ textTransform: 'capitalize', width: 'fit-content', cursor: 'pointer', backgroundColor: '#756DE9' }} className='px-3 py-2 me-2 mb-2 roundedone'>
                             Account Manager </Button>
@@ -63,11 +63,11 @@ const BrowseJobs = () => {
                 <Box sx={{ flexGrow: 1, paddingBottom: '60px' }} className="mt-3">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={4}>
-                            <Box style={{ padding: '60px 20px', background: `linear-gradient(0deg, rgba(117, 109, 233, 0.16), rgba(117, 109, 233, 0.16)), linear-gradient(0deg, #FFFFFF, #FFFFFF)`, borderRadius: '5px', position: 'relative' }}>
-                                <Stack direction="row" justifyContent="space-between">
+                            <Box style={{ padding: '60px 10px', background: `linear-gradient(0deg, rgba(117, 109, 233, 0.16), rgba(117, 109, 233, 0.16)), linear-gradient(0deg, #FFFFFF, #FFFFFF)`, borderRadius: '5px', position: 'relative' }}>
+                                <Stack direction="row" justifyContent="space-between"  flexWrap="wrap">
                                     <Box>
                                         <Stack direction="row">
-                                            <img src="/images/ogilvy.png" alt="" className="img-fluid" style={{ width: '100px' }} />
+                                            <img src="/images/ogilvy.png" alt="" className="img-fluid" style={{ width: '100px', objectFit: 'contain' }} />
                                             <Box className="ms-3">
                                                 <h4 className="text-dark">Account Planner</h4>
                                                 <p className="text-dark">Ogilvy.Pvt. Ltd</p>

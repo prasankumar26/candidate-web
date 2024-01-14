@@ -84,7 +84,7 @@ const Answers = () => {
     return (
         <>
             <Navbar />
-            <section className='px-4 pt-4' style={{ backgroundColor: '#ffffff' }}>
+            <section className='px-lg-4 px-2 pt-4' style={{ backgroundColor: '#ffffff' }}>
                 <Box sx={{ flexGrow: 1 }} className="mt-4">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
@@ -110,11 +110,11 @@ const Answers = () => {
                 <Box sx={{ flexGrow: 1, paddingBottom: '60px' }} className="mt-3">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
-                            <Box style={{ padding: '20px 20px', borderRadius: '5px', position: 'relative' }}>
+                            <Box style={{ padding: '20px 10px', borderRadius: '5px', position: 'relative' }}>
                                 <Stack>
                                     <Box sx={{ flexGrow: 1 }}>
                                         <Grid container spacing={2} style={{ display: 'flex', justifyContent: 'center' }}>
-                                            <h2 style={{ fontSize: '24px' }} className='my-3'>Confirm all your details for <br />  this job role</h2>
+                                            <h2 className='my-3 cp-heading'>Confirm all your details for <br />  this job role</h2>
                                             <Grid className='pb-5' item xs={12} md={8} style={{ background: `linear-gradient(0deg, rgba(117, 109, 233, 0.16), rgba(117, 109, 233, 0.16)), linear-gradient(0deg, #FFFFFF, #FFFFFF)` }}>
                                                 <Stack direction="row" justifyContent="space-between">
                                                     <Box>
@@ -197,7 +197,7 @@ const Answers = () => {
                             <p style={{ fontWeight: '600' }}>Planner at your previous job? </p>
 
                             <TextareaAutosize
-                                className='mt-3 p-2'
+                                className='mt-3 py-2'
                                 aria-label="empty textarea"
                                 placeholder="Write your answer here..."
                                 value={textValue}
@@ -210,7 +210,7 @@ const Answers = () => {
                             <p style={{ fontWeight: '600' }} className='mt-4'>Can you meet a target of 4 clients every month?</p>
 
                             <TextareaAutosize
-                                className='mt-3 p-2'
+                                className='mt-3 py-2'
                                 aria-label="empty textarea"
                                 placeholder="Write your answer here..."
                                 value={textValue}
@@ -222,7 +222,7 @@ const Answers = () => {
 
 
                             <Box className="mt-3 text-center">
-                                <Button variant="contained" className='py-3' sx={{ width: '60%', backgroundColor: '#756DE9', borderRadius: '99px' }}>
+                                <Button variant="contained" className='py-3' sx={{ width: '80%', backgroundColor: '#756DE9', borderRadius: '99px' }}>
                                 I'm confident! Let's Apply
                                 </Button>
                             </Box>
