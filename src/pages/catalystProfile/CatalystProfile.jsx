@@ -70,16 +70,16 @@ const CatalystProfile = () => {
                     </Stack>
                 </Box>
 
-                <Box sx={{ width: '100%' }} className='px-4 mt-4'>
+                <Box sx={{ width: '100%' }} className='px-lg-4 mt-4'>
                     <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={12} lg={12}>
 
                             <Box sx={{ width: '100%', typography: 'body1' }}>
                                 <TabContext value={value}>
-                                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
                                         <TabList onChange={handleChange} aria-label="lab API tabs example">
-                                            <CustomTab label="About Me" value="1" />
-                                            <CustomTab label="My Video CV" value="2" />
+                                            <CustomTab label="About Me" value="1" className='cp-btn' />
+                                            <CustomTab label="My Video CV" value="2" className='cp-btn' />
                                         </TabList>
                                     </Box>
                                     <TabPanel value="1">
@@ -115,7 +115,7 @@ const CatalystProfile = () => {
 
                                                         <h4 style={{ fontSize: '16px', color: '#222222' }} className='my-3 ms-4'>Personality Match</h4>
 
-                                                        <Box style={{ background: '#D7D5F966' }} className="mx-5 mb-2 p-4">
+                                                        <Box style={{ background: '#D7D5F966' }} className="mx-cat-5 mb-2 p-4">
                                                             <h6 className='mb-2' style={{ color: '#756DE9', fontSize: '14px', fontWeight: 700 }}>COOL</h6>
 
                                                             <ul>
@@ -490,7 +490,7 @@ const CatalystProfile = () => {
 
                                                 <Grid item xs={12} md={4}>
 
-                                                    <Box className="mt-5 mx-5">
+                                                    <Box className="mt-5 mx-cat-5">
                                                         <p style={{ color: '#00000080', textTransform: 'uppercase' }}>Updates</p>
                                                         <Stack direction="row" justifyContent="space-between">
                                                             <h4 className="mt-2 mb-3">
@@ -566,7 +566,7 @@ const CatalystProfile = () => {
 
                                         <Box sx={{ flexGrow: 1 }} className="mt-3">
                                             <Grid container spacing={2}>
-                                                <Grid item xs={12} md={3}>
+                                                <Grid item xs={12} md={3} className="mb-2">
                                                     <Box style={{ backgroundColor: '#EDEDED', borderRadius: '5px', height: '100%' }} className="p-4">
                                                         <img style={{height: '150px', objectFit: 'contain'}} src="/images/catalyst-profile/video-cv-one.png" alt="" className="img-fluid" />
                                                         <h4 className='text-center my-4'>
@@ -575,7 +575,7 @@ const CatalystProfile = () => {
                                                         <p className='text-center'>This is the platform that lets you highlight your are much more than just a piece of resume paper.  </p>
                                                     </Box>
                                                 </Grid>
-                                                <Grid item xs={12} md={3}>
+                                                <Grid item xs={12} md={3} className="mb-2">
                                                     <Box style={{ backgroundColor: '#EDEDED', borderRadius: '5px', height: '100%' }} className="p-4">
                                                         <img style={{height: '150px', objectFit: 'contain'}} src="/images/catalyst-profile/video-cv-two.png" alt="" className="img-fluid" />
                                                         <h4 className='text-center my-4'>
@@ -584,7 +584,7 @@ const CatalystProfile = () => {
                                                         <p className='text-center'>This is the platform that lets you highlight your are much more than just a piece of resume paper.  </p>
                                                     </Box>
                                                 </Grid>
-                                                <Grid item xs={12} md={3}>
+                                                <Grid item xs={12} md={3} className="mb-2">
                                                     <Box style={{ backgroundColor: '#EDEDED', borderRadius: '5px', height: '100%' }} className="p-4">
                                                         <img style={{height: '150px', objectFit: 'contain'}} src="/images/catalyst-profile/video-cv-three.png" alt="" className="img-fluid" />
                                                         <h4 className='text-center my-4'>
@@ -593,7 +593,7 @@ const CatalystProfile = () => {
                                                         <p className='text-center'>This is the platform that lets you highlight your are much more than just a piece of resume paper.  </p>
                                                     </Box>
                                                 </Grid>
-                                                <Grid item xs={12} md={3}>
+                                                <Grid item xs={12} md={3} className="mb-2">
                                                     <Box className="mt-3 p-3 mb-3" style={{ backgroundColor: '#FF8960', borderRadius: '5px' }}>
                                                         <h4 className='text-white' >120 Great Fit opportunities are waiting for you!</h4>
                                                         <p className='text-white mt-2 mb-4'>Your profile is on hold! Add Video CV to complete your profile for the recruiters to view it. </p>

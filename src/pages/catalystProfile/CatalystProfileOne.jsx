@@ -80,24 +80,23 @@ const CatalystProfileOne = () => {
                 <Box sx={{ width: '100%' }} className='mt-4'>
                     <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={12} lg={12}>
-
                             <Box sx={{ width: '100%', typography: 'body1' }}>
                                 <TabContext value={value}>
-                                    <Stack direction="row" alignItems="center" flexWrap="wrap" justifyContent="space-between" className='pe-2'>
+                                    <Stack direction="row" alignItems="center" flexWrap="wrap" justifyContent="space-between" className='pe-2 mx-cat-5'>
                                         <Box>
                                             <TabList onChange={handleChange} aria-label="lab API tabs example">
-                                                <CustomTab label="About Me" value="1" />
-                                                <CustomTab label="My Video CV" value="2" />
+                                                <CustomTab label="About Me" value="1" className='cp-btn' />
+                                                <CustomTab label="My Video CV" value="2" className='cp-btn' />
                                             </TabList>
                                         </Box>
 
-                                        <Stack direction="row" alignItems="center"> <CheckBoxIcon className='me-2' style={{ color: '#756DE9' }} /> <span style={{ color: '#756DE9' }}>
+                                        <Stack className='mt-3' direction="row" alignItems="center"> <CheckBoxIcon className='me-2' style={{ color: '#756DE9' }} /> <span style={{ color: '#756DE9' }}>
                                                 Mobile Preview </span> </Stack>
                                     </Stack>
                                     <TabPanel value="1">
                                         <Box sx={{ flexGrow: 1 }}>
                                             <Grid container spacing={2}>
-                                                <Grid item xs={6} md={8}>
+                                                <Grid item xs={12} md={8}>
                                                     <Stack className="drop_area_box mt-4" direction="row" justifyContent="center">
                                                         <FileUploader className="drop_area drop_zone" handleChange={handleChange} name="file" types={fileTypes} style={{ width: '100% !important' }} >
                                                             <div className='text-center'><p style={{ color: '#756DE9', fontWeight: '600' }}>+Add Work Links</p>
@@ -105,19 +104,18 @@ const CatalystProfileOne = () => {
                                                         </FileUploader>
                                                     </Stack>
 
-                                                    <Box style={{ borderRadius: '5px', backgroundColor: '#ffffff', boxShadow: '0px 1px 6px 0px #003A5D1A' }} className="pb-1 mt-3">
-                                                        <Stack>
+                                                    <Box style={{ borderRadius: '5px', backgroundColor: '#ffffff', boxShadow: '0px 1px 6px 0px #003A5D1A' }} className="pb-1 mt-4">
+                                                    <Stack>
                                                             <h3 className='ms-4 pt-3'>Personality Type</h3>
                                                         </Stack>
-                                                        <Stack className='m-4 p-3' direction="row" alignItems="center" justifyContent="space-between" style={{ boxShadow: '0px 2px 10px 0px #2222221A' }}>
-                                                            <Box>
-
+                                                        <Stack className='m-4 p-3' direction={{ xs: 'column', sm: 'row' }} alignItems="center" justifyContent="space-between" style={{ boxShadow: '0px 2px 10px 0px #2222221A' }}>
+                                                            <Box> 
                                                                 <h3>THE DRIVER</h3>
                                                                 <p>When faced with a challenge, drivers say, “Bring it on!” Your eye is always on the prize at work, and you like to use logic and data to tackle problems because if there’s anything you love more than playing the game, it's winning.</p>
                                                             </Box>
 
-                                                            <Box className="ms-5" style={{ width: '500px' }}>
-                                                                <Stack direction="row" alignItems="center">
+                                                            <Box className="ms-5 cp-img">
+                                                                <Stack direction="row" alignItems="center" flexWrap="wrap"  >
                                                                     <EditIcon className='me-1' style={{ color: '#756DE9', fontSize: '18px' }} />
                                                                     <p style={{ color: '#756DE9', fontSize: '16px', fontWeight: '600' }}>TEST RETAKE</p>
                                                                 </Stack>
@@ -127,7 +125,7 @@ const CatalystProfileOne = () => {
 
                                                         <h4 style={{ fontSize: '16px', color: '#222222' }} className='my-3 ms-4'>Personality Match</h4>
 
-                                                        <Box style={{ background: '#D7D5F966' }} className="mx-5 mb-2 p-4">
+                                                        <Box style={{ background: '#D7D5F966' }} className="mx-cat-5 mb-2 p-4">
                                                             <h6 className='mb-2' style={{ color: '#756DE9', fontSize: '14px', fontWeight: 700 }}>COOL</h6>
 
                                                             <ul>
@@ -447,9 +445,9 @@ const CatalystProfileOne = () => {
                                                     </Stack>
                                                 </Grid>
 
-                                                <Grid item xs={6} md={4}>
+                                                <Grid item xs={12} md={4}>
 
-                                                    <Box className="mt-5 mx-5">
+                                                    <Box className="mt-5 mx-cat-5">
                                                         <p style={{ color: '#00000080', textTransform: 'uppercase' }}>Updates</p>
                                                         <Stack direction="row" justifyContent="space-between">
                                                             <h4 className="mt-2 mb-3">
@@ -586,21 +584,18 @@ const CatalystProfileOne = () => {
                                     </TabPanel>
 
                                     <TabPanel value="2">
-                                        <Stack direction="row" justifyContent="space-between" alignItems="center">
-                                            <p style={{ fontSize: '16px' }}>
+                                        <Stack direction="row" justifyContent="space-between" alignItems="center" className='ms-3'>
+                                            <p style={{ fontSize: '16px' }} >
                                                 5 Video CV Available
                                             </p>
-
-                                       
                                         </Stack>
-
 
                                         <Stack>
                                             <Box sx={{ flexGrow: 1 }}>
                                                 <Grid container spacing={2}>
                                                     <Grid item xs={12} md={8}>
                                                         <Stack direction="row" spacing={2} flexWrap="wrap">
-                                                            <Box className='mt-3' sx={{ background: '#F2F1FF', boxShadow: '2px 4px 10px 0px #0000001F', border: '2px solid #756DE9', borderRadius: '5px' }}>
+                                                            <Box className='mt-3 ms-3' sx={{ background: '#F2F1FF', boxShadow: '2px 4px 10px 0px #0000001F', border: '2px solid #756DE9', borderRadius: '5px' }}>
                                                                 <div className="position-relative">
                                                                     <img src="/images/browse-jobs/video-image.png" alt="" className="img-fluid" />
                                                                     <div className="position-absolute center-icon">
