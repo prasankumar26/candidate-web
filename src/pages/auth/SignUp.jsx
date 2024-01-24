@@ -25,7 +25,7 @@ const SignUp = () => {
                 <img src="/images/signup-five.png" alt="" className="img-fluid" style={{ position: 'absolute', bottom: '10%', left: '-20%', width: '100px' }} />
                 <TopHeading />
                 <Box className="bg-white roundedten pad-desktop-signup" >
-                    <h2 className='text-center' style={{ padding: '20px 0px', fontSize: '35px', zIndex: '99', position: 'relative' }}>We're glad you're aboard!</h2>
+                    <h2 className='text-center' style={{ padding: '20px 0px', fontSize: '35px', zIndex: '99', position: 'relative' }}>We're glad you're aboard! !!</h2>
                     <CssTextField
                         id="outlined-basic"
                         variant="outlined"
